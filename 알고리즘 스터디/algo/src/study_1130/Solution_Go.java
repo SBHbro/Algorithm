@@ -8,7 +8,6 @@ public class Solution_Go {
 		
 		int answer = 0;
 		while(!isEnd(data)) {
-//			boolean[] isCheck = new boolean[data.length];
 			int pointer = 0;
 			for(int i = 0 ; i<n;i++) {
 				while(pointer<data.length&&data[pointer]==0) {
@@ -17,7 +16,6 @@ public class Solution_Go {
 				if(pointer>=data.length)
 					break;
 				data[pointer]--;
-//				isCheck[pointer] = true;
 				pointer++;
 			}
 			answer++;

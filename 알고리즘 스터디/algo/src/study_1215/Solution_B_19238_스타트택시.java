@@ -73,6 +73,8 @@ public class Solution_B_19238_스타트택시 {
 				break;
 			}
 			int length = nearMan[1];
+//			System.out.println(index);
+//			System.out.println("man " + index + " " + length);
 			if(F>=length) {
 				F-=length;
 				taxiY = man[index].y;
@@ -86,6 +88,7 @@ public class Solution_B_19238_스타트택시 {
 			
 			visited = new boolean[N+1][N+1];
 			length = findShortLength(taxiY,taxiX,visit[index],visited);
+//			System.out.println("visit " + index + " " + length);
 			if(length == 0) {
 				F = -1;
 				break;
@@ -140,7 +143,7 @@ public class Solution_B_19238_스타트택시 {
 			length++;
 		}
 		
-		return length;
+		return 0;
 	}
 
 

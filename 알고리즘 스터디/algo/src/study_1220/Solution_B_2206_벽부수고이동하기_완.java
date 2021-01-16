@@ -55,7 +55,6 @@ public class Solution_B_2206_벽부수고이동하기_완 {
 	}
 
 	private static void bfs() {
-
 		Queue<int[]> que = new LinkedList<int[]>();
 
 		que.add(new int[] { 0, 0, 1, 0 });
@@ -66,7 +65,6 @@ public class Solution_B_2206_벽부수고이동하기_완 {
 			for (int i = 0; i < 4; i++) {
 				int ty = dy[i] + temp[0];
 				int tx = dx[i] + temp[1];
-
 					// 벽을 부수지 않고 온 경우
 					if ((temp[3] == 0)) {
 						// 나보다 값이 클때만

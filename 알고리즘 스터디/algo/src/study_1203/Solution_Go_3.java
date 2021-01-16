@@ -1,14 +1,14 @@
 package study_1203;
 
-import java.util.Arrays;
 
 public class Solution_Go_3 {
 
 	
 	public static void main(String[] args) {
 //		Dictionary fruits = new Dictionary(new String[] {"cherry", "pineapple", "melon", "strawberry", "raspberry"});
-		Dictionary fruits = new Dictionary(new String[] {"javascript", "java", "ruby", "php", "python", "coffeescript"});
-		System.out.println(fruits.findMostSimilar("pinea"));
+//		Dictionary fruits = new Dictionary(new String[] {"javascript", "java", "ruby", "php", "python", "coffeescript"});
+		Dictionary fruits = new Dictionary(new String[] {"ajajava","java"});
+		System.out.println(fruits.findMostSimilar("a"));
 	}
 	public static class Dictionary{
 		String[] data;
@@ -61,7 +61,6 @@ public class Solution_Go_3 {
 			}
 			return this.data[answerIndex];
 		}
-
 		
 	}
 }
