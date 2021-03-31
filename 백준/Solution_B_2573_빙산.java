@@ -20,7 +20,7 @@ public class Solution_B_2573_ºù»ê {
 			this.height = height;
 		}
 	}
-
+//
 	static int N, M;
 	static int[][] map;
 	static int year;
