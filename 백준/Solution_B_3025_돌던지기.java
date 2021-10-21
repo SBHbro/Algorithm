@@ -1,4 +1,4 @@
-package study_0203;
+ï»¿package study_0203;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -7,7 +7,7 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.util.StringTokenizer;
 
-public class Solution_B_3025_µ¹´øÁö±â {
+public class Solution_B_3025_ëŒë˜ì§€ê¸° {
 
 	static char[][] map;
 	static int R, C;
@@ -18,10 +18,10 @@ public class Solution_B_3025_µ¹´øÁö±â {
 
 	public static void main(String[] args) throws IOException {
 		
-		//º®ÀÇ À§Ä¡¸¦ ±â¾ïÇÑ´Ù.
-		//C°³ÀÇ ¸®½ºÆ®¸¦ ¸¸µé°í °Å±â¿¡ º®À» ³Ö´Â´Ù(º®ÀÎÁö µ¹¸æÀÎÁö ±¸ºĞ).
-		//¶³¾î¶ß¸± À§Ä¡¸¦ ¹Ş°í º®¿¡ ºÎµóÈ÷´ÂÁö µ¹¸æÀÌ¿¡ ºÎµóÈ÷´ÂÁö ºÎµóÈ÷´Â°Ô ¾ø´ÂÁö È®ÀÎÇÑ´Ù.
-		//È®ÀÎÀÇ °á°ú¿¡ µû¶ó µ¹¸æÀÌ¸¦ ³õ°í ¸®½ºÆ®¿¡ µ¹¸æÀÌÀÇ À§Ä¡¸¦ ³Ö´Â´Ù.(»ğÀÔÁ¤·Ä)
+		//ë²½ì˜ ìœ„ì¹˜ë¥¼ ê¸°ì–µí•œë‹¤.
+		//Cê°œì˜ ë¦¬ìŠ¤íŠ¸ë¥¼ ë§Œë“¤ê³  ê±°ê¸°ì— ë²½ì„ ë„£ëŠ”ë‹¤(ë²½ì¸ì§€ ëŒë©©ì¸ì§€ êµ¬ë¶„).
+		//ë–¨ì–´ëœ¨ë¦´ ìœ„ì¹˜ë¥¼ ë°›ê³  ë²½ì— ë¶€ë”›íˆëŠ”ì§€ ëŒë©©ì´ì— ë¶€ë”›íˆëŠ”ì§€ ë¶€ë”›íˆëŠ”ê²Œ ì—†ëŠ”ì§€ í™•ì¸í•œë‹¤.
+		//í™•ì¸ì˜ ê²°ê³¼ì— ë”°ë¼ ëŒë©©ì´ë¥¼ ë†“ê³  ë¦¬ìŠ¤íŠ¸ì— ëŒë©©ì´ì˜ ìœ„ì¹˜ë¥¼ ë„£ëŠ”ë‹¤.(ì‚½ì…ì •ë ¬)
 
 		StringTokenizer st = new StringTokenizer(in.readLine());
 

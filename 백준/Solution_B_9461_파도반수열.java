@@ -1,10 +1,10 @@
-package study_0203;
+ï»¿package study_0203;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class Solution_B_9461_ÆÄµµ¹İ¼ö¿­ {
+public class Solution_B_9461_íŒŒë„ë°˜ìˆ˜ì—´ {
 
 	static long[] data;
 	static int T,N;

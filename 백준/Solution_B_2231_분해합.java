@@ -1,11 +1,11 @@
-package study_1216;
+ï»¿package study_1216;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Solution_B_2231_ºÐÇØÇÕ {
+public class Solution_B_2231_ë¶„í•´í•© {
 	
 	static int answer;
 	static int input;

@@ -1,4 +1,4 @@
-import java.util.Arrays;
+ï»¿import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -31,7 +31,7 @@ public class Solution3_2 {
         
         Map<String, Data> dadangae = new HashMap<>();
         
-        //ºÎ¸ğ ¿¬°á
+        //ë¶€ëª¨ ì—°ê²°
         for(int i = 0 ; i<referral.length;i++) {
         	String name = enroll[i];
         	String parent = referral[i];
@@ -40,15 +40,15 @@ public class Solution3_2 {
         }
         dadangae.put("-", null);
         
-        //ÀÌ¸§°ú ¼öÀÍÀÌ µé¾î¿À¸é
-        //ºÎ¸ğ°¡ ÀÖ´ÂÁö È®ÀÎ ÈÄ ºÎ¸ğ¿¡°Ô 10ÇÁ·Î ÁÖ°í ³ª¸ÓÁö´Â ³»°¡ °¡Áø´Ù.
-        //¸Ê=> ÀÌ¸§ : µ¥ÀÌÅÍ
+        //ì´ë¦„ê³¼ ìˆ˜ìµì´ ë“¤ì–´ì˜¤ë©´
+        //ë¶€ëª¨ê°€ ìˆëŠ”ì§€ í™•ì¸ í›„ ë¶€ëª¨ì—ê²Œ 10í”„ë¡œ ì£¼ê³  ë‚˜ë¨¸ì§€ëŠ” ë‚´ê°€ ê°€ì§„ë‹¤.
+        //ë§µ=> ì´ë¦„ : ë°ì´í„°
         for(int i = 0 ; i<seller.length;i++) {
         	String name = seller[i];
         	int money = amount[i]*100;
         	
         	while(!name.equals("-")) {
-        		//µ· ¹ø»ç¶÷ÀÇ µ¥ÀÌÅÍ(ÃßÃµÀÎÀ» Ã£°í ÀÚ½ÅÇÑÅ× µ·À» ´õÇØ¾ßÇÔ)
+        		//ëˆ ë²ˆì‚¬ëŒì˜ ë°ì´í„°(ì¶”ì²œì¸ì„ ì°¾ê³  ìì‹ í•œí…Œ ëˆì„ ë”í•´ì•¼í•¨)
         		Data temp = dadangae.get(name);
         		
         		if(money/10<1) {

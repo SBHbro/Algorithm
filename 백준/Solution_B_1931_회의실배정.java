@@ -1,4 +1,4 @@
-package study_0301;
+ï»¿package study_0301;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -10,7 +10,7 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.StringTokenizer;
 
-public class Solution_B_1931_È¸ÀÇ½Ç¹èÁ¤ {
+public class Solution_B_1931_íšŒì˜ì‹¤ë°°ì • {
 
 	static int N;
 	static List<int[]> input = new ArrayList<int[]>();
@@ -22,7 +22,7 @@ public class Solution_B_1931_È¸ÀÇ½Ç¹èÁ¤ {
 		StringTokenizer st = new StringTokenizer(in.readLine());
 		N = Integer.parseInt(st.nextToken());
 
-		// end ±âÁØ Á¤·Ä
+		// end ê¸°ì¤€ ì •ë ¬
 		for (int i = 0; i < N; i++) {
 			st = new StringTokenizer(in.readLine());
 			int start = Integer.parseInt(st.nextToken());
@@ -44,8 +44,8 @@ public class Solution_B_1931_È¸ÀÇ½Ç¹èÁ¤ {
 
 		
 		data.add(input.get(0));
-		// end °ªÀÌ °°À» ¶§ -> ½ÃÀÛ°ªÀÌ Å«°ÍÀ¸·Î º¯°æ
-		// end °ªÀÌ ´Ù¸¦ ¶§ -> ½ÃÀÛ°ªÀÌ ÀÌÀü end°ªº¸´Ù Å¬¶§¸¸ µî·Ï
+		// end ê°’ì´ ê°™ì„ ë•Œ -> ì‹œì‘ê°’ì´ í°ê²ƒìœ¼ë¡œ ë³€ê²½
+		// end ê°’ì´ ë‹¤ë¥¼ ë•Œ -> ì‹œì‘ê°’ì´ ì´ì „ endê°’ë³´ë‹¤ í´ë•Œë§Œ ë“±ë¡
 		for (int i = 1; i < input.size(); i++) {
 			int p = data.size() - 1;
 			int[] temp = data.get(p);

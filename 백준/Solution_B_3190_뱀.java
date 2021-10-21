@@ -1,4 +1,4 @@
-package study_0324;
+ï»¿package study_0324;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -11,7 +11,7 @@ import java.util.Queue;
 import java.util.Set;
 import java.util.StringTokenizer;
 
-public class Solution_B_3190_¹ì {
+public class Solution_B_3190_ë±€ {
 
 	static int N, K, L;
 	static Set<XY> apple;
@@ -19,7 +19,7 @@ public class Solution_B_3190_¹ì {
 	static int sy = 0, sx = 0;
 	static int direction;
 	static int second;
-	static int[] dy = { -1, 0, 1, 0 }; // »ó ¿ì ÇÏ ÁÂ
+	static int[] dy = { -1, 0, 1, 0 }; // ìƒ ìš° í•˜ ì¢Œ
 	static int[] dx = { 0, 1, 0, -1 };
 
 	static class XY {
@@ -50,7 +50,7 @@ public class Solution_B_3190_¹ì {
 		N = Integer.parseInt(in.readLine());
 		K = Integer.parseInt(in.readLine());
 
-		//»ç°úÁÂÇ¥ÀÔ·Â
+		//ì‚¬ê³¼ì¢Œí‘œì…ë ¥
 		apple = new HashSet<>();
 		for (int i = 0; i < K; i++) {
 			StringTokenizer st = new StringTokenizer(in.readLine());
@@ -59,7 +59,7 @@ public class Solution_B_3190_¹ì {
 			apple.add(new XY(ty, tx));
 		}
 
-		//¿òÁ÷ÀÓ ÀÔ·Â
+		//ì›€ì§ì„ ì…ë ¥
 		L = Integer.parseInt(in.readLine());
 		Queue<int[]> moving = new LinkedList<>();
 		for (int i = 0; i < L; i++) {
@@ -74,7 +74,7 @@ public class Solution_B_3190_¹ì {
 		direction = 1;
 
 		outloop: while (true) {
-			// Å¥¿¡¼­ µ¹¾Æ°¥ ½Ã°£¿Í ¹æÇâÀ» ²¨³½´Ù.
+			// íì—ì„œ ëŒì•„ê°ˆ ì‹œê°„ì™€ ë°©í–¥ì„ êº¼ë‚¸ë‹¤.
 			int[] temp;
 			if (!moving.isEmpty()) {
 				temp = moving.poll();
@@ -82,24 +82,24 @@ public class Solution_B_3190_¹ì {
 				temp = new int[] { 100001, direction };
 			}
 
-			// ÃÊ°¡ ÀÛÀºµ¿¾È °è¼Ó ¹ìÀÇ ¹æÇâÀ¸·Î ÇÑÄ­¾¿ °£´Ù.
+			// ì´ˆê°€ ì‘ì€ë™ì•ˆ ê³„ì† ë±€ì˜ ë°©í–¥ìœ¼ë¡œ í•œì¹¸ì”© ê°„ë‹¤.
 			while (second < temp[0]) {
 				int ty = sy + dy[direction];
 				int tx = sx + dx[direction];
 				XY head = new XY(ty, tx);
 
-				// ¹üÀ§¸¦ ³Ñ¾î°¡°Å³ª ³» ¸öÀ» ¸¸³ª¸é Á×´Â´Ù.
+				// ë²”ìœ„ë¥¼ ë„˜ì–´ê°€ê±°ë‚˜ ë‚´ ëª¸ì„ ë§Œë‚˜ë©´ ì£½ëŠ”ë‹¤.
 				if (!isSafe(ty, tx) || snake.contains(head)) {
 					second++;
 					break outloop;
 				}
 
 				snake.add(0, head);
-				// ÀÌµ¿ÇÑ °÷ÀÌ »ç°ú¸é? ¸®½ºÆ®ÀÇ ¸Ç¾Õ¿¡ »ç°ú¸¦ Ãß°¡.
+				// ì´ë™í•œ ê³³ì´ ì‚¬ê³¼ë©´? ë¦¬ìŠ¤íŠ¸ì˜ ë§¨ì•ì— ì‚¬ê³¼ë¥¼ ì¶”ê°€.
 				if (apple.contains(head)) {
 					apple.remove(head);
 				}
-				// ÀÌµ¿ÇÑ°÷ÀÌ »ç°ú°¡ ¾øÀ¸¸é? ¸®½ºÆ®ÀÇ ¸Ç µÚ ¿ø¼Ò »èÁ¦.
+				// ì´ë™í•œê³³ì´ ì‚¬ê³¼ê°€ ì—†ìœ¼ë©´? ë¦¬ìŠ¤íŠ¸ì˜ ë§¨ ë’¤ ì›ì†Œ ì‚­ì œ.
 				else {
 					snake.remove(snake.size() - 1);
 				}
@@ -108,7 +108,7 @@ public class Solution_B_3190_¹ì {
 				second++;
 			}
 
-			// ¹æÇâÀ» µ¹¸°´Ù.
+			// ë°©í–¥ì„ ëŒë¦°ë‹¤.
 			direction += temp[1];
 			if (direction == -1)
 				direction = 3;

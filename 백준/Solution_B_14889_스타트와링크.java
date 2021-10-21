@@ -1,11 +1,11 @@
-package study_0203;
+ï»¿package study_0203;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Solution_B_14889_½ºÅ¸Æ®¿Í¸µÅ© {
+public class Solution_B_14889_ìŠ¤íƒ€íŠ¸ì™€ë§í¬ {
 
 	static int N;
 	static int[][] S;
@@ -29,9 +29,9 @@ public class Solution_B_14889_½ºÅ¸Æ®¿Í¸µÅ© {
 			}
 		}
 		
-		//N/2¸¦ °í¸¥´Ù. °ñ¶óÁø ÆÀ¿øµé·Î ¸îÁ¡ÀÌ ³ª¿À´ÂÁö ¸¸µé¾îº»´Ù.
-		//dfs µª½º´Â N/2±îÁö
-		//boolean¹è¿­ »ç¿ë
+		//N/2ë¥¼ ê³ ë¥¸ë‹¤. ê³¨ë¼ì§„ íŒ€ì›ë“¤ë¡œ ëª‡ì ì´ ë‚˜ì˜¤ëŠ”ì§€ ë§Œë“¤ì–´ë³¸ë‹¤.
+		//dfs ëìŠ¤ëŠ” N/2ê¹Œì§€
+		//booleanë°°ì—´ ì‚¬ìš©
 		
 		dfs(0,0,0);
 		

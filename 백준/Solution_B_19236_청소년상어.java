@@ -1,15 +1,15 @@
-package algo_study_0709;
+﻿package algo_study_0709;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Solution_B_19236_청소년상어 {
+public class Solution_B_19236_泥?????{
 
-	// 1.dfs로 상어 집어넣음
-	// 2.물고기 이동
-	// 3.상어 이동할 수 있는 곳으로 새로 dfs
+	// 1.dfs濡 ???吏?대ｌ
+	// 2.臾쇨?湲??대
+	// 3.????대? ? ?? 怨녹쇰? ?濡 dfs
 
 	static int N = 4;
 	static int ans;
@@ -56,7 +56,7 @@ public class Solution_B_19236_청소년상어 {
 	}
 
 	private static void dfs(int y, int x, int cnt, Shark[] shark, int[][] map2, int test) {
-		// cnt에 현재 상어 위치의 숫자값 더함, 그위치의 물고기 사망, 사망한 물고기의 방향 상어가 가짐
+		// cnt? ???????移? ?レ媛 ??? 洹몄移? 臾쇨?湲??щ?, ?щ?? 臾쇨?湲곗 諛⑺???닿? 媛吏
 		cnt += map2[y][x];
 		int d = shark[map2[y][x]].d;
 		shark[map2[y][x]].d = -1;
@@ -67,69 +67,69 @@ public class Solution_B_19236_청소년상어 {
 		if (d == -1)
 			return;
 
-		// 물고기 16마리 이동
+		// 臾쇨?湲?16留由??대
 		for (int i = 1; i < 17; i++) {
 
-			// 물고기의 방향값이 -1이면 다음물고기로 넘어간다.
+			// 臾쇨?湲곗 諛⑺κ???-1?대㈃ ?ㅼ臾쇨?湲곕? ??닿???
 			if (shark[i].d == -1)
 				continue;
 
-			// 8방향으로 바꿔가면서 이동할 수 있는 곳으로 이동
+			// 8諛⑺μ쇰? 諛轅媛硫댁 ?대? ? ?? 怨녹쇰? ?대
 			for (int j = 0; j < 8; j++) {
-				// 이동 방향// 8을 넘어간다면 -8
+				// ?대 諛⑺?/ 8? ??닿??ㅻ㈃ -8
 				int td = shark[i].d + j;
 				if (td >= 9)
 					td = td % 8;
 				int ty = shark[i].y + dy[td];
 				int tx = shark[i].x + dx[td];
 
-				// 물고기가 이동하려는곳이 맵의 범위 안에있고 상어가 있는 자리가 아니라면
+				// 臾쇨?湲곌? ?대??ㅻ怨녹?留듭 踰? ???怨 ??닿? ?? ?由ш? ???쇰㈃
 				if (isSafe(ty, tx) && !(ty == y && tx == x)) {
-					// 빈공간일때
+					// 鍮怨듦??쇰
 					if (map2[ty][tx] == 0) {
-						// 맵 값 교체
+						// 留?媛 援泥?
 						map2[ty][tx] = i;
 						map2[shark[i].y][shark[i].x] = 0;
 
-						// shark배열의 값 변경
+						// shark諛곗댁 媛 蹂寃?
 						shark[i].y = ty;
 						shark[i].x = tx;
 						shark[i].d = td;
 					}
-					// 다른 물고기가 있을 때
+					// ?ㅻⅨ 臾쇨?湲곌? ?? ?
 					else {
-						// 맵 값 교체
+						// 留?媛 援泥?
 						int temp = map2[ty][tx];
 						map2[ty][tx] = i;
 						map2[shark[i].y][shark[i].x] = temp;
 
-						// shark배열의 값 변경
+						// shark諛곗댁 媛 蹂寃?
 						int tempy = shark[i].y;
-						shark[i].y = ty; // 이동한 곳의 y값을(ty) 넣어준다
-						shark[temp].y = tempy; // 교체된 shark의 y값을(y) 넣어준다
+						shark[i].y = ty; // ?대? 怨녹 y媛?(ty) ?ｌ댁???
+						shark[temp].y = tempy; // 援泥대 shark? y媛?(y) ?ｌ댁???
 
 						int tempx = shark[i].x;
-						shark[i].x = tx; // 이동한 곳의 x값을(tx) 넣어준다
-						shark[temp].x = tempx; // 교체된 shark의 x값을(x) 넣어준다
+						shark[i].x = tx; // ?대? 怨녹 x媛?(tx) ?ｌ댁???
+						shark[temp].x = tempx; // 援泥대 shark? x媛?(x) ?ｌ댁???
 
-						shark[i].d = td;// 현재 d값을(td) 저장한다
+						shark[i].d = td;// ???d媛?(td) ??ν??
 
 					}
-					// 다음 물고기로 넘어간다.
+					// ?ㅼ 臾쇨?湲곕? ??닿???
 					break;
 				}
 			}
 
 		}
 
-		// 상어이동
+		// ??댁대
 		for (int i = 1; i < 4; i++) {
 			int ty = y + (dy[d] * i);
 			int tx = x + (dx[d] * i);
-			// 상어가 map 범위안으로 이동하고 이동하려는 곳이 빈공간이 아닐 때 다음 depth로 이동
+			// ??닿? map 踰???쇰? ?대?怨 ?대??ㅻ 怨녹?鍮怨듦????? ? ?ㅼ depth濡 ?대
 			if (isSafe(ty, tx) && map2[ty][tx] != 0) {
 
-				// 배열은 인자로 넘겨진 배열의 값이 바뀌면 원래 배열의 값도 바뀌므로 똑같은 배열을 생성해서 넘겨준다.
+				// 諛곗댁 ?몄濡 ?寃⑥? 諛곗댁 媛??諛?硫??? 諛곗댁 媛? 諛?誘濡 ?媛? 諛곗댁 ??깊댁 ?寃⑥???
 				int[][] copyMap = new int[N][N];
 				Shark[] copyShark = new Shark[17];
 

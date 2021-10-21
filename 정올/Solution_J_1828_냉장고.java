@@ -1,11 +1,11 @@
-package study_0216;
+ï»¿package study_0216;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.Scanner;
 
-public class Solution_J_1828_³ÃÀå°í {
+public class Solution_J_1828_ëƒ‰ìž¥ê³  {
 
 	public static void main(String[] args) {
 		

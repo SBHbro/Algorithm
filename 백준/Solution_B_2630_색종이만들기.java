@@ -1,4 +1,4 @@
-package algo_study_0715;
+ï»¿package algo_study_0715;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -7,7 +7,7 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.util.StringTokenizer;
 
-public class Solution_B_2630_»öÁ¾ÀÌ¸¸µé±â {
+public class Solution_B_2630_ìƒ‰ì¢…ì´ë§Œë“¤ê¸° {
 
 	static int N;
 	static int[][] map;
@@ -17,9 +17,9 @@ public class Solution_B_2630_»öÁ¾ÀÌ¸¸µé±â {
 	static BufferedWriter out = new BufferedWriter(new OutputStreamWriter(System.out));
 	
 	
-	//1. start~end ¸ğµÎ °°Àº °ªÀ» °¡Áö°í ÀÖ´ÂÁö È®ÀÎÇÑ´Ù.
-	//2. ´Ù¸¥ °ªÀ» °¡Áö°í ÀÖ´Â °æ¿ì °¡·Î,¼¼·ÎÀÇ Áß°£À» Àß¶ó¼­ ºĞÇÒÇÑ´Ù.
-	//3. ³ª´©¾îÁø ºÎºĞµé¿¡ ´ëÇØ¼­ NÀÌ 1ÀÌ°Å³ª ¸ğµÎ °°Àº °ªÀ» °¡Áö°í ÀÖ´Â °æ¿ì answer¸¦ 1 Áõ°¡½ÃÅ²´Ù
+	//1. start~end ëª¨ë‘ ê°™ì€ ê°’ì„ ê°€ì§€ê³  ìˆëŠ”ì§€ í™•ì¸í•œë‹¤.
+	//2. ë‹¤ë¥¸ ê°’ì„ ê°€ì§€ê³  ìˆëŠ” ê²½ìš° ê°€ë¡œ,ì„¸ë¡œì˜ ì¤‘ê°„ì„ ì˜ë¼ì„œ ë¶„í• í•œë‹¤.
+	//3. ë‚˜ëˆ„ì–´ì§„ ë¶€ë¶„ë“¤ì— ëŒ€í•´ì„œ Nì´ 1ì´ê±°ë‚˜ ëª¨ë‘ ê°™ì€ ê°’ì„ ê°€ì§€ê³  ìˆëŠ” ê²½ìš° answerë¥¼ 1 ì¦ê°€ì‹œí‚¨ë‹¤
 	
 	public static void main(String[] args) throws NumberFormatException, IOException {
 		N = Integer.parseInt(in.readLine());
@@ -54,7 +54,7 @@ public class Solution_B_2630_»öÁ¾ÀÌ¸¸µé±â {
 			}
 		}
 		
-		if(blockSame(n,starty,startx,endy, endx)) {//¸ğµÎ °°Àº ºí·°ÀÏ °æ¿ì
+		if(blockSame(n,starty,startx,endy, endx)) {//ëª¨ë‘ ê°™ì€ ë¸”ëŸ­ì¼ ê²½ìš°
 			if(map[starty][startx]==0) {
 				answer++;
 				return;
@@ -64,9 +64,9 @@ public class Solution_B_2630_»öÁ¾ÀÌ¸¸µé±â {
 				return;
 			}
 		}
-		else { //´Ù¸¥ ºí·°ÀÌ ÀÖÀ» °æ¿ì
-			//4°³·Î ³ª´«´Ù
-			//ÁÂ»ó, ¿ì»ó, ÁÂÇÏ, ¿ìÇÏ
+		else { //ë‹¤ë¥¸ ë¸”ëŸ­ì´ ìˆì„ ê²½ìš°
+			//4ê°œë¡œ ë‚˜ëˆˆë‹¤
+			//ì¢Œìƒ, ìš°ìƒ, ì¢Œí•˜, ìš°í•˜
 			dq(n/2,starty,startx,(endy+starty)/2,(endx+startx)/2);
 			dq(n/2,starty,(endx+startx)/2,(endy+starty)/2,endx);
 			dq(n/2,(endy+starty)/2,startx,endy,(endx+startx)/2);

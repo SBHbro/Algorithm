@@ -1,11 +1,11 @@
-package study_1209;
+ï»¿package study_1209;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Solution_B_20057_¸¶¹ı»ç»ó¾î¿ÍÅä³×ÀÌµµ {
+public class Solution_B_20057_ë§ˆë²•ì‚¬ìƒì–´ì™€í† ë„¤ì´ë„ {
 
 	static int N;
 	static int map[][];
@@ -19,7 +19,7 @@ public class Solution_B_20057_¸¶¹ı»ç»ó¾î¿ÍÅä³×ÀÌµµ {
 		BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
 		StringTokenizer st = new StringTokenizer(in.readLine());
 		N = Integer.parseInt(st.nextToken());
-		d = 0;//0ÁÂ 1ÇÏ 2¿ì 3»ó
+		d = 0;//0ì¢Œ 1í•˜ 2ìš° 3ìƒ
 		
 		map = new int[N][N];
 		
@@ -44,7 +44,7 @@ public class Solution_B_20057_¸¶¹ı»ç»ó¾î¿ÍÅä³×ÀÌµµ {
 				else if(d==3)ty--;
 				move();
 			}
-			//¹æÇâµ¹¸²
+			//ë°©í–¥ëŒë¦¼
 			if(i==N)break;
 			d++;
 			if(d==4)d=0;
@@ -56,7 +56,7 @@ public class Solution_B_20057_¸¶¹ı»ç»ó¾î¿ÍÅä³×ÀÌµµ {
 				else if(d==3)ty--;
 				move();
 			}
-			//¹æÇâµ¹¸²
+			//ë°©í–¥ëŒë¦¼
 			d++;
 			if(d==4)d=0;
 			tonadoTurn();

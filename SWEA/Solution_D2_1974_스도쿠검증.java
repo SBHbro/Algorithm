@@ -1,11 +1,11 @@
-package study_0116;
+ï»¿package study_0116;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Solution_D2_1974_½ºµµÄí°ËÁõ {
+public class Solution_D2_1974_ìŠ¤ë„ì¿ ê²€ì¦ {
 
 	static int T;
 	static int[][] map;

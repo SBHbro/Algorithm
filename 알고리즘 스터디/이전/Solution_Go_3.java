@@ -1,4 +1,4 @@
-package study_1203;
+ï»¿package study_1203;
 
 
 public class Solution_Go_3 {
@@ -20,9 +20,9 @@ public class Solution_Go_3 {
 
 		public String findMostSimilar(String input) {
 			
-			//dataÀÇ ±æÀÌ¸¸Å­ ÁøÇà
-			//dataÀÇ ¿ø¼Ò¿Í ÀÔ·ÂÀ¸·Î µé¾î¿Â ½ºÆ®¸µÀÇ À¯»çµµ¸¦ °Ë»çÇÑ´Ù.
-			//À¯»çµµ°¡ °¡Àå³·Àº ½ºÆ®¸µÀ» ¸®ÅÏÇÑ´Ù.
+			//dataì˜ ê¸¸ì´ë§Œí¼ ì§„í–‰
+			//dataì˜ ì›ì†Œì™€ ì…ë ¥ìœ¼ë¡œ ë“¤ì–´ì˜¨ ìŠ¤íŠ¸ë§ì˜ ìœ ì‚¬ë„ë¥¼ ê²€ì‚¬í•œë‹¤.
+			//ìœ ì‚¬ë„ê°€ ê°€ì¥ë‚®ì€ ìŠ¤íŠ¸ë§ì„ ë¦¬í„´í•œë‹¤.
 			int answer = Integer.MAX_VALUE;
 			int answerIndex = 0;
 			for(int i = 0 ; i<this.data.length;i++) {
@@ -40,11 +40,11 @@ public class Solution_Go_3 {
 				
 				for(int a = 1 ; a<=input.length();a++) {
 					for(int b= 1; b<=first.length();b++) {
-						//°°À¸¸é ¿ŞÂÊ´ë°¢¼±À§ 
+						//ê°™ìœ¼ë©´ ì™¼ìª½ëŒ€ê°ì„ ìœ„ 
 						if(first.charAt(b-1)==input.charAt(a-1)) {
 							map[a][b] = map[a-1][b-1];
 						}
-						//´Ù¸£¸é ¿ŞÂÊ ´ë°¢¼±¿ŞÂÊÀ§ À§ Áß °¡Àå ÀÛÀº°ª +1
+						//ë‹¤ë¥´ë©´ ì™¼ìª½ ëŒ€ê°ì„ ì™¼ìª½ìœ„ ìœ„ ì¤‘ ê°€ì¥ ì‘ì€ê°’ +1
 						else {
 							int temp = Math.min(map[a][b-1], map[a-1][b-1]);
 							temp = Math.min(temp, map[a-1][b])+1;

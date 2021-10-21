@@ -1,4 +1,4 @@
-package study_0205;
+ï»¿package study_0205;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.StringTokenizer;
 
-public class Solution_B_11054_°¡Àå±ä¹ÙÀÌÅä´ĞºÎºĞ¼ö¿­ {
+public class Solution_B_11054_ê°€ì¥ê¸´ë°”ì´í† ë‹‰ë¶€ë¶„ìˆ˜ì—´ {
 
 	static int N;
 	static int[] data;

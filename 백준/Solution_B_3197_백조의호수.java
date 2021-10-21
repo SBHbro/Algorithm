@@ -1,4 +1,4 @@
-package study_0308;
+ï»¿package study_0308;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -7,15 +7,15 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.StringTokenizer;
 
-public class Solution_B_3197_¹éÁ¶ÀÇÈ£¼ö {
+public class Solution_B_3197_ë°±ì¡°ì˜í˜¸ìˆ˜ {
 
 	
-	//¹°ÀÎ°É ¸ğµÎ Å¥¿¡ ³Ö´Â´Ù
-	//¿ÍÀÏ Å¥°¡ ºô¶§±îÁö ·Î µ¹¸°´Ù
-	//¹°ÀÎ¾ÖµéÀ» Å¥¿¡¼­ ²¨³»¼­ »óÇÏÁÂ¿ì °Ë»öÇØ¼­ ¾óÀ½ÀÌ ÀÖÀ¸¸é ±×°É Å¥¿¡ ³Ö°í ±× ÁÂÇ¥¸¦ ¹°·Î ¹Ù²Û´Ù.
-	//¹éÁ¶ÀÇ ÁÂÇ¥¸¦ °¡Áö°í ¸¸³¯ ¼ö ÀÖ´ÂÁö È®ÀÎÇÑ´Ù
-	//µÑ¿¡¼­ ½ÃÀÛÇØ¼­ ¸¸³­´Ù¸é ¹İº¹¹®À» ¸ØÃß°í ÇÏ³ª¶óµµ ¸ø¸¸³ª°í ³¡³ª¸é ¹İº¹¹®À» ¸ØÃá´Ù
-	//¹İº¹ÇÑ´Ù
+	//ë¬¼ì¸ê±¸ ëª¨ë‘ íì— ë„£ëŠ”ë‹¤
+	//ì™€ì¼ íê°€ ë¹Œë•Œê¹Œì§€ ë¡œ ëŒë¦°ë‹¤
+	//ë¬¼ì¸ì• ë“¤ì„ íì—ì„œ êº¼ë‚´ì„œ ìƒí•˜ì¢Œìš° ê²€ìƒ‰í•´ì„œ ì–¼ìŒì´ ìˆìœ¼ë©´ ê·¸ê±¸ íì— ë„£ê³  ê·¸ ì¢Œí‘œë¥¼ ë¬¼ë¡œ ë°”ê¾¼ë‹¤.
+	//ë°±ì¡°ì˜ ì¢Œí‘œë¥¼ ê°€ì§€ê³  ë§Œë‚  ìˆ˜ ìˆëŠ”ì§€ í™•ì¸í•œë‹¤
+	//ë‘˜ì—ì„œ ì‹œì‘í•´ì„œ ë§Œë‚œë‹¤ë©´ ë°˜ë³µë¬¸ì„ ë©ˆì¶”ê³  í•˜ë‚˜ë¼ë„ ëª»ë§Œë‚˜ê³  ëë‚˜ë©´ ë°˜ë³µë¬¸ì„ ë©ˆì¶˜ë‹¤
+	//ë°˜ë³µí•œë‹¤
 	
 	static int R,C;
 	static char[][] map;
@@ -84,13 +84,13 @@ public class Solution_B_3197_¹éÁ¶ÀÇÈ£¼ö {
 
 
 	private static void binarySearch(int start, int middle, int end) {
-		//¸¸³¯°æ¿ì
+		//ë§Œë‚ ê²½ìš°
 		if(isMeet(middle)) {
 			if(middle-1<start)
 				return;
 			binarySearch(start,(start+middle-1)/2,middle-1);
 		}
-		//¸ø¸¸³¯°æ¿ì
+		//ëª»ë§Œë‚ ê²½ìš°
 		else {
 			if(end<middle+1)
 				return;

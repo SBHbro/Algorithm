@@ -1,4 +1,4 @@
-package study_0203;
+ï»¿package study_0203;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -10,7 +10,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.StringTokenizer;
 
-public class Solution_B_2580_½ºµµÄí {
+public class Solution_B_2580_ìŠ¤ë„ì¿  {
 	
 	static int[][] map;
 	static int[][] answer;
@@ -27,10 +27,10 @@ public class Solution_B_2580_½ºµµÄí {
 	}
 	
 	public static void main(String[] args) throws IOException {
-		//ºóÄ­À» ¸ğµÎ Ã£´Â´Ù.
-		//ºóÄ­ÀÏ °æ¿ì
-		//1~9 µ¹¸ç ¼ıÀÚ¸¦ ³Ö°í R,C,3*3À» °Ë»çÇÑ ÈÄ °¡´ÉÇÏ¸é ³Ö°í ´ÙÀ½´Ü°è·Î ³Ñ¾î°£´Ù.
-		//¹İº¹
+		//ë¹ˆì¹¸ì„ ëª¨ë‘ ì°¾ëŠ”ë‹¤.
+		//ë¹ˆì¹¸ì¼ ê²½ìš°
+		//1~9 ëŒë©° ìˆ«ìë¥¼ ë„£ê³  R,C,3*3ì„ ê²€ì‚¬í•œ í›„ ê°€ëŠ¥í•˜ë©´ ë„£ê³  ë‹¤ìŒë‹¨ê³„ë¡œ ë„˜ì–´ê°„ë‹¤.
+		//ë°˜ë³µ
 		
 		map = new int[9][9];
 		answer = new int[9][9];
@@ -72,7 +72,7 @@ public class Solution_B_2580_½ºµµÄí {
 		for(int i = 1;i<=9;i++) {
 			if(answer[0][0] !=0)return;
 			boolean flag = false;
-			//y·Î°Ë»ç
+			//yë¡œê²€ì‚¬
 			for(int j = 8 ; j>=0;j--) {
 				if(map[list.get(depth).y][j]==i) {
 					flag = true;
@@ -82,7 +82,7 @@ public class Solution_B_2580_½ºµµÄí {
 			if(flag)
 				continue;
 			
-			//x·Î°Ë»ç
+			//xë¡œê²€ì‚¬
 			for(int j = 8 ; j>=0;j--) {
 				if(map[j][list.get(depth).x]==i) {
 					flag = true;
@@ -92,7 +92,7 @@ public class Solution_B_2580_½ºµµÄí {
 			if(flag)
 				continue;
 			
-			//±¸¿ª°Ë»ç
+			//êµ¬ì—­ê²€ì‚¬
 			for(int y = (list.get(depth).y/3)*3;y<(list.get(depth).y/3)*3+3;y++) {
 				for(int x = (list.get(depth).x/3)*3;x<(list.get(depth).x/3)*3+3;x++) {
 					if(map[y][x]==i) {

@@ -1,10 +1,10 @@
-package study_0121;
+ï»¿package study_0121;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class Solution_B_1436_¿µÈ­°¨µ¶¼ò {
+public class Solution_B_1436_ì˜í™”ê°ë…ìˆŒ {
 
 	
 	public static void main(String[] args) throws NumberFormatException, IOException {

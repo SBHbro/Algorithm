@@ -1,11 +1,11 @@
-package study_0204;
+ï»¿package study_0204;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Arrays;
 
-public class Solution_B_10844_½¬¿î°è´Ü¼ö {
+public class Solution_B_10844_ì‰¬ìš´ê³„ë‹¨ìˆ˜ {
 
 	static int N;
 	static long[][] dp;

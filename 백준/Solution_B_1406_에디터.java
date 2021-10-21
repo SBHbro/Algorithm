@@ -1,4 +1,4 @@
-package study_0208;
+ï»¿package study_0208;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.ListIterator;
 import java.util.StringTokenizer;
 
-public class Solution_B_1406_¿¡µğÅÍ {
+public class Solution_B_1406_ì—ë””í„° {
 
 	static int N;
 	static List<Character> data = new LinkedList<Character>();

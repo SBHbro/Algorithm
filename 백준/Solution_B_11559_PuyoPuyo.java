@@ -1,4 +1,4 @@
-package algo_study_0708;
+﻿package algo_study_0708;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -19,15 +19,15 @@ public class Solution_B_11559_PuyoPuyo {
 	static int[] dy = { -1, 1, 0, 0 };
 	static int[] dx = { 0, 0, -1, 1 };
 
-	static Queue<int[]> que; // 상하좌우 갈 수 있는곳 체크
-	static Queue<int[]> que2; // 4개이상 갈 수 있는지 체크
+	static Queue<int[]> que; // ??醫??媛 ? ??怨?泥댄?
+	static Queue<int[]> que2; // 4媛?댁 媛 ? ??吏 泥댄?
 
-	// 123반복
-	// 1.터질애들 검사 - 여러 블록이 같이 터질 수 있음 bfs로 맵을 돌면서 영문자인애가 나오면 4개가 상하좌우로 붙어있는지 큐에 넣어가며
-	// 체크
-	// 체크후에 큐의 크기가 4이상일 경우 큐에 들어있는 좌표들로 isBomb배열(boolean)을 T로 바꾼다
-	// 2.터뜨리기 - isBomb가 T인 좌표들을 map에서 'X'으로 바꾼다.
-	// 3.내려오기 - map 배열의 아래부터 체크하면서 값이 있고 아래가 'X'인 경우 'X'가 아닐때까지 밑으로 한칸씩이동
+	// 123諛蹂?
+	// 1.?곗????寃??- ?щ?釉濡??媛???곗? ? ?? bfs濡 留듭 ?硫댁 ?臾몄?몄媛 ??ㅻ㈃ 4媛媛 ??醫?곕? 遺?댁?吏 ?? ?ｌ닿?硫?
+	// 泥댄?
+	// 泥댄ы? ?? ?ш린媛 4?댁??寃쎌??? ?ㅼ댁? 醫??ㅻ? isBomb諛곗?boolean)? T濡 諛袁쇰?
+	// 2.?곕⑤━湲?- isBomb媛 T??醫??ㅼ map?? 'X'?쇰? 諛袁쇰?
+	// 3.?대ㅼㅺ린 - map 諛곗댁 ??遺??泥댄ы硫댁 媛???怨 ??媛 'X'??寃쎌?'X'媛 ???源吏 諛?쇰? ?移몄⑹대
 
 	public static void main(String[] args) throws IOException {
 
@@ -47,14 +47,14 @@ public class Solution_B_11559_PuyoPuyo {
 
 		while (checkBomb) {
 			checkBomb = false;
-			// 터질 수 있는지 검사
+			// ?곗? ? ??吏 寃??
 			for (int i = 0; i < R; i++) {
 				for (int j = 0; j < C; j++) {
-					if (map[i][j] != '.' && !isBomb[i][j]) { // 빈공간이 아닐경우
+					if (map[i][j] != '.' && !isBomb[i][j]) { // 鍮怨듦?????寃쎌?
 						que.add(new int[] { i, j });
 						isBomb[i][j] = true;
 						bfs(map[i][j]);
-						if (!que2.isEmpty() && que2.size() >= 4) { // 같은색 조각이 4개가 넘을경우
+						if (!que2.isEmpty() && que2.size() >= 4) { // 媛?? 議곌???4媛媛 ??寃쎌?
 							checkBomb = true;
 							que2.clear();
 						} else {
@@ -67,8 +67,8 @@ public class Solution_B_11559_PuyoPuyo {
 				}
 			}
 
-			if (checkBomb) { // 터질 수 있을 때만
-				// 터뜨리기
+			if (checkBomb) { // ?곗? ? ?? ?留
+				// ?곕⑤━湲?
 				for (int i = 0; i < R; i++) {
 					for (int j = 0; j < C; j++) {
 						if (isBomb[i][j]) {
@@ -78,7 +78,7 @@ public class Solution_B_11559_PuyoPuyo {
 					}
 				}
 
-				// 떨어뜨리기
+				// ?⑥대⑤━湲?
 				for (int i = R - 1; i >= 0; i--) {
 					for (int j = 0; j < C; j++) {
 						if (map[i][j] != '.') {
@@ -97,7 +97,7 @@ public class Solution_B_11559_PuyoPuyo {
 
 		}
 		
-		//정답 출력
+		//???異??
 		System.out.println(ans);
 
 	}

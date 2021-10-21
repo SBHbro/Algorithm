@@ -1,4 +1,4 @@
-package study_0318;
+ï»¿package study_0318;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -7,18 +7,18 @@ import java.util.Comparator;
 import java.util.PriorityQueue;
 import java.util.StringTokenizer;
 
-public class Solution_B_1197_ÃÖ¼Ò½ºÆÐ´×Æ®¸® {
-	//Å©·ç½ºÄ® ¾Ë°í¸®ÁòÀ¸·Î Ç®±â
-	//½ÃÀÛÁ¤Á¡ µµÂøÁ¤Á¡ °¡ÁßÄ¡¸¦ ¸ðµÎ ÀÔ·Â¹Þ´Â´Ù.
-	//[½ÃÀÛÁ¤Á¡].µµÂø[0,1,2]
+public class Solution_B_1197_ìµœì†ŒìŠ¤íŒ¨ë‹íŠ¸ë¦¬ {
+	//í¬ë£¨ìŠ¤ì¹¼ ì•Œê³ ë¦¬ì¦˜ìœ¼ë¡œ í’€ê¸°
+	//ì‹œìž‘ì •ì  ë„ì°©ì •ì  ê°€ì¤‘ì¹˜ë¥¼ ëª¨ë‘ ìž…ë ¥ë°›ëŠ”ë‹¤.
+	//[ì‹œìž‘ì •ì ].ë„ì°©[0,1,2]
 	
-	//°£¼±ÀÇ ±æÀÌ ¾Æ´Ï±Ùµ¥ °£¼±ÀÇ °³¼ö°¡ ¸¹À¸¸é ÇÁ¸²¾Ë°í¸®ÁòÀ» ¾²¶ó¸é¼­ ¿Ö Å©·ç½ºÄ®·ÎÇ®·¡
-	//À¯´Ï¿ÂÆÄÀÎµåÇØ¾ßÇÔ
-	//¹è¿­[Á¤Á¡ÀÇ°³¼ö]
-	//priority que¸¦ »ç¿ëÇØ¼­ °£¼±ÀÇ ±æÀÌ°¡ ÂªÀº ¼øÀ¸·Î ÀÔ·Â¹Þ´Â´Ù.
-	//°¡Àå ÂªÀº°ÍÀ» »©¼­ °°Àº ·çÆ®¸¦ °¡Áö°í ÀÖ´ÂÁö È®ÀÎÇÏ°í 
-	//´Ù¸¥ ·çÆ®¸¦ °¡Áú °æ¿ì À¯´Ï¿Â ¿¬»êÀ» ÇÑ´Ù.
-	//n-1°³ÀÇ °£¼±ÀÌ ¼±ÅÃµÉ¶§±îÁö ¹Ýº¹
+	//ê°„ì„ ì˜ ê¸¸ì´ ì•„ë‹ˆê·¼ë° ê°„ì„ ì˜ ê°œìˆ˜ê°€ ë§Žìœ¼ë©´ í”„ë¦¼ì•Œê³ ë¦¬ì¦˜ì„ ì“°ë¼ë©´ì„œ ì™œ í¬ë£¨ìŠ¤ì¹¼ë¡œí’€ëž˜
+	//ìœ ë‹ˆì˜¨íŒŒì¸ë“œí•´ì•¼í•¨
+	//ë°°ì—´[ì •ì ì˜ê°œìˆ˜]
+	//priority queë¥¼ ì‚¬ìš©í•´ì„œ ê°„ì„ ì˜ ê¸¸ì´ê°€ ì§§ì€ ìˆœìœ¼ë¡œ ìž…ë ¥ë°›ëŠ”ë‹¤.
+	//ê°€ìž¥ ì§§ì€ê²ƒì„ ë¹¼ì„œ ê°™ì€ ë£¨íŠ¸ë¥¼ ê°€ì§€ê³  ìžˆëŠ”ì§€ í™•ì¸í•˜ê³  
+	//ë‹¤ë¥¸ ë£¨íŠ¸ë¥¼ ê°€ì§ˆ ê²½ìš° ìœ ë‹ˆì˜¨ ì—°ì‚°ì„ í•œë‹¤.
+	//n-1ê°œì˜ ê°„ì„ ì´ ì„ íƒë ë•Œê¹Œì§€ ë°˜ë³µ
 	
 	static int[] unionArray;
 	static int V,E;

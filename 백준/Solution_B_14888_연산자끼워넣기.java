@@ -1,11 +1,11 @@
-package study_0203;
+ï»¿package study_0203;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Solution_B_14888_¿¬»êÀÚ³¢¿ö³Ö±â {
+public class Solution_B_14888_ì—°ì‚°ìë¼ì›Œë„£ê¸° {
 
 	static int N;
 	static int[] data;
@@ -42,14 +42,14 @@ public class Solution_B_14888_¿¬»êÀÚ³¢¿ö³Ö±â {
 	}
 
 	private static void dfs(int depth,int now) {
-		//¼ıÀÚ¹è¿­ÀÇ depth°¡ NÀÏ¶§ ÃÖ¼Ò°ª°ú ÃÖ´ë°ªÀ» Ã£´Â´Ù.
+		//ìˆ«ìë°°ì—´ì˜ depthê°€ Nì¼ë•Œ ìµœì†Œê°’ê³¼ ìµœëŒ€ê°’ì„ ì°¾ëŠ”ë‹¤.
 		if(depth==N) {
 			Max = Math.max(now, Max);
 			Min = Math.min(now, Min);
 			return;
 		}
 		
-		//0~4±îÁö °¡¸é¼­ ÇöÀç °ª°ú cal¹è¿­ÀÌ ³²¾ÆÀÖ´Ù¸é °è»êÇØ¼­ ´ÙÀ½ depth·Î ³Ñ±ä´Ù.
+		//0~4ê¹Œì§€ ê°€ë©´ì„œ í˜„ì¬ ê°’ê³¼ calë°°ì—´ì´ ë‚¨ì•„ìˆë‹¤ë©´ ê³„ì‚°í•´ì„œ ë‹¤ìŒ depthë¡œ ë„˜ê¸´ë‹¤.
 		for(int i = 0 ; i<4;i++) {
 			int temp = now;
 			if(0<cal[i]) {

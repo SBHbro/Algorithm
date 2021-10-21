@@ -1,6 +1,6 @@
-package study_0306;
+﻿package study_0306;
 
-public class Solution_H_2nŸ�ϸ� {
+public class Solution_H_2n타일링 {
 
 	public static void main(String[] args) {
 		System.out.println(solution(9));

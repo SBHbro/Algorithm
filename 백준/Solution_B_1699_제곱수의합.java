@@ -1,13 +1,13 @@
-package study_0311;
+ï»¿package study_0311;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class Solution_B_1699_Á¦°ö¼öÀÇÇÕ {
+public class Solution_B_1699_ì œê³±ìˆ˜ì˜í•© {
 
-	//·çÆ®¸¦ ¾º¿î °¡Àå Å« Á¤¼ö Ã£±â
-	//ÀÔ·Â°ª¿¡¼­ Ã£¾Æ³½ Á¤¼ö Á¦°öÀ» »« ÈÄ ¹İº¹
+	//ë£¨íŠ¸ë¥¼ ì”Œìš´ ê°€ì¥ í° ì •ìˆ˜ ì°¾ê¸°
+	//ì…ë ¥ê°’ì—ì„œ ì°¾ì•„ë‚¸ ì •ìˆ˜ ì œê³±ì„ ëº€ í›„ ë°˜ë³µ
 	static int N;
 	static int answer;
 	
@@ -31,9 +31,9 @@ public class Solution_B_1699_Á¦°ö¼öÀÇÇÕ {
 		}
 		if(answer<=depth)
 			return;
-		//ÀÔ·Â°ª¿¡ ·çÆ® ¾º¿ö¼­ Á¤¼öÃ£±â
-		//ÀÔ·Â°ª - Ã£¾Æ³½¼ö^2 == 0ÀÏ°æ¿ì depth+1 ¸®ÅÏ
-		//ÀÔ·Â°ª - Ã£¾Æ³½¼ö^2À» ÀÔ·ÂÀ¸·Î ³Ö°í depth+1
+		//ì…ë ¥ê°’ì— ë£¨íŠ¸ ì”Œì›Œì„œ ì •ìˆ˜ì°¾ê¸°
+		//ì…ë ¥ê°’ - ì°¾ì•„ë‚¸ìˆ˜^2 == 0ì¼ê²½ìš° depth+1 ë¦¬í„´
+		//ì…ë ¥ê°’ - ì°¾ì•„ë‚¸ìˆ˜^2ì„ ì…ë ¥ìœ¼ë¡œ ë„£ê³  depth+1
 		
 		int rootedInput = (int)Math.sqrt(input);
 		for(int i = rootedInput;i>0;i--) {

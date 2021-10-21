@@ -1,4 +1,4 @@
-package algo_study_0717;
+ï»¿package algo_study_0717;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -8,26 +8,26 @@ import java.util.Queue;
 import java.util.StringTokenizer;
 
 
-public class Solution_B_17135_Ä³½½µğÆæ½º {
+public class Solution_B_17135_ìºìŠ¬ë””íœìŠ¤ {
 
 	static int N, M; // y,x
-	static int[][] map; // ¸Ê
+	static int[][] map; // ë§µ
 	static int ay, ax;
 	static int sy, sx;
-	static int D;// ¹üÀ§
+	static int D;// ë²”ìœ„
 	static int answer;
 	static int answerTemp;
-	static int[] archer; // ±Ã¼ö ÀúÀå
+	static int[] archer; // ê¶ìˆ˜ ì €ì¥
 	static int[] dy = { -1, 0, 0 };
 	static int[] dx = { 0, 1, -1 };
 	static Queue<int[]> enemy = new LinkedList<>();
 	static boolean[][] visited;
-	// ±Ã¼ö´Â 3¸í
-	// ±Ã¼ö´Â ¸ğµÎ µ¿½Ã¿¡ °ø°İÇÏ¸ç °°Àº°ÍÀ» ½ò ¼öµµ ÀÖ´Ù.
-	// °Å¸®°¡ D ÀÌÇÏÀÎ Àû Áß¿¡¼­ °¡Àå °¡±î¿î ÀûÀÌ°í °¡±î¿î°Ô ¿©·¯°³¶ó¸é °¡Àå ¿ŞÂÊ¿¡ ÀÖ´Â ÀûÀ» °ø°İ
-	// °ø°İÀÌ ³¡³ª¸é ÀûÀÌ ÀÌµ¿
-	// ¸Ç ¾Æ·§ÁÙ¿¡ ¿ÔÀ»°æ¿ì °ÔÀÓ¿¡¼­ Á¦¿Ü
-	// ¸Ê¿¡ ÀûÀÌ ¾ø´Ù¸é °ÔÀÓ Á¾·á
+	// ê¶ìˆ˜ëŠ” 3ëª…
+	// ê¶ìˆ˜ëŠ” ëª¨ë‘ ë™ì‹œì— ê³µê²©í•˜ë©° ê°™ì€ê²ƒì„ ì  ìˆ˜ë„ ìˆë‹¤.
+	// ê±°ë¦¬ê°€ D ì´í•˜ì¸ ì  ì¤‘ì—ì„œ ê°€ì¥ ê°€ê¹Œìš´ ì ì´ê³  ê°€ê¹Œìš´ê²Œ ì—¬ëŸ¬ê°œë¼ë©´ ê°€ì¥ ì™¼ìª½ì— ìˆëŠ” ì ì„ ê³µê²©
+	// ê³µê²©ì´ ëë‚˜ë©´ ì ì´ ì´ë™
+	// ë§¨ ì•„ë«ì¤„ì— ì™”ì„ê²½ìš° ê²Œì„ì—ì„œ ì œì™¸
+	// ë§µì— ì ì´ ì—†ë‹¤ë©´ ê²Œì„ ì¢…ë£Œ
 
 	public static void main(String[] args) throws IOException {
 		BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
@@ -37,12 +37,12 @@ public class Solution_B_17135_Ä³½½µğÆæ½º {
 		M = Integer.parseInt(st.nextToken());
 		D = Integer.parseInt(st.nextToken());
 
-		// ÃÊ±âÈ­
+		// ì´ˆê¸°í™”
 		map = new int[N + 1][M];
 		archer = new int[3];
 		answer = Integer.MIN_VALUE;
 
-		// 0 ºó°ø°£ 1 Àû
+		// 0 ë¹ˆê³µê°„ 1 ì 
 		for (int i = 0; i < N; i++) {
 			st = new StringTokenizer(in.readLine());
 			for (int j = 0; j < M; j++) {
@@ -55,7 +55,7 @@ public class Solution_B_17135_Ä³½½µğÆæ½º {
 		System.out.println(answer);
 	}
 
-	// ±Ã¼öµéÀÇ À§Ä¡Å½»ö
+	// ê¶ìˆ˜ë“¤ì˜ ìœ„ì¹˜íƒìƒ‰
 	private static void dfs(int depth, int v) {
 		if (depth == 3) {
 			int[][] map2 = new int[N + 1][M];
@@ -74,11 +74,11 @@ public class Solution_B_17135_Ä³½½µğÆæ½º {
 		}
 	}
 
-	// 1. ±Ã¼öÇ¥Àû Å½»ö - 1¹øºÎÅÍ 3¹ø±îÁö ÇØ¼­ Ç¥ÀûÀ» Å¥¿¡ ³Ö´Â´Ù.
-	// À§ºÎÅÍ °Ë»ç, °Å¸®°¡ ±Ã¼öÀÇ ¹üÀ§º¸´Ù ÀÛ°í ¸¸¾à Ç¥ÀûÀÌ¸é °Å¸®°¡ ÀÌÀü Ç¥Àû
-	// 2. »ç»ì
-	// 3. Àû ÀÌµ¿
-	// 4. ÀûÀÖ´ÂÁö È®ÀÎ ÈÄ ¾øÀ»°æ¿ì Á¾·á
+	// 1. ê¶ìˆ˜í‘œì  íƒìƒ‰ - 1ë²ˆë¶€í„° 3ë²ˆê¹Œì§€ í•´ì„œ í‘œì ì„ íì— ë„£ëŠ”ë‹¤.
+	// ìœ„ë¶€í„° ê²€ì‚¬, ê±°ë¦¬ê°€ ê¶ìˆ˜ì˜ ë²”ìœ„ë³´ë‹¤ ì‘ê³  ë§Œì•½ í‘œì ì´ë©´ ê±°ë¦¬ê°€ ì´ì „ í‘œì 
+	// 2. ì‚¬ì‚´
+	// 3. ì  ì´ë™
+	// 4. ì ìˆëŠ”ì§€ í™•ì¸ í›„ ì—†ì„ê²½ìš° ì¢…ë£Œ
 	private static void catleDefense(int[][] map) {
 		while (checkEnemy(map)) {
 			for (int i = 0; i < 3; i++) {
@@ -91,8 +91,8 @@ public class Solution_B_17135_Ä³½½µğÆæ½º {
 		}
 	}
 
-	// 1. ±Ã¼öÇ¥Àû Å½»ö - 1¹øºÎÅÍ 3¹ø±îÁö ÇØ¼­ Ç¥ÀûÀ» Å¥¿¡ ³Ö´Â´Ù.
-	// À§ºÎÅÍ °Ë»ç, °Å¸®°¡ ±Ã¼öÀÇ ¹üÀ§º¸´Ù ÀÛ°í ¸¸¾à Ç¥ÀûÀÌ¸é °Å¸®°¡ ÀÌÀü Ç¥Àû
+	// 1. ê¶ìˆ˜í‘œì  íƒìƒ‰ - 1ë²ˆë¶€í„° 3ë²ˆê¹Œì§€ í•´ì„œ í‘œì ì„ íì— ë„£ëŠ”ë‹¤.
+	// ìœ„ë¶€í„° ê²€ì‚¬, ê±°ë¦¬ê°€ ê¶ìˆ˜ì˜ ë²”ìœ„ë³´ë‹¤ ì‘ê³  ë§Œì•½ í‘œì ì´ë©´ ê±°ë¦¬ê°€ ì´ì „ í‘œì 
 	private static void findEnemy(int y, int x, int[][] map) {
 		Queue<int[]> que = new LinkedList<>();
 		Queue<int[]> enemyQue = new LinkedList<>();
@@ -109,34 +109,34 @@ public class Solution_B_17135_Ä³½½µğÆæ½º {
 				int ty = temp[0] + dy[i];
 				int tx = temp[1] + dx[i];
 
-				// ¹è¿­ÀÇ ¹üÀ§¾ÈÀÌ°í °Å¸®°¡ Á¤ÇØÁø °Å¸®º¸´Ù ÂªÀ¸¸é, ±×¸®°í ¹æ¹® ¾ÈÇßÀ»°æ¿ì
+				// ë°°ì—´ì˜ ë²”ìœ„ì•ˆì´ê³  ê±°ë¦¬ê°€ ì •í•´ì§„ ê±°ë¦¬ë³´ë‹¤ ì§§ìœ¼ë©´, ê·¸ë¦¬ê³  ë°©ë¬¸ ì•ˆí–ˆì„ê²½ìš°
 				if (isSafe(ty, tx) && Math.abs(ty - ay) + Math.abs(tx - ax) <= D && !visited[ty][tx]) {
-					// È®ÀÎÇÑ °÷¿¡ ÀûÀÌ ÀÖÀ»°æ¿ì
+					// í™•ì¸í•œ ê³³ì— ì ì´ ìˆì„ê²½ìš°
 					if (map[ty][tx] == 1) {
-						// Å¥¿¡ ³Ö¾îµĞ°Ô ¾øÀ»°æ¿ì ³Ö°í
+						// íì— ë„£ì–´ë‘”ê²Œ ì—†ì„ê²½ìš° ë„£ê³ 
 						if (enemyQue.isEmpty()) {
 							enemyQue.add(new int[] { ty, tx });
 						}
-						// ÀÖÀ»°æ¿ì ²¨³»¼­ ºñ±³ÈÄ¿¡ °¡±î¿î°ÍÀ» ³Ö´øÁö ¶È°°À¸¸é ¿ŞÂÊ°ÍÀ» ³Ö´Â´Ù.
+						// ìˆì„ê²½ìš° êº¼ë‚´ì„œ ë¹„êµí›„ì— ê°€ê¹Œìš´ê²ƒì„ ë„£ë˜ì§€ ë˜‘ê°™ìœ¼ë©´ ì™¼ìª½ê²ƒì„ ë„£ëŠ”ë‹¤.
 						else {
 							int[] tp = enemyQue.poll();
-							// ²¨³½°Ô ´õ °¡±î¿ï°æ¿ì
+							// êº¼ë‚¸ê²Œ ë” ê°€ê¹Œìš¸ê²½ìš°
 							if (Math.abs(tp[0] - ay) + Math.abs(tp[1] - ax) < Math.abs(ty - ay) + Math.abs(tx - ax)) {
 								enemyQue.add(tp);
 							}
-							// ÇöÀç°¡ ´õ ±î°¡¿ï°æ¿ì
+							// í˜„ì¬ê°€ ë” ê¹Œê°€ìš¸ê²½ìš°
 							else if (Math.abs(tp[0] - ay) + Math.abs(tp[1] - ax) > Math.abs(ty - ay)
 									+ Math.abs(tx - ax)) {
 								enemyQue.add(new int[] { ty, tx });
 							}
-							// °°À»°æ¿ì
+							// ê°™ì„ê²½ìš°
 							else if (Math.abs(tp[0] - ay) + Math.abs(tp[1] - ax) == Math.abs(ty - ay)
 									+ Math.abs(tx - ax)) {
-								// ²¨³½°Ô ´õ ¿ŞÂÊ
+								// êº¼ë‚¸ê²Œ ë” ì™¼ìª½
 								if (tp[1] < tx) {
 									enemyQue.add(tp);
 								}
-								// ÇöÀç°¡ ´õ ¿ŞÂÊ
+								// í˜„ì¬ê°€ ë” ì™¼ìª½
 								else if (tx < tp[1]) {
 									enemyQue.add(new int[] { ty, tx });
 								} else {
@@ -157,7 +157,7 @@ public class Solution_B_17135_Ä³½½µğÆæ½º {
 		}
 	}
 
-	// 2. »ç»ì
+	// 2. ì‚¬ì‚´
 	private static void shoot(int[][] map) {
 		while (!enemy.isEmpty()) {
 			int[] temp = enemy.poll();
@@ -169,7 +169,7 @@ public class Solution_B_17135_Ä³½½µğÆæ½º {
 
 	}
 
-	// 3. Àû ÀÌµ¿
+	// 3. ì  ì´ë™
 	private static void moveEnemy(int[][] map) {
 		for (int i = N - 1; i >= 0; i--) {
 			for (int j = 0; j < M; j++) {
@@ -186,7 +186,7 @@ public class Solution_B_17135_Ä³½½µğÆæ½º {
 		}
 	}
 
-	// 4. ÀûÀÖ´ÂÁö È®ÀÎ ÈÄ ¾øÀ»°æ¿ì Á¾·á
+	// 4. ì ìˆëŠ”ì§€ í™•ì¸ í›„ ì—†ì„ê²½ìš° ì¢…ë£Œ
 	private static boolean checkEnemy(int[][] map) {
 		// TODO Auto-generated method stub
 		for (int i = 0; i < N; i++) {

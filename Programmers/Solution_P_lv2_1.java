@@ -1,4 +1,4 @@
-package programmers;
+ï»¿package programmers;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -16,7 +16,7 @@ public class Solution_P_lv2_1 {
 	        
 	        
 	        while(true) {
-	        	//°Ë»çÇÒ ±ÛÀÚÀÇ Ã¹ÀÚ¸®¿Í ÀÌÀü ±ÛÀÚÀÇ ³¡ÀÚ¸®°¡ °°¾Æ¾ß ÇÏ°í ÀÌ¹Ì »ç¿ëµÈ ´Ü¾î°¡ ¾Æ´Ï¿©¾ÆÇÑ´Ù.
+	        	//ê²€ì‚¬í•  ê¸€ìì˜ ì²«ìë¦¬ì™€ ì´ì „ ê¸€ìì˜ ëìë¦¬ê°€ ê°™ì•„ì•¼ í•˜ê³  ì´ë¯¸ ì‚¬ìš©ëœ ë‹¨ì–´ê°€ ì•„ë‹ˆì—¬ì•„í•œë‹¤.
 	        	if(lastChar == words[step].charAt(0) && !lastWords.contains(words[step])) {
 	        		lastChar = words[step].charAt(words[step].length()-1);
 	        		lastWords.add(words[step]);

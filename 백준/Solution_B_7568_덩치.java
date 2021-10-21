@@ -1,14 +1,14 @@
-package study_0102;
+ï»¿package study_0102;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Solution_B_7568_µ¢Ä¡ {
+public class Solution_B_7568_ë©ì¹˜ {
 
-	static int N; // »ç¶÷ ¼ö
-	static int[][] data; // ¸ö¹«°Ô, Å°, ¼øÀ§
+	static int N; // ì‚¬ëŒ ìˆ˜
+	static int[][] data; // ëª¸ë¬´ê²Œ, í‚¤, ìˆœìœ„
 	
 	public static void main(String[] args) throws IOException {
 		BufferedReader in = new BufferedReader(new InputStreamReader(System.in));

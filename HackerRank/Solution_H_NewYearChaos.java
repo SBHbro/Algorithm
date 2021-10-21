@@ -1,4 +1,4 @@
-package study_0126;
+﻿package study_0126;
 
 public class Solution_H_NewYearChaos {
 
@@ -11,9 +11,9 @@ public class Solution_H_NewYearChaos {
 		int answer = 0;
 		for(int i = q.length-1; i>0;i--) {
 			
-			//while ���� �����ִ¾ְ� �־�ߵǴ� ���̾ƴѰ��
-			//�־�ߵǴ� �ָ� ���������� �����ΰ���
-			//������ �־�ߵǴ� ������ ������.
+			//while 지금 보고있는애가 있어야되는 값이아닌경우
+			//있어야되는 애를 만날때까지 앞으로간다
+			//만나면 있어야되는 데까지 보낸다.
 			if(q[i]!=i+1) {
 				int temp = i;
 				while(q[temp]!=i+1) {

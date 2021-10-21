@@ -1,6 +1,6 @@
-package study_1021;
+ï»¿package study_1021;
 
-public class Solution_P_ÀÔ±¹½É»ç {
+public class Solution_P_ìž…êµ­ì‹¬ì‚¬ {
 
 	public static void main(String[] args) {
 		int n = 10;

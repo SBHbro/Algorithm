@@ -1,4 +1,4 @@
-import java.util.Arrays;
+ï»¿import java.util.Arrays;
 
 public class Solution2 {
 	
@@ -25,7 +25,7 @@ public class Solution2 {
         	}
         }
         
-        //queriesÀÇ ±æÀÌ¸¸Å­ Æ÷¹®
+        //queriesì˜ ê¸¸ì´ë§Œí¼ í¬ë¬¸
         for(int i = 0; i<queries.length;i++) {
         	answer[i] = rotate(queries[i][0]-1, queries[i][1]-1, queries[i][2]-1, queries[i][3]-1, map);
         }

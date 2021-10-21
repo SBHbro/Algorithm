@@ -1,4 +1,4 @@
-package study_0115;
+ï»¿package study_0115;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -7,7 +7,7 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.util.StringTokenizer;
 
-public class Solution_B_2447_º°Âï±â10 {
+public class Solution_B_2447_ë³„ì°ê¸°10 {
 
 	static int N;
 	static char[][] map;
@@ -44,9 +44,9 @@ public class Solution_B_2447_º°Âï±â10 {
 		
 		int tx = x;
 		int ty = y;
-		//9±¸¿ª
+		//9êµ¬ì—­
 		for(int i = 1 ;i<=3;i++) {
-			//ÇÑÁÙ¿¡ 3¹ø ÇÏ¸é ´ÙÀ½ÁÙ·Î ³Ñ¾î°¨
+			//í•œì¤„ì— 3ë²ˆ í•˜ë©´ ë‹¤ìŒì¤„ë¡œ ë„˜ì–´ê°
 			for(int j = 1;j<=3;j++) {
 				if(i==2&&j==2) {
 					tx+=N/3;

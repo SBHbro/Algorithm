@@ -1,4 +1,4 @@
-package study_0308;
+ï»¿package study_0308;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -8,16 +8,16 @@ import java.io.OutputStreamWriter;
 import java.util.Collections;
 import java.util.PriorityQueue;
 
-public class Solution_B_1655_°¡¿îµ¥¸¦¸»ÇØ¿ä {
+public class Solution_B_1655_ê°€ìš´ë°ë¥¼ë§í•´ìš” {
 
-	//¿ì¼±¼øÀ§Å¥¸¦ µÎ°³ ¸¸µç´Ù
-	//ÇÏ³ª´Â ¸Æ½ºÈü ÇÏ³ª´Â ¹ÎÈü
-	//¸Ç Ã³À½ °ªÀº ±× °ªÀ» Áß°£°ªÀ¸·Î ÇÏ°í ¸Æ½ºÈü¿¡ ³Ö´Â´Ù
-	//´ÙÀ½ºÎÅÍ µé¾î¿À´Â °ªÀº Áß°£°ª°ú ºñ±³ÇÏ¿© ¿ÞÂÊ¿¡ ³ÖÀ»Áö ¿À¸¥ÂÊ¿¡ ³ÖÀ»Áö ¼±ÅÃÇÑ´Ù
-	//¿ÞÂÊ°ú ¿À¸¥ÂÊÀÇ Å©±â Â÷ÀÌ°¡ 2 ÀÌ»óÀÌ µÇ¸é ¾ÈµÈ´Ù.
-	//Å©±â Â÷ÀÌ°¡ 2 ÀÌ»óÀÌ µÆÀ» °æ¿ì Å©±â°¡ ´õ Å«ÂÊÀÇ °ªÀ» »©¼­ ¹Ý´ëÂÊ¿¡ ³Ö´Â´Ù.
-	//È¦¼öÀÏ¶§ÀÇ Áß°£°ªÀº Å©±â°¡ ´õ Å«ÂÊÀÇ ¸Ç À­°ªÀÌ´Ù.
-	//Â¦¼öÀÏ¶§ÀÇ Áß°£°ªÀº µÑÁß ´õ ÀÛÀº°ÍÀÌ´Ù.
+	//ìš°ì„ ìˆœìœ„íë¥¼ ë‘ê°œ ë§Œë“ ë‹¤
+	//í•˜ë‚˜ëŠ” ë§¥ìŠ¤íž™ í•˜ë‚˜ëŠ” ë¯¼íž™
+	//ë§¨ ì²˜ìŒ ê°’ì€ ê·¸ ê°’ì„ ì¤‘ê°„ê°’ìœ¼ë¡œ í•˜ê³  ë§¥ìŠ¤íž™ì— ë„£ëŠ”ë‹¤
+	//ë‹¤ìŒë¶€í„° ë“¤ì–´ì˜¤ëŠ” ê°’ì€ ì¤‘ê°„ê°’ê³¼ ë¹„êµí•˜ì—¬ ì™¼ìª½ì— ë„£ì„ì§€ ì˜¤ë¥¸ìª½ì— ë„£ì„ì§€ ì„ íƒí•œë‹¤
+	//ì™¼ìª½ê³¼ ì˜¤ë¥¸ìª½ì˜ í¬ê¸° ì°¨ì´ê°€ 2 ì´ìƒì´ ë˜ë©´ ì•ˆëœë‹¤.
+	//í¬ê¸° ì°¨ì´ê°€ 2 ì´ìƒì´ ëì„ ê²½ìš° í¬ê¸°ê°€ ë” í°ìª½ì˜ ê°’ì„ ë¹¼ì„œ ë°˜ëŒ€ìª½ì— ë„£ëŠ”ë‹¤.
+	//í™€ìˆ˜ì¼ë•Œì˜ ì¤‘ê°„ê°’ì€ í¬ê¸°ê°€ ë” í°ìª½ì˜ ë§¨ ìœ—ê°’ì´ë‹¤.
+	//ì§ìˆ˜ì¼ë•Œì˜ ì¤‘ê°„ê°’ì€ ë‘˜ì¤‘ ë” ìž‘ì€ê²ƒì´ë‹¤.
 	
 	static int N;
 	static PriorityQueue<Integer> left = new PriorityQueue<>(Collections.reverseOrder());

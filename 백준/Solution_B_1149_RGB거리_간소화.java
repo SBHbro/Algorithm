@@ -1,4 +1,4 @@
-package study_0203;
+ï»¿package study_0203;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -7,7 +7,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.StringTokenizer;
 
-public class Solution_B_1149_RGB°Å¸®_°£¼ÒÈ­ {
+public class Solution_B_1149_RGBê±°ë¦¬_ê°„ì†Œí™” {
 
 	static int[][] data;
 	static int N;

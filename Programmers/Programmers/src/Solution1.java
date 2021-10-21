@@ -1,4 +1,4 @@
-import java.util.Arrays;
+ï»¿import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -20,14 +20,14 @@ public class Solution1 {
         int[] answer = new int[] {};
         
         Set<Integer> set = new HashSet<>();
-        //·Î¶Ç ¹è¿­ÀÇ °ªÀ» ¼Â¿¡ ³Ö´Â´Ù.
+        //ë¡œë˜ ë°°ì—´ì˜ ê°’ì„ ì…‹ì— ë„£ëŠ”ë‹¤.
         for(int i = 0 ;i<6;i++) {
         	set.add(win_nums[i]);
         }
         
         int sameCount = 0;
         int zeroCount = 0;
-        //win¹è¿­À» µ¹¸é¼­ 0ÀÌ¾Æ´Ò°æ¿ì¿¡ ¼Â¿¡ ÀÖÀ¸¸é °ãÄ¡´Â ¼ıÀÚ ++
+        //winë°°ì—´ì„ ëŒë©´ì„œ 0ì´ì•„ë‹ê²½ìš°ì— ì…‹ì— ìˆìœ¼ë©´ ê²¹ì¹˜ëŠ” ìˆ«ì ++
         for(int i = 0 ; i<6; i++) {
         	if(lottos[i] !=0) {
         		if(set.contains(lottos[i])) {
@@ -35,12 +35,12 @@ public class Solution1 {
         		}
         	}
         	else {
-        		//0ÀÏ°æ¿ìÀÇ °ªÀ» ¼¾´Ù.
+        		//0ì¼ê²½ìš°ì˜ ê°’ì„ ì„¼ë‹¤.
         		zeroCount++;
         	}
         }
-        //ÃÖ°í -> Áö±İ±îÁö °ãÄ¡´Â ¼ıÀÚ + 0ÀÇ°³¼ö
-        //ÃÖ¾Ç -> Áö±İ±îÁö °ãÄ¡´Â ¼ıÀÚ.
+        //ìµœê³  -> ì§€ê¸ˆê¹Œì§€ ê²¹ì¹˜ëŠ” ìˆ«ì + 0ì˜ê°œìˆ˜
+        //ìµœì•… -> ì§€ê¸ˆê¹Œì§€ ê²¹ì¹˜ëŠ” ìˆ«ì.
         int max = 6-(sameCount+zeroCount)+1!=7?6-(sameCount+zeroCount)+1:6;
         int min = 6-sameCount+1!=7?6-sameCount+1:6;
         answer = new int[] {max,min};

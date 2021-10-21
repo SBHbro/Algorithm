@@ -1,4 +1,4 @@
-package study_0125;
+ï»¿package study_0125;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -77,7 +77,7 @@ public class Solution_H_Equalizing_Arrray_Elements {
 //		System.out.println(maxData);
 		System.out.println(map.get(4)!=null&&map.get(4)>0);
 		System.out.println(map.get(4)!=null&&map.get(4)>0);
-		//°°Àº °ªÀÌ µé¾î¿ÀÁö ¾Ê´Â´Ù¸é
+		//ê°™ì€ ê°’ì´ ë“¤ì–´ì˜¤ì§€ ì•ŠëŠ”ë‹¤ë©´
 		
 		
 		return answer;

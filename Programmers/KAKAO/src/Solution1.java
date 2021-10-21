@@ -1,4 +1,4 @@
-import java.util.Arrays;
+ï»¿import java.util.Arrays;
 
 public class Solution1 {
 	
@@ -14,17 +14,17 @@ public class Solution1 {
 	static public int solution(int[] gift_cards, int[] wants) {
 	        int answer = wants.length;
 	        
-	        //¹è¿­ µÑ´Ù Á¤·Ä
+	        //ë°°ì—´ ë‘˜ë‹¤ ì •ë ¬
 	        Arrays.sort(gift_cards);
 	        Arrays.sort(wants);
-	        //while wants°¡ ³¡³¯´ë±îÁö]
+	        //while wantsê°€ ëë‚ ëŒ€ê¹Œì§€]
 	        int pointerG=0;
 	        int pointerW=0;
 	        while(pointerW<wants.length&&pointerG<wants.length) {
-	        	//µÑ´Ù ¿ŞÂÊºÎÅÍ ½ÃÀÛ
-	        	//wants°¡ Å©¸é gift_cards°¡ ÇÑÄ­¿À¸¥ÂÊÀ¸·Î
-	        	//gift_cards°¡ Å©¸é wats°¡ ÇÑÄ­¿À¸¥ÂÊÀ¸·Î
-	        	//µÑÀÌ °°À¸¸é answer-1ÇÏ°í µÑ´Ù ¿À¸¥ÂÊÀ¸·Î
+	        	//ë‘˜ë‹¤ ì™¼ìª½ë¶€í„° ì‹œì‘
+	        	//wantsê°€ í¬ë©´ gift_cardsê°€ í•œì¹¸ì˜¤ë¥¸ìª½ìœ¼ë¡œ
+	        	//gift_cardsê°€ í¬ë©´ watsê°€ í•œì¹¸ì˜¤ë¥¸ìª½ìœ¼ë¡œ
+	        	//ë‘˜ì´ ê°™ìœ¼ë©´ answer-1í•˜ê³  ë‘˜ë‹¤ ì˜¤ë¥¸ìª½ìœ¼ë¡œ
 	        	if(gift_cards[pointerG]<wants[pointerW]) {
 	        		pointerG++;
 	        		continue;

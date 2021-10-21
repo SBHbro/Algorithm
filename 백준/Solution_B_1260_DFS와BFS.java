@@ -1,4 +1,4 @@
-package algo_study_0705;
+﻿package algo_study_0705;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -10,11 +10,11 @@ import java.util.List;
 import java.util.Queue;
 import java.util.StringTokenizer;
 
-public class Solution_B_1260_DFS와BFS {
-	static int N; // 정점의 개수
-	static int M; // 간선의 개수
-	static int start; // 시작 정점
-	static ArrayList<Integer>[] data; // 간선 저장
+public class Solution_B_1260_DFS?BFS {
+	static int N; // ??? 媛?
+	static int M; // 媛?? 媛?
+	static int start; // ?? ??
+	static ArrayList<Integer>[] data; // 媛? ???
 //	static List<ArrayList<Integer>> data;
 	static boolean[] visited;
 
@@ -34,7 +34,7 @@ public class Solution_B_1260_DFS와BFS {
 			data[i] = new ArrayList<Integer>();
 		}
 
-		for (int i = 0; i < M; i++) { // 간선 정보 입력
+		for (int i = 0; i < M; i++) { // 媛? ?蹂????
 			st = new StringTokenizer(in.readLine());
 			int s = Integer.parseInt(st.nextToken());
 			int e = Integer.parseInt(st.nextToken());
@@ -47,7 +47,7 @@ public class Solution_B_1260_DFS와BFS {
 			Collections.sort(data[i]);
 		}
 
-//		for (int i = 1; i < data.length; i++) { // 출력
+//		for (int i = 1; i < data.length; i++) { // 異??
 //			System.out.print(i + " : ");
 //			for (int j = 0; j < data[i].size(); j++) {
 //				System.out.print(data[i].get(j) + " ");

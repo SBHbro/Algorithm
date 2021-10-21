@@ -1,4 +1,4 @@
-package study_0127;
+ï»¿package study_0127;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
@@ -10,20 +10,20 @@ import java.util.Scanner;
 
 public class Solution_H_LuckBalance {
 
-	//100°³ÀÇ ½ÃÇèÀÌÀÖµû
-	//k¸¸Å­ Áú ¼ö ÀÖ´Ù.
-	//10000±îÁöÀÇ ·°ÀÌÀÖ´Ù.
-	//Áß¿äÇÑ°Í°ú Áß¿äÇÏÁö ¾ÊÀº °ÍÀÌ ÀÖ´Ù.
+	//100ê°œì˜ ì‹œí—˜ì´ìžˆë”°
+	//kë§Œí¼ ì§ˆ ìˆ˜ ìžˆë‹¤.
+	//10000ê¹Œì§€ì˜ ëŸ­ì´ìžˆë‹¤.
+	//ì¤‘ìš”í•œê²ƒê³¼ ì¤‘ìš”í•˜ì§€ ì•Šì€ ê²ƒì´ ìžˆë‹¤.
 	
-	//6°³ÀÇ ½ÃÇè, 3¹ø Áú¼öÀÖÀ½ - Áö´Â°Ç Áß¿äÇÑ ½ÃÇè¿¡¼­¸¸ 
-	//0ºÎÅÍ 5±îÁö °¡Àå³ôÀº Á¡¼ö ÇÏ³ª°ñ¶ó¼­ Áø´Ù.
-	//ÀÎÆ®Çü ¹è¿­ ¼¼°³ ¸¸µë
-	//°ªÀÌ µé¾î¿À¸é 1¹ø°ú ºñ±³ÇØ¼­ Å©¸é ³Ö°í ¾ÈÅ©¸é 2¹øÀ¸·Î ³Ñ¾î°¡°í ºñ±³ÇØ¼­ Å©¸é ³Ö°í 3¹ø
-	//³ÖÀº°ÍµéÀÇ °ªÀº 0 À¸·Î º¯°æ
-	//Ã·ºÎÅÍ ³¡±îÁö ´Ù ´õÇÔ
-	//Áö¸é + ÀÌ±â¸é -µ¥ ÁøÁö ÀÌ±äÁö ¸ð¸§
-	//0ÀÎ¾ÖµéÀº ´õÇÏ°í 1ÀÎ¾ÖµéÀº »«´Ù.
-	//¸¶Áö¸·¿¡ 3°³¹è¿­ÇÕ*2¸¦ ´õÇØÁÖ¸é ´ä.
+	//6ê°œì˜ ì‹œí—˜, 3ë²ˆ ì§ˆìˆ˜ìžˆìŒ - ì§€ëŠ”ê±´ ì¤‘ìš”í•œ ì‹œí—˜ì—ì„œë§Œ 
+	//0ë¶€í„° 5ê¹Œì§€ ê°€ìž¥ë†’ì€ ì ìˆ˜ í•˜ë‚˜ê³¨ë¼ì„œ ì§„ë‹¤.
+	//ì¸íŠ¸í˜• ë°°ì—´ ì„¸ê°œ ë§Œë“¬
+	//ê°’ì´ ë“¤ì–´ì˜¤ë©´ 1ë²ˆê³¼ ë¹„êµí•´ì„œ í¬ë©´ ë„£ê³  ì•ˆí¬ë©´ 2ë²ˆìœ¼ë¡œ ë„˜ì–´ê°€ê³  ë¹„êµí•´ì„œ í¬ë©´ ë„£ê³  3ë²ˆ
+	//ë„£ì€ê²ƒë“¤ì˜ ê°’ì€ 0 ìœ¼ë¡œ ë³€ê²½
+	//ì²¨ë¶€í„° ëê¹Œì§€ ë‹¤ ë”í•¨
+	//ì§€ë©´ + ì´ê¸°ë©´ -ë° ì§„ì§€ ì´ê¸´ì§€ ëª¨ë¦„
+	//0ì¸ì• ë“¤ì€ ë”í•˜ê³  1ì¸ì• ë“¤ì€ ëº€ë‹¤.
+	//ë§ˆì§€ë§‰ì— 3ê°œë°°ì—´í•©*2ë¥¼ ë”í•´ì£¼ë©´ ë‹µ.
 	
 	private static final Scanner scanner = new Scanner(System.in);
 	public static void main(String[] args) throws IOException {

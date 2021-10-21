@@ -1,11 +1,11 @@
-package study_0907;
+ï»¿package study_0907;
 
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.Comparator;
 
-public class Solution_P_°¡ÀåÅ«¼ö {
+public class Solution_P_ê°€ì¥í°ìˆ˜ {
 
 	public static void main(String[] args) {
 		int[] numbers = {3, 30, 34, 5, 9};
@@ -16,7 +16,7 @@ public class Solution_P_°¡ÀåÅ«¼ö {
 	public static String solution(int[] numbers) {
         String answer = "";
         
-        //¾Õ±ÛÀÚ ¼ø¼­
+        //ì•ê¸€ì ìˆœì„œ
         String[] answerArray = new String[numbers.length];
 		for (int i = 0; i < numbers.length; i++) {
 			answerArray[i] = numbers[i] + "";

@@ -1,4 +1,4 @@
-package algo_study_0705;
+﻿package algo_study_0705;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -7,17 +7,17 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.StringTokenizer;
 
-public class Solution_B_4179_불 {
+public class Solution_B_4179_遺 {
 
-	static int R, C;// 행렬
-	static char[][] map; // 맵
-	static boolean isExit; // 탈출했는지
+	static int R, C;// ???
+	static char[][] map; // 留?
+	static boolean isExit; // ?異??吏
 	static int ans;
-	static Queue<int[]> que; //불 저장 큐
-	static Queue<int[]> que2; // 사람 저장 큐
+	static Queue<int[]> que; //遺 ????
+	static Queue<int[]> que2; // ?щ ????
 
-	static int fx, fy;// 불의 좌표
-	static int ux, uy;// 사람 좌표
+	static int fx, fy;// 遺? 醫?
+	static int ux, uy;// ?щ 醫?
 
 	static int[] dy = { -1, 1, 0, 0 };
 	static int[] dx = { 0, 0, -1, 1 };
@@ -37,7 +37,7 @@ public class Solution_B_4179_불 {
 		for (int i = 0; i < R; i++) {
 			String input = in.readLine();
 			map[i] = input.toCharArray();
-			if (input.contains("F")) { // 불과 유저의 위치 파악, 불은 하나가 아니다
+			if (input.contains("F")) { // 遺怨???? ?移 ??, 遺? ??媛 ????
 				fy = i;
 				fx = input.indexOf("F");
 				que.add(new int[] {fy,fx});
@@ -49,14 +49,14 @@ public class Solution_B_4179_불 {
 			}
 		}
 		
-		if(isEnd(uy, ux)) // 처음부터 탈출할 수 있는 위치에 있다면
+		if(isEnd(uy, ux)) // 泥?遺???異? ? ?? ?移? ??ㅻ㈃
 			isExit=true;
 		
-		// while문 안에서 불 움직이고 사람 움직이고
+		// while臾???? 遺 ?吏?닿? ?щ ?吏?닿?
 		while (true) {
-			if (isExit)//탈출했다면
+			if (isExit)//?異??ㅻ㈃
 				break;
-			if (que2.isEmpty()) // 사람이 더이상 이동할 수 없다면
+			if (que2.isEmpty()) // ?щ????댁 ?대? ? ??ㅻ㈃
 				break;
 
 			fireMove();

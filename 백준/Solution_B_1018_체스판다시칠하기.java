@@ -1,4 +1,4 @@
-package study_0117;
+ï»¿package study_0117;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -6,12 +6,12 @@ import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.StringTokenizer;
 
-public class Solution_B_1018_Ã¼½ºÆÇ´Ù½ÃÄ¥ÇÏ±â {
+public class Solution_B_1018_ì²´ìŠ¤íŒë‹¤ì‹œì¹ í•˜ê¸° {
 	
-	//ÀÔ·Â¹ÞÀ½
-	//8*8·Î ²÷À» ¼ö ÀÖ´Â ÃÖ´ë °ªºÎÅÍ 0,0±îÁö ¸ðµç ¹üÀ§¿¡ ´ëÇØ °Ë»ç
-	//°Ë»ç -> Ã¹À§Ä¡ÀÇ »ö±ò È®ÀÎ -> ÇÑÄ­¾¿ ÁøÇàÇÏ¸é¼­ ÀÌ »ö±òÀÌ¿©¾ß ÇÏ´Â°Í°ú ÀÌÄ­ÀÇ »ö±òÀÌ ¸Â´ÂÁö ºñ±³ ->Æ²¸®¸é temp++
-	//answerÃ£±â
+	//ìž…ë ¥ë°›ìŒ
+	//8*8ë¡œ ëŠì„ ìˆ˜ ìžˆëŠ” ìµœëŒ€ ê°’ë¶€í„° 0,0ê¹Œì§€ ëª¨ë“  ë²”ìœ„ì— ëŒ€í•´ ê²€ì‚¬
+	//ê²€ì‚¬ -> ì²«ìœ„ì¹˜ì˜ ìƒ‰ê¹” í™•ì¸ -> í•œì¹¸ì”© ì§„í–‰í•˜ë©´ì„œ ì´ ìƒ‰ê¹”ì´ì—¬ì•¼ í•˜ëŠ”ê²ƒê³¼ ì´ì¹¸ì˜ ìƒ‰ê¹”ì´ ë§žëŠ”ì§€ ë¹„êµ ->í‹€ë¦¬ë©´ temp++
+	//answerì°¾ê¸°
 	
 	static char[][] map;
 	static int N,M;
@@ -30,7 +30,7 @@ public class Solution_B_1018_Ã¼½ºÆÇ´Ù½ÃÄ¥ÇÏ±â {
 		for(int i = 0 ; i<N;i++) {
 			map[i] = in.readLine().toCharArray();
 		}
-		//W,B ¸¸µç´Ù.
+		//W,B ë§Œë“ ë‹¤.
 		W = new char[8][8];
 		B = new char[8][8];
 		
@@ -49,7 +49,7 @@ public class Solution_B_1018_Ã¼½ºÆÇ´Ù½ÃÄ¥ÇÏ±â {
 			}
 			temp++;
 		}
-		//ºñ±³ÇßÀ»¶§´õÀÛÀº°Í
+		//ë¹„êµí–ˆì„ë•Œë”ìž‘ì€ê²ƒ
 		
 		
 		answer = Integer.MAX_VALUE;

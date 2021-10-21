@@ -1,4 +1,4 @@
-package study_1130;
+ï»¿package study_1130;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -9,15 +9,15 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.StringTokenizer;
 
-public class Solution_B_19238_½ºÅ¸Æ®ÅÃ½Ã2 {
+public class Solution_B_19238_ìŠ¤íƒ€íŠ¸íƒì‹œ2 {
 
-	static int N, M;// ¸Ê Å©±â, ½Â°´ ¼ö
-	static int[][] map; // ¸Ê
+	static int N, M;// ë§µ í¬ê¸°, ìŠ¹ê° ìˆ˜
+	static int[][] map; // ë§µ
 	static int ay, ax;
-	static int min; // ½Â°´¿¡°Ô °¥ ¼ö ÀÖ´Â ÃÖ´Ü°Å¸®
-	static int fuel;// ¿¬·á
+	static int min; // ìŠ¹ê°ì—ê²Œ ê°ˆ ìˆ˜ ìˆëŠ” ìµœë‹¨ê±°ë¦¬
+	static int fuel;// ì—°ë£Œ
 	static int minIndex;
-	static int[] dy = { -1, 0, 1, 0 }; // ÀÌµ¿¿¡ »ç¿ëÇÒ ¹è¿­
+	static int[] dy = { -1, 0, 1, 0 }; // ì´ë™ì— ì‚¬ìš©í•  ë°°ì—´
 	static int[] dx = { 0, -1, 0, 1 };
 	static ArrayList<Node> start;
 	static ArrayList<Node> end;
@@ -48,7 +48,7 @@ public class Solution_B_19238_½ºÅ¸Æ®ÅÃ½Ã2 {
 		start = new ArrayList<>();
 		end = new ArrayList<>();
 
-		// ¸Ê Á¤º¸ ÀÔ·Â
+		// ë§µ ì •ë³´ ì…ë ¥
 		for (int i = 0; i < N; i++) {
 			st = new StringTokenizer(in.readLine());
 			for (int j = 0; j < N; j++) {
@@ -56,12 +56,12 @@ public class Solution_B_19238_½ºÅ¸Æ®ÅÃ½Ã2 {
 			}
 		}
 
-		// ÅÃ½Ã ½ÃÀÛÁÂÇ¥ ÀÔ·Â
+		// íƒì‹œ ì‹œì‘ì¢Œí‘œ ì…ë ¥
 		st = new StringTokenizer(in.readLine());
 		ay = Integer.parseInt(st.nextToken()) - 1;
 		ax = Integer.parseInt(st.nextToken()) - 1;
 
-		// ½Â°´ ÁÂÇ¥¿Í µµÂøÁöÁÂÇ¥ ÀÔ·Â
+		// ìŠ¹ê° ì¢Œí‘œì™€ ë„ì°©ì§€ì¢Œí‘œ ì…ë ¥
 		for (int i = 0; i < M; i++) {
 			st = new StringTokenizer(in.readLine());
 			start.add(new Node(Integer.parseInt(st.nextToken()) - 1, Integer.parseInt(st.nextToken()) - 1, 0));
@@ -69,9 +69,9 @@ public class Solution_B_19238_½ºÅ¸Æ®ÅÃ½Ã2 {
 		}
 
 		while (M > 0) {
-			// ÅÃ½Ã¿¡¼­ ½Â°´±îÁöÀÇ ÃÖ´Ü°Å¸®¸¦ ¸ğµÎ ±¸ÇÏ¸é¼­(ÅÃ½Ã¿Í ½Â°´ÀÌ °°Àº°÷¿¡ ÀÖÀ¸¸é 0, ÃÖ´Ü°Å¸®°¡ °°À»°æ¿ì y,x ¼øÀ¸·Î ÀÛÀº ½Â°´ºÎÅÍ °£´Ù
-			// ÃÖ´Ü°Å¸®°¡ °¡Àå ÂªÀº ½Â°´°ú ÃÖ´Ü°Å¸®¸¦ ÀúÀåÇØ³õ´Â´Ù
-			// bfs·Î º¯°æ
+			// íƒì‹œì—ì„œ ìŠ¹ê°ê¹Œì§€ì˜ ìµœë‹¨ê±°ë¦¬ë¥¼ ëª¨ë‘ êµ¬í•˜ë©´ì„œ(íƒì‹œì™€ ìŠ¹ê°ì´ ê°™ì€ê³³ì— ìˆìœ¼ë©´ 0, ìµœë‹¨ê±°ë¦¬ê°€ ê°™ì„ê²½ìš° y,x ìˆœìœ¼ë¡œ ì‘ì€ ìŠ¹ê°ë¶€í„° ê°„ë‹¤
+			// ìµœë‹¨ê±°ë¦¬ê°€ ê°€ì¥ ì§§ì€ ìŠ¹ê°ê³¼ ìµœë‹¨ê±°ë¦¬ë¥¼ ì €ì¥í•´ë†“ëŠ”ë‹¤
+			// bfsë¡œ ë³€ê²½
 			min = Integer.MAX_VALUE;
 			int minLength = Integer.MAX_VALUE;
 			if (bfsAll(ay, ax)) {
@@ -82,7 +82,7 @@ public class Solution_B_19238_½ºÅ¸Æ®ÅÃ½Ã2 {
 				break;
 			}
 
-			// ÅÃ½ÃÀÇ À§Ä¡¸¦ ½Â°´À¸·Î ¿Å±ä ÈÄ ¿¬·á¸¦ ÀÌµ¿ÇÑ °Å¸®¸¸Å­ »«´Ù
+			// íƒì‹œì˜ ìœ„ì¹˜ë¥¼ ìŠ¹ê°ìœ¼ë¡œ ì˜®ê¸´ í›„ ì—°ë£Œë¥¼ ì´ë™í•œ ê±°ë¦¬ë§Œí¼ ëº€ë‹¤
 
 			if (fuel - minLength > 0) {
 				fuel -= minLength;
@@ -91,7 +91,7 @@ public class Solution_B_19238_½ºÅ¸Æ®ÅÃ½Ã2 {
 				
 			}
 
-			// ¸ñÀûÁö±îÁöÀÇ ÃÖ´Ü°Å¸® °è»ê ÈÄ ¿¬·á°¡ ÃæºĞÇÏ´Ù¸é ÀÌµ¿ÇÑ ÈÄ ¿¬·á¸¦ ÃæÀüÇÑ´Ù.
+			// ëª©ì ì§€ê¹Œì§€ì˜ ìµœë‹¨ê±°ë¦¬ ê³„ì‚° í›„ ì—°ë£Œê°€ ì¶©ë¶„í•˜ë‹¤ë©´ ì´ë™í•œ í›„ ì—°ë£Œë¥¼ ì¶©ì „í•œë‹¤.
 			min = Integer.MAX_VALUE;
 			if (bfs(ay, ax, end.get(minIndex).y, end.get(minIndex).x)) {
 				if (fuel - min >= 0) {
@@ -106,7 +106,7 @@ public class Solution_B_19238_½ºÅ¸Æ®ÅÃ½Ã2 {
 					break;
 				}
 			}
-			// ÀÌµ¿ÇÒ ¼ö ¾øÀ» °æ¿ì Á¾·á
+			// ì´ë™í•  ìˆ˜ ì—†ì„ ê²½ìš° ì¢…ë£Œ
 			else {
 				fuel = -1;
 				break;
@@ -133,7 +133,7 @@ public class Solution_B_19238_½ºÅ¸Æ®ÅÃ½Ã2 {
 			for (int i = 0; i < 4; i++) {
 				int ty = temp[0] + dy[i];
 				int tx = temp[1] + dx[i];
-				// ÀÌµ¿ÇÒ ¼ö ÀÖÀ» °æ¿ì¿¡
+				// ì´ë™í•  ìˆ˜ ìˆì„ ê²½ìš°ì—
 				if (isSafe(ty, tx) && map[ty][tx] != 1 && !check[ty][tx]) {
 					if (isSame(ty, tx)) {
 						que2.add(new int[] {ty,tx,temp[2]+1});
@@ -196,12 +196,12 @@ public class Solution_B_19238_½ºÅ¸Æ®ÅÃ½Ã2 {
 			for (int i = 0; i < 4; i++) {
 				int ty = temp[0] + dy[i];
 				int tx = temp[1] + dx[i];
-				// ÀÌµ¿ÇÒ ¼ö ÀÖÀ» °æ¿ì¿¡
+				// ì´ë™í•  ìˆ˜ ìˆì„ ê²½ìš°ì—
 				if (isSafe(ty, tx) && map[ty][tx] != 1 && !check[ty][tx]) {
 //					System.out.println("ty : "+ ty + " tx : " + tx);
 					check[ty][tx] = true;
 					que.add(new int[] { ty, tx, temp[2] + 1 });
-					// ¸ñÇ¥ÁöÁ¡ µµÂøÇßÀ»°æ¿ì
+					// ëª©í‘œì§€ì  ë„ì°©í–ˆì„ê²½ìš°
 					if (check[ey][ex]) {
 						if (min > temp[2] + 1) {
 							min = temp[2] + 1;

@@ -1,4 +1,4 @@
-package algo_study_0714;
+ï»¿package algo_study_0714;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -30,7 +30,7 @@ public class Solution_B_9663_NQueen {
 		System.out.println(answer);
 
 		long end = System.currentTimeMillis();
-		System.out.println( "½ÇÇà ½Ã°£ : " + ( end - start )/1000.0 );
+		System.out.println( "ì‹¤í–‰ ì‹œê°„ : " + ( end - start )/1000.0 );
 
 	}
 
@@ -62,8 +62,8 @@ public class Solution_B_9663_NQueen {
 	}
 
 	private static void queen(int[][] map, int y, int x,int start,int end) {
-		for (int i = 0; i < 8; i++) {// 8¹æÇâ
-			for (int j = 1; j < N; j++) { // 1~NÄ­
+		for (int i = 0; i < 8; i++) {// 8ë°©í–¥
+			for (int j = 1; j < N; j++) { // 1~Nì¹¸
 				int ty = y + (dy[i] * j);
 				int tx = x + (dx[i] * j);
 				if (isSafe(ty, tx)&&map[ty][tx]==start) {

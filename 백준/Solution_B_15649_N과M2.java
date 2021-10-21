@@ -1,13 +1,13 @@
-package algo_study_0714;
+ï»¿package algo_study_0714;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Solution_B_15649_N°úM2 {
+public class Solution_B_15649_Nê³¼M2 {
 
-	static int End, depth; // 1ºÎÅÍ End±îÁö depth °³¸¦ °í¸¥´Ù.
+	static int End, depth; // 1ë¶€í„° Endê¹Œì§€ depth ê°œë¥¼ ê³ ë¥¸ë‹¤.
 	static int[] array;
 
 	public static void main(String[] args) throws IOException {
@@ -23,7 +23,7 @@ public class Solution_B_15649_N°úM2 {
 	}
 
 	private static void dfs(int tmp, int start) {
-		if (tmp == depth) { // depth°³¸¦ »Ì¾Ò´Ù¸é Ãâ·Â
+		if (tmp == depth) { // depthê°œë¥¼ ë½‘ì•˜ë‹¤ë©´ ì¶œë ¥
 			for (int i = 0; i < tmp; i++) {
 				System.out.print(array[i] + " ");
 			}

@@ -1,4 +1,4 @@
-package study_0317;
+ï»¿package study_0317;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -14,7 +14,7 @@ import java.util.PriorityQueue;
 import java.util.Set;
 import java.util.StringTokenizer;
 
-public class Solution_B_1753_ÃÖ´Ü°æ·Î {
+public class Solution_B_1753_ìµœë‹¨ê²½ë¡œ {
 
 	static class Node {
 		List<int[]> end = new ArrayList<int[]>();
@@ -60,12 +60,12 @@ public class Solution_B_1753_ÃÖ´Ü°æ·Î {
 		Set<Integer> isVisit = new HashSet<>(); 
 		que.add(new int[] {startNode,0});
 		
-		//¿ì¼±¼øÀ§Å¥ -> Á¤Á¡°ú °Å±â±îÁöÀÇ °Å¸®
-		//Ã³À½¿¡ 0, startNode¸¦ ³Ö´Â´Ù.
+		//ìš°ì„ ìˆœìœ„í -> ì •ì ê³¼ ê±°ê¸°ê¹Œì§€ì˜ ê±°ë¦¬
+		//ì²˜ìŒì— 0, startNodeë¥¼ ë„£ëŠ”ë‹¤.
 		while(!que.isEmpty()){
-			//¿ì¼±¼øÀ§Å¥¿¡¼­ »«´Ù.
-			//»¯´Âµ¥ °Â°¡ ÀÌ¹Ì Çß´ø¾ÖÀÌ¸é ÄÁÆ¼´º
-			//¾Æ´Ï¸é °Â¸¦ ±âÁ¡À¸·Î answer¹è¿­À» °»½ÅÇÑ´Ù.
+			//ìš°ì„ ìˆœìœ„íì—ì„œ ëº€ë‹¤.
+			//ëºëŠ”ë° ê±”ê°€ ì´ë¯¸ í–ˆë˜ì• ì´ë©´ ì»¨í‹°ë‰´
+			//ì•„ë‹ˆë©´ ê±”ë¥¼ ê¸°ì ìœ¼ë¡œ answerë°°ì—´ì„ ê°±ì‹ í•œë‹¤.
 			
 			int[] temp = que.poll();
 			int start= temp[0];

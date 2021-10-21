@@ -1,8 +1,8 @@
-package study_0907;
+ï»¿package study_0907;
 
 import java.util.Arrays;
 
-public class Solution_P_K¹øÂ°¼ö {
+public class Solution_P_Kë²ˆì§¸ìˆ˜ {
 
 	public static void main(String[] args) {
 		int[] array = { 1, 5, 2, 6, 3, 7, 4 };

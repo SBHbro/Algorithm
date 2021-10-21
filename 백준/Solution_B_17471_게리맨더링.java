@@ -1,4 +1,4 @@
-package algo_study_0721;
+ï»¿package algo_study_0721;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -9,7 +9,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.StringTokenizer;
 
-public class Solution_B_17471_°Ô¸®¸Ç´õ¸µ {
+public class Solution_B_17471_ê²Œë¦¬ë§¨ë”ë§ {
 
 	
 	static int N;
@@ -38,9 +38,9 @@ public class Solution_B_17471_°Ô¸®¸Ç´õ¸µ {
 		
 		
 	}
-	//1. ³ª´²º»´Ù
-	//2. ³ª´« ±¸¿ªÀÌ ¸ğµÎ ¿¬°áµÇ¾îÀÖ´ÂÁö È®ÀÎÇÑ´Ù.
-	//3. ÃÖ¼Ò°ªÀ» Ã£´Â´Ù.
+	//1. ë‚˜ëˆ ë³¸ë‹¤
+	//2. ë‚˜ëˆˆ êµ¬ì—­ì´ ëª¨ë‘ ì—°ê²°ë˜ì–´ìˆëŠ”ì§€ í™•ì¸í•œë‹¤.
+	//3. ìµœì†Œê°’ì„ ì°¾ëŠ”ë‹¤.
 	
 	public static void main(String[] args) throws NumberFormatException, IOException {
 		BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
@@ -67,7 +67,7 @@ public class Solution_B_17471_°Ô¸®¸Ç´õ¸µ {
 			}
 		}
 		
-		//NÀÌ Â¦¼öÀÏ ¶§
+		//Nì´ ì§ìˆ˜ì¼ ë•Œ
 		if(N%2==0) {
 			for(int i = 1 ;i<=N/2;i++) {
 				isVisit = new boolean[N];
@@ -76,7 +76,7 @@ public class Solution_B_17471_°Ô¸®¸Ç´õ¸µ {
 				dfs(i,0);
 			}
 		}
-		//NÀÌ È¦¼öÀÏ ¶§
+		//Nì´ í™€ìˆ˜ì¼ ë•Œ
 		else if(N%2==1) {
 			for(int i = 1 ;i<=(N/2)+1;i++) {
 				isVisit = new boolean[N];
@@ -102,7 +102,7 @@ public class Solution_B_17471_°Ô¸®¸Ç´õ¸µ {
 					right[t++]=i;
 			}
 			
-			//¸ğµÎ ¿¬°áµÇ¾îÀÖ´ÂÁö Ã¼Å©
+			//ëª¨ë‘ ì—°ê²°ë˜ì–´ìˆëŠ”ì§€ ì²´í¬
 			if(lineAll(left)) {
 				if(lineAll(right)) {
 					int temp = 0;
@@ -119,7 +119,7 @@ public class Solution_B_17471_°Ô¸®¸Ç´õ¸µ {
 			return;
 		}
 		
-		//³ª´©±â
+		//ë‚˜ëˆ„ê¸°
 		for(int i =depth;i<N;i++) {
 			if(!isVisit[i]) {
 				left[depth] = i;
@@ -134,11 +134,11 @@ public class Solution_B_17471_°Ô¸®¸Ç´õ¸µ {
 		int length = arr.length;
 		boolean[] visited = new boolean[length];
 		Queue<Integer> que = new LinkedList<>();
-		//left 0¹øÀÎµ¦½ºÀÇ °ªÀ» que¿¡ ¸ğµÎ ³Ö´Â´Ù.
+		//left 0ë²ˆì¸ë±ìŠ¤ì˜ ê°’ì„ queì— ëª¨ë‘ ë„£ëŠ”ë‹¤.
 		for(int i = 0;i<node[arr[0]].to.size();i++) {
 			que.add(node[arr[0]].to.get(i));
 		}
-		//0¹øÀº ¹æ¹®Ã³¸®
+		//0ë²ˆì€ ë°©ë¬¸ì²˜ë¦¬
 		visited[0] = true;
 		
 		while(!que.isEmpty()) {

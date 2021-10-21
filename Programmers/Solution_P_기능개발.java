@@ -1,10 +1,10 @@
-package study_0907;
+ï»¿package study_0907;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class Solution_P_±â´É°³¹ß {
+public class Solution_P_ê¸°ëŠ¥ê°œë°œ {
 	
 	public static void main(String[] args) {
 //		int[] progress = {93,30,55};
@@ -19,11 +19,11 @@ public class Solution_P_±â´É°³¹ß {
 	
 	public static int[] solution(int[] progresses, int[] speeds) {
         int[] answer = {};
-        //progress Æ÷ÀÎÅÍ »ı¼º 
-        //speedÀÇ °ª¸¸Å­ °ªÀ» ¿Ã·Á°¡¸é¼­ ¿Ã¸° È½¼ö ÀúÀå
-        //°ªÀÌ 100 ³Ñ¾î°¥ °æ¿ì ÇÏ·ç ¹èÆ÷ È¸¼ö +1 ÇÏ°í ´ÙÀ½À¸·Î³Ñ¾î°¨
-        //°ªÀ» ¿Ã¸° È¸¼ö¸¸Å­ ½ºÇÇµå¸¦ °öÇØ¼­ progress¿¡ ´õÇØº¸°í 100³Ñ¾î°¥°æ¿ì ´Ù½Ã ´ÙÀ½À¸·Î ³Ñ¾î°¨
-        //¸ø³Ñ¾úÀ»°æ¿ì °ª ÃÊ±âÈ­, ÇÏ·ç¹èÆ÷È¸¼ö ÃÊ±âÈ­
+        //progress í¬ì¸í„° ìƒì„± 
+        //speedì˜ ê°’ë§Œí¼ ê°’ì„ ì˜¬ë ¤ê°€ë©´ì„œ ì˜¬ë¦° íšŸìˆ˜ ì €ì¥
+        //ê°’ì´ 100 ë„˜ì–´ê°ˆ ê²½ìš° í•˜ë£¨ ë°°í¬ íšŒìˆ˜ +1 í•˜ê³  ë‹¤ìŒìœ¼ë¡œë„˜ì–´ê°
+        //ê°’ì„ ì˜¬ë¦° íšŒìˆ˜ë§Œí¼ ìŠ¤í”¼ë“œë¥¼ ê³±í•´ì„œ progressì— ë”í•´ë³´ê³  100ë„˜ì–´ê°ˆê²½ìš° ë‹¤ì‹œ ë‹¤ìŒìœ¼ë¡œ ë„˜ì–´ê°
+        //ëª»ë„˜ì—ˆì„ê²½ìš° ê°’ ì´ˆê¸°í™”, í•˜ë£¨ë°°í¬íšŒìˆ˜ ì´ˆê¸°í™”
         List<Integer> answerList = new ArrayList<Integer>();
         
         int progressPointer = 0;

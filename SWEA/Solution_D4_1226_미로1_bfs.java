@@ -1,4 +1,4 @@
-
+﻿
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -8,7 +8,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.StringTokenizer;
 
-public class Solution_D4_1226_미로1_bfs {
+public class Solution_D4_1226_誘몃?1_bfs {
 
 	static int N = 16;
 	static int[][] map;
@@ -23,16 +23,16 @@ public class Solution_D4_1226_미로1_bfs {
 		BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
 
 		for (int t = 1; t <= 10; t++) {
-			// 테스트케이스 번호받는부붑
+			// ??ㅽ몄??댁?踰?몃??遺遺
 			in.readLine();
 
-			// 변수 초기화
+			// 蹂? 珥湲고
 			map = new int[N][N];
 			visited = new boolean[N][N];
 			ans = 0;
 			queue = new LinkedList<int[]>();
 
-			// 데이터 입력
+			// ?곗댄????
 			for (int i = 0; i < N; i++) {
 				String input = in.readLine();
 				for (int j = 0; j < N; j++) {

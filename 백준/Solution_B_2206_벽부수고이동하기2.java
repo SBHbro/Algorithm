@@ -1,4 +1,4 @@
-package study_1220;
+ï»¿package study_1220;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -8,7 +8,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.StringTokenizer;
 
-public class Solution_B_2206_º®ºÎ¼ö°íÀÌµ¿ÇÏ±â2 {
+public class Solution_B_2206_ë²½ë¶€ìˆ˜ê³ ì´ë™í•˜ê¸°2 {
 
 	static int[][] map;
 	static int[][] isValid;
@@ -73,11 +73,11 @@ public class Solution_B_2206_º®ºÎ¼ö°íÀÌµ¿ÇÏ±â2 {
 					int ty = dy[i] + temp[0];
 					int tx = dx[i] + temp[1];
 
-					// Ã³À½ ¿Íº» °÷ÀÏ ¶§
+					// ì²˜ìŒ ì™€ë³¸ ê³³ì¼ ë•Œ
 					if (isSafe(ty, tx) && isValid[ty][tx] == 0) {
-						//º®À» ¾ÈºÎ¼ö°í ¿Â ·çÆ®ÀÏ °æ¿ì
+						//ë²½ì„ ì•ˆë¶€ìˆ˜ê³  ì˜¨ ë£¨íŠ¸ì¼ ê²½ìš°
 						if(temp[3]==0) {
-							// º®ÀÌ¶ó¸é ºÎ½¥À½ Ã¼Å© ÈÄ isValid °ª °»½Å
+							// ë²½ì´ë¼ë©´ ë¶€ì‰ˆìŒ ì²´í¬ í›„ isValid ê°’ ê°±ì‹ 
 							isValid[ty][tx] = temp[2] + 1;
 							if (map[ty][tx] == 1) {
 								que.add(new int[] { ty, tx, temp[2] + 1, 1 });
@@ -85,28 +85,28 @@ public class Solution_B_2206_º®ºÎ¼ö°íÀÌµ¿ÇÏ±â2 {
 								que.add(new int[] { ty, tx, temp[2] + 1, 0 });
 							}
 						}
-						//º®À» ºÎ¼ö°í ¿Â ·çÆ®ÀÏ °æ¿ì
+						//ë²½ì„ ë¶€ìˆ˜ê³  ì˜¨ ë£¨íŠ¸ì¼ ê²½ìš°
 						if(temp[3] == 1) {
-							//º®ÀÌ ¾Æ´Ò¶§¸¸ °ªÀ» ³Ö´Â´Ù.
+							//ë²½ì´ ì•„ë‹ë•Œë§Œ ê°’ì„ ë„£ëŠ”ë‹¤.
 							if(map[ty][tx] == 0) {
 								que.add(new int[] {ty,tx,temp[2]+1,1});
 								isValid[ty][tx] = temp[2]+1;
 							}
 						}
 					}
-					// Ã³À½ ¿Â °÷ÀÌ ¾Æ´Ò ¶§
+					// ì²˜ìŒ ì˜¨ ê³³ì´ ì•„ë‹ ë•Œ
 					else if (isSafe(ty, tx) && isValid[ty][tx] != 0) {
-						// º®À» ºÎ¼ö°í ¿Â ·çÆ®
+						// ë²½ì„ ë¶€ìˆ˜ê³  ì˜¨ ë£¨íŠ¸
 						if (temp[3] == 1) {
-							// º®ÀÌ ¾Æ´Ï¾î¾ß ÇÏ°í ³»°¡ °¡´Â ·çÆ®°¡ ±âÁ¸ ·çÆ®º¸´Ù °ªÀÌ ÀûÀ» ¶§¸¸ »ì¸°´Ù.
+							// ë²½ì´ ì•„ë‹ˆì–´ì•¼ í•˜ê³  ë‚´ê°€ ê°€ëŠ” ë£¨íŠ¸ê°€ ê¸°ì¡´ ë£¨íŠ¸ë³´ë‹¤ ê°’ì´ ì ì„ ë•Œë§Œ ì‚´ë¦°ë‹¤.
 							if (map[ty][tx]==0&&temp[2] + 1 < isValid[ty][tx]) {
 								que.add(new int[] { ty, tx, temp[2] + 1, temp[3] });
 								isValid[ty][tx] = temp[2] + 1;
 							}
 						}
-						// ºÎ¼öÁö ¾Ê°í ¿ÔÀ» °æ¿ì
+						// ë¶€ìˆ˜ì§€ ì•Šê³  ì™”ì„ ê²½ìš°
 						else if (temp[3] == 0) {
-							//³»°¡ °¡Áø°ªÀÌ ÀÌµ¿ÇÏ·Á´Â ÁÂÇ¥ÀÇ °ªº¸´Ù ÀÛ°Å³ª °°À»¶§¸¸
+							//ë‚´ê°€ ê°€ì§„ê°’ì´ ì´ë™í•˜ë ¤ëŠ” ì¢Œí‘œì˜ ê°’ë³´ë‹¤ ì‘ê±°ë‚˜ ê°™ì„ë•Œë§Œ
 							if(temp[2]+1<=isValid[ty][tx]) {
 								if(map[ty][tx] == 0)
 									que.add(new int[] {ty,tx,temp[2]+1,0});

@@ -1,11 +1,11 @@
-package study_0127;
+ï»¿package study_0127;
 
 import java.util.Arrays;
 
 public class Solution_H_MaxMin {
 
-	// Á¤·ÄÀ»½ÃÅ²´Ù.
-	// 0ºÎÅÍ n-k±îÁö°¡¸é¼­ ÃÖ¼Ò°ªÈ®ÀÎ
+	// ì •ë ¬ì„ì‹œí‚¨ë‹¤.
+	// 0ë¶€í„° n-kê¹Œì§€ê°€ë©´ì„œ ìµœì†Œê°’í™•ì¸
 
 	public static void main(String[] args) {
 

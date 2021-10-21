@@ -1,4 +1,4 @@
-package study_0203;
+ï»¿package study_0203;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -7,7 +7,7 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.util.StringTokenizer;
 
-public class Solution_B_9184_½Å³ª´ÂÇÔ¼ö½ÇÇà {
+public class Solution_B_9184_ì‹ ë‚˜ëŠ”í•¨ìˆ˜ì‹¤í–‰ {
 	
 	static int[][][] data;
 	

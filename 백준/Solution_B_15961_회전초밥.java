@@ -1,4 +1,4 @@
-package study_0415;
+ï»¿package study_0415;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -6,11 +6,11 @@ import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.StringTokenizer;
 
-public class Solution_B_15961_È¸ÀüÃÊ¹ä {
+public class Solution_B_15961_íšŒì „ì´ˆë°¥ {
 
-	static int N,D,K,C;//Á¢½ÃÀÇ ¼ö, ÃÊ¹äÀÇ °¡Áö¼ö, ¿¬¼ÓÇØ¼­ ¸Ô´Â Á¢½ÃÀÇ ¼ö, ÄíÆù¹øÈ£
-	static int[] input;//ÃÊ¹äÀÌ ³õ¿©ÀÖ´Â ¼ø¼­
-	static int[] data;//ÃÊ¹äÀÇ °³¼ö
+	static int N,D,K,C;//ì ‘ì‹œì˜ ìˆ˜, ì´ˆë°¥ì˜ ê°€ì§€ìˆ˜, ì—°ì†í•´ì„œ ë¨¹ëŠ” ì ‘ì‹œì˜ ìˆ˜, ì¿ í°ë²ˆí˜¸
+	static int[] input;//ì´ˆë°¥ì´ ë†“ì—¬ìˆëŠ” ìˆœì„œ
+	static int[] data;//ì´ˆë°¥ì˜ ê°œìˆ˜
 	static int answer;
 	
 	public static void main(String[] args) throws IOException {

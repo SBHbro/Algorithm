@@ -1,4 +1,4 @@
-package algo_study_0626;
+﻿package algo_study_0626;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -6,12 +6,12 @@ import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.StringTokenizer;
 
-public class Solution_D4_9282_초콜릿과건포도 {
+public class Solution_D4_9282_珥肄由욧낵嫄댄щ {
 
-	static int T;//전체회수
-	static int N, M;//행렬
-	static int[][] map;//입력
-	static int ans;//답
+	static int T;//?泥댄?
+	static int N, M;//???
+	static int[][] map;//???
+	static int ans;//??
 	static int[][][][] dp;
 
 	public static void main(String[] args) throws NumberFormatException, IOException {
@@ -55,7 +55,7 @@ public class Solution_D4_9282_초콜릿과건포도 {
 			return dp[y][x][h][w];
 		}
 
-		// 기존에 있던 덩어리의 건포도 개수
+		// 湲곗〈? ?? ?⑹대━? 嫄댄щ 媛?
 		int sum = 0;
 		for (int i = y; i < y + h; i++) {
 			for (int j = x; j < x + w; j++) {
@@ -63,22 +63,22 @@ public class Solution_D4_9282_초콜릿과건포도 {
 			}
 		}
 		
-		// 가로로 나누어서 최소 비용을 구한다.
+		// 媛濡濡 ???댁 理? 鍮?⑹ 援ы??
 		for (int i = 1; i < h; i++) {
-			// 위쪽비용
+			// ?履쎈???
 			int sum1 = dfs(y, x, i, w);
-			// 아래쪽 비용
+			// ??履?鍮??
 			int sum2 = dfs(y + i, x, h - i, w);
 
 			int sum3 = sum + sum1 + sum2;
 			dp[y][x][h][w] = Math.min(dp[y][x][h][w], sum3);
 		}
 
-		// 세로로 나누어서 최소 비용을 구한다.
+		// ?몃?濡 ???댁 理? 鍮?⑹ 援ы??
 		for (int i = 1; i < w; i++) {
-			// 왼쪽비용
+			// ?쇱そ鍮??
 			int sum1 = dfs(y, x, h, i);
-			// 오른쪽 비용
+			// ?ㅻⅨ履?鍮??
 			int sum2 = dfs(y, x + i, h, w - i);
 
 			int sum3 = sum + sum1 + sum2;

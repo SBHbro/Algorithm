@@ -1,13 +1,13 @@
-package study_0311;
+ï»¿package study_0311;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class Solution_B_1699_Á¦°ö¼öÀÇÇÕ_dp {
+public class Solution_B_1699_ì œê³±ìˆ˜ì˜í•©_dp {
 
-	//·çÆ®¸¦ ¾º¿î °¡Àå Å« Á¤¼ö Ã£±â
-	//ÀÔ·Â°ª¿¡¼­ Ã£¾Æ³½ Á¤¼ö Á¦°öÀ» »« ÈÄ ¹İº¹
+	//ë£¨íŠ¸ë¥¼ ì”Œìš´ ê°€ì¥ í° ì •ìˆ˜ ì°¾ê¸°
+	//ì…ë ¥ê°’ì—ì„œ ì°¾ì•„ë‚¸ ì •ìˆ˜ ì œê³±ì„ ëº€ í›„ ë°˜ë³µ
 	static int N;
 	static int answer;
 	static int[] data;

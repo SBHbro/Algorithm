@@ -1,4 +1,4 @@
-import java.io.BufferedReader;
+﻿import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Arrays;
@@ -6,7 +6,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.StringTokenizer;
 
-public class Solution_D4_7733_치즈도둑 {
+public class Solution_D4_7733_移利?? {
 
 	static int T;
 	static int[][] map;
@@ -46,7 +46,7 @@ public class Solution_D4_7733_치즈도둑 {
 			for (int m = 1; m <= max; m++) {
 				int cnt = 0;
 				visited=new boolean[N][N];
-				// m이랑 똑같은거 0으로
+				// m?대 ?媛?嫄?0?쇰?
 				for (int i = 0; i < N; i++) {
 					for (int j = 0; j < N; j++) {
 						if (map[i][j] == m) {
@@ -78,7 +78,7 @@ public class Solution_D4_7733_치즈도둑 {
 						}
 					}
 				}
-				//끝
+				//?
 				
 //				System.out.println("-----------------------------");
 //				for(int i = 0 ; i<N;i++) {

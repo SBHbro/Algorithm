@@ -1,4 +1,4 @@
-package algo_study_0714;
+ï»¿package algo_study_0714;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -15,9 +15,9 @@ public class Solution_B_9663_NQueen3 {
 	static int N;
 	static int answer;
 	static boolean[][] map;
-	//ÇÑÁÙ¿¡ ÄýÀº ÇÏ³ª¹Û¿¡ ¸øµé¾î°£´Ù.
-	//¸Ç À­ÁÙºÎÅÍ ÇÏ³ª¾¿ ³õ°í ±×¹ØÀÇ À§Ä¡¸¦ Á¤ÇÏ´Â ¹æ½ÄÀ¸·Î Ç¬´Ù
-	//¿ÞÂÊÀ§, À§, ¿À¸¥ÂÊ À§ ¸¸ °Ë»çÇÏ¸é µÈ´Ù.
+	//í•œì¤„ì— í€¸ì€ í•˜ë‚˜ë°–ì— ëª»ë“¤ì–´ê°„ë‹¤.
+	//ë§¨ ìœ—ì¤„ë¶€í„° í•˜ë‚˜ì”© ë†“ê³  ê·¸ë°‘ì˜ ìœ„ì¹˜ë¥¼ ì •í•˜ëŠ” ë°©ì‹ìœ¼ë¡œ í‘¼ë‹¤
+	//ì™¼ìª½ìœ„, ìœ„, ì˜¤ë¥¸ìª½ ìœ„ ë§Œ ê²€ì‚¬í•˜ë©´ ëœë‹¤.
 	
 
 	public static void main(String[] args) throws NumberFormatException, IOException {
@@ -36,7 +36,7 @@ public class Solution_B_9663_NQueen3 {
 		System.out.println(answer);
 
 		long end = System.currentTimeMillis();
-		System.out.println("½ÇÇà ½Ã°£ : " + (end - start) / 1000.0);
+		System.out.println("ì‹¤í–‰ ì‹œê°„ : " + (end - start) / 1000.0);
 
 	}
 
@@ -58,13 +58,13 @@ public class Solution_B_9663_NQueen3 {
 		
 	}
 	
-	private static boolean safe(int h, int i) { //ÄýÀ» ³õÀ» ¼ö ÀÖ´ÂÁö °Ë»ç
+	private static boolean safe(int h, int i) { //í€¸ì„ ë†“ì„ ìˆ˜ ìžˆëŠ”ì§€ ê²€ì‚¬
 		
-		for(int k = h;k>=0;k--) { //À§·Î °Ë»ç
+		for(int k = h;k>=0;k--) { //ìœ„ë¡œ ê²€ì‚¬
 			if(map[k][i]) return false;
 		}
 		
-		int ty = h-1; //¿ÞÂÊ À§·Î °Ë»ç
+		int ty = h-1; //ì™¼ìª½ ìœ„ë¡œ ê²€ì‚¬
 		int tx = i-1;
 		while(0<=ty&&0<=tx) {
 			if(map[ty][tx]) return false;
@@ -72,7 +72,7 @@ public class Solution_B_9663_NQueen3 {
 			tx--;
 		}
 		
-		ty = h-1; // ¿À¸¥ÂÊ À§·Î °Ë»ç
+		ty = h-1; // ì˜¤ë¥¸ìª½ ìœ„ë¡œ ê²€ì‚¬
 		tx = i+1;
 		while(0<=ty&&tx<N) {
 			if(map[ty][tx]) return false;

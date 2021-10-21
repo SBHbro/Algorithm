@@ -1,4 +1,4 @@
-package study_1220;
+ï»¿package study_1220;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -8,7 +8,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.StringTokenizer;
 
-public class Solution_B_2206_º®ºÎ¼ö°íÀÌµ¿ÇÏ±â_¿Ï {
+public class Solution_B_2206_ë²½ë¶€ìˆ˜ê³ ì´ë™í•˜ê¸°_ì™„ {
 
 	static int[][] map;
 	static int[][][] visited;
@@ -65,25 +65,25 @@ public class Solution_B_2206_º®ºÎ¼ö°íÀÌµ¿ÇÏ±â_¿Ï {
 			for (int i = 0; i < 4; i++) {
 				int ty = dy[i] + temp[0];
 				int tx = dx[i] + temp[1];
-					// º®À» ºÎ¼öÁö ¾Ê°í ¿Â °æ¿ì
+					// ë²½ì„ ë¶€ìˆ˜ì§€ ì•Šê³  ì˜¨ ê²½ìš°
 					if ((temp[3] == 0)) {
-						// ³ªº¸´Ù °ªÀÌ Å¬¶§¸¸
+						// ë‚˜ë³´ë‹¤ ê°’ì´ í´ë•Œë§Œ
 						if (isSafe(ty, tx)&&temp[2] + 1 < visited[0][ty][tx]) {
-							// ±æ·Î°¥¶§
+							// ê¸¸ë¡œê°ˆë•Œ
 							if (map[ty][tx] == 0) {
 								visited[0][ty][tx] = temp[2] + 1;
 								que.add(new int[] { ty, tx, temp[2] + 1, 0 });
 							}
-							// º®ÇÏ³ª ¶ÕÀ»¶§
+							// ë²½í•˜ë‚˜ ëš«ì„ë•Œ
 							else if (map[ty][tx] == 1) {
 								visited[1][ty][tx] = temp[2] + 1;
 								que.add(new int[] { ty, tx, temp[2] + 1, 1 });
 							}
 						}
 					}
-					// º®À» ºÎ¼ö°í ¿Â °æ¿ì
+					// ë²½ì„ ë¶€ìˆ˜ê³  ì˜¨ ê²½ìš°
 					else {
-						// ±æÀÌ¿©¾ß ÇÏ°í °Å±â °ªÀÌ ³ªº¸´Ù ÀÛ¾Æ¾ß ÇÔ
+						// ê¸¸ì´ì—¬ì•¼ í•˜ê³  ê±°ê¸° ê°’ì´ ë‚˜ë³´ë‹¤ ì‘ì•„ì•¼ í•¨
 						if (isSafe(ty, tx)&&map[ty][tx] == 0 && temp[2] + 1 < visited[1][ty][tx]) {
 							visited[1][ty][tx] = temp[2] + 1;
 							que.add(new int[] { ty, tx, temp[2] + 1, 1 });

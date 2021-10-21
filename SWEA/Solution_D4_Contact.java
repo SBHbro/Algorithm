@@ -1,4 +1,4 @@
-package algo_study_0809;
+ï»¿package algo_study_0809;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -19,7 +19,7 @@ public class Solution_D4_Contact {
 		}
 	}
 	
-	static int start; // ½ÃÀÛÁ¡
+	static int start; // ì‹œì‘ì 
 	static int ans;
 	static Node[] data;
 	static boolean[] visited;
@@ -30,7 +30,7 @@ public class Solution_D4_Contact {
 		for(int t = 1; t<=10;t++) {
 			StringTokenizer st = new StringTokenizer(in.readLine());
 			
-			//ÀÔ·Â¹ŞÀ» ±æÀÌ¿Í ½ÃÀÛÁ¡ ÀÔ·Â
+			//ì…ë ¥ë°›ì„ ê¸¸ì´ì™€ ì‹œì‘ì  ì…ë ¥
 			int length = Integer.parseInt(st.nextToken());
 			start = Integer.parseInt(st.nextToken());
 			
@@ -65,13 +65,13 @@ public class Solution_D4_Contact {
 		Queue<Integer> que = new LinkedList<Integer>();
 		Queue<Integer> que2 = new LinkedList<Integer>();
 		
-		//½ÃÀÛÁ¡À» ³Ö´Â´Ù.
+		//ì‹œì‘ì ì„ ë„£ëŠ”ë‹¤.
 		que.add(s);
 		visited[s] = true;
-		//que°¡ ¸ğµÎ ºôµ¿¾È
+		//queê°€ ëª¨ë‘ ë¹Œë™ì•ˆ
 		while(!que.isEmpty()) {
 //			System.out.println();
-			//que¿¡ µéÀº¾ÖµéÀÌ °¥¼öÀÖ´Â°÷À» ¸ğµÎ ²¨³»¼­ quae2¿¡ ³Ö´Â´Ù.
+			//queì— ë“¤ì€ì• ë“¤ì´ ê°ˆìˆ˜ìˆëŠ”ê³³ì„ ëª¨ë‘ êº¼ë‚´ì„œ quae2ì— ë„£ëŠ”ë‹¤.
 			while(!que.isEmpty()) {
 				int start = que.poll();
 				ans = Math.max(ans,start);
@@ -87,8 +87,8 @@ public class Solution_D4_Contact {
 			}
 //			System.out.println();
 			
-			//que2°¡ ¸ğµÎºôµ¿¾È 
-			//que2°¡ °¥¼öÀÖ´Â¾Öµé ¸ğµÎ que¿¡ ³Ö´Â´Ù.
+			//que2ê°€ ëª¨ë‘ë¹Œë™ì•ˆ 
+			//que2ê°€ ê°ˆìˆ˜ìˆëŠ”ì• ë“¤ ëª¨ë‘ queì— ë„£ëŠ”ë‹¤.
 			
 			while(!que2.isEmpty()) {
 				int start = que2.poll();

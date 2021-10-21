@@ -1,4 +1,4 @@
-package study_1209;
+ï»¿package study_1209;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -7,7 +7,7 @@ import java.util.StringTokenizer;
 
 
 
-public class Solution_B_20058_¸¶¹ı»ç»ó¾î¿ÍÆÄÀÌ¾î½ºÅè {
+public class Solution_B_20058_ë§ˆë²•ì‚¬ìƒì–´ì™€íŒŒì´ì–´ìŠ¤í†° {
 
 	static int N,Q;
 	static int[] L;
@@ -49,14 +49,14 @@ public class Solution_B_20058_¸¶¹ı»ç»ó¾î¿ÍÆÄÀÌ¾î½ºÅè {
 		
 		while(k<Q) {
 			answer = 0;
-			//±¸¿ªº°·Î ¸ÊÀ» µ¹¸°´Ù.
-			for(int i = 0 ; i<size;i+=L[k]) {//L[0] ¼öÁ¤ÇÏ±â
+			//êµ¬ì—­ë³„ë¡œ ë§µì„ ëŒë¦°ë‹¤.
+			for(int i = 0 ; i<size;i+=L[k]) {//L[0] ìˆ˜ì •í•˜ê¸°
 				for(int j = 0 ; j<size;j+=L[k]) {
 					mapRotate(i,j,i+L[k]-1,j+L[k]-1);
 				}
 			}
 
-			//±ÙÃ³¿¡ ¾óÀ½ÀÌ 3°³ÀÌ»óÀÌ ¾Æ´Ñ¾ÖµéÀº 1¾¿³·Ãá´Ù.
+			//ê·¼ì²˜ì— ì–¼ìŒì´ 3ê°œì´ìƒì´ ì•„ë‹Œì• ë“¤ì€ 1ì”©ë‚®ì¶˜ë‹¤.
 			
 			for(int i = 0 ; i<size;i++) {
 				for(int j = 0 ; j<size;j++) {
@@ -85,7 +85,7 @@ public class Solution_B_20058_¸¶¹ı»ç»ó¾î¿ÍÆÄÀÌ¾î½ºÅè {
 				}
 			}
 			
-			//¹İº¹ÇÏ¿© ´äÀ» ±¸ÇÑ´Ù.
+			//ë°˜ë³µí•˜ì—¬ ë‹µì„ êµ¬í•œë‹¤.
 			k++;
 		}
 		

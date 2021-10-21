@@ -1,13 +1,13 @@
-package algo_study_0714;
+ï»¿package algo_study_0714;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Solution_B_15649_N°úM1 {
+public class Solution_B_15649_Nê³¼M1 {
 
-	static int End, depth; // 1ºÎÅÍ End±îÁö depth °³¸¦ °í¸¥´Ù. (Áßº¹X)
+	static int End, depth; // 1ë¶€í„° Endê¹Œì§€ depth ê°œë¥¼ ê³ ë¥¸ë‹¤. (ì¤‘ë³µX)
 	static int[] array;
 	static boolean[] visited;
 
@@ -20,13 +20,13 @@ public class Solution_B_15649_N°úM1 {
 		
 		
 		array = new int[depth + 1];
-		visited = new boolean[End+1];//¹æ¹®Çß´ÂÁö È®ÀÎ
+		visited = new boolean[End+1];//ë°©ë¬¸í–ˆëŠ”ì§€ í™•ì¸
 
 		dfs(0);
 	}
 
 	private static void dfs(int tmp) {
-		if (tmp == depth) { // depth°³¸¦ »Ì¾Ò´Ù¸é Ãâ·Â
+		if (tmp == depth) { // depthê°œë¥¼ ë½‘ì•˜ë‹¤ë©´ ì¶œë ¥
 			for (int i = 0; i < tmp; i++) {
 				System.out.print(array[i] + " ");
 			}

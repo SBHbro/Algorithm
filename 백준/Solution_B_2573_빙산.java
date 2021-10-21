@@ -1,4 +1,4 @@
-package study_0331;
+ï»¿package study_0331;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -7,7 +7,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.StringTokenizer;
 
-public class Solution_B_2573_ºù»ê {
+public class Solution_B_2573_ë¹™ì‚° {
 
 	static class Ice {
 		int y, x;

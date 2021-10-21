@@ -1,11 +1,11 @@
-package study_0116;
+ï»¿package study_0116;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Solution_D2_1959_µÎ°³ÀÇ¼ıÀÚ¿­ {
+public class Solution_D2_1959_ë‘ê°œì˜ìˆ«ìì—´ {
 	
 	static int T;
 	static int[] A,B;
@@ -36,7 +36,7 @@ public class Solution_D2_1959_µÎ°³ÀÇ¼ıÀÚ¿­ {
 			int answer = Integer.MIN_VALUE;
 			int temp = 0;
 			if(0<time) {
-				//A°¡´õÅ­
+				//Aê°€ë”í¼
 				for(int i = 0;i<=time;i++) {
 					int tb = 0;
 					temp = 0;
@@ -48,7 +48,7 @@ public class Solution_D2_1959_µÎ°³ÀÇ¼ıÀÚ¿­ {
 				}
 			}
 			else if(time<0) {
-				//B°¡´õÅ­
+				//Bê°€ë”í¼
 				time *= -1;
 				for(int i = 0;i<=time;i++) {
 					int ta = 0;

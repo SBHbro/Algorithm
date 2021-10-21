@@ -1,4 +1,4 @@
-package study_0315;
+ï»¿package study_0315;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 import java.util.PriorityQueue;
 import java.util.StringTokenizer;
 
-public class Solution_D4_ÇÏ³ª·Î {
+public class Solution_D4_í•˜ë‚˜ë¡œ {
 
 	static class Edge implements Comparable<Edge>{
 		int node1,node2;

@@ -1,9 +1,9 @@
-package study_1021;
+﻿package study_1021;
 
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class Solution_P_Ÿ�ٳѹ�_dfs2 {
+public class Solution_P_타겟넘버_dfs2 {
 	
 	public static void main(String[] args) {
 		int[] numbers = new int[] {1,1,1,1,1};

@@ -1,8 +1,8 @@
-package study_0306;
+﻿package study_0306;
 
 import java.util.Scanner;
 
-public class Solution_B_11726_2nŸ�ϸ� {
+public class Solution_B_11726_2n타일링 {
 
 	private static Scanner sc;
 

@@ -1,9 +1,9 @@
-package study_0906;
+ï»¿package study_0906;
 
 import java.util.HashMap;
 import java.util.Map;
 
-public class Solution_P_¿ÏÁÖÇÏÁö¸øÇÑ¼±¼ö {
+public class Solution_P_ì™„ì£¼í•˜ì§€ëª»í•œì„ ìˆ˜ {
 	
 	
 	public static void main(String[] args) {
@@ -20,9 +20,9 @@ public class Solution_P_¿ÏÁÖÇÏÁö¸øÇÑ¼±¼ö {
 	public static String solution(String[] participant, String[] completion) {
         String answer = "";
         
-        //completionÀ» hashmap¿¡ ³Ö´Â´Ù. ÀÌ¹Ì ÀÖÀ»°æ¿ì 2·Î ÇÑ´Ù.
-        //participant°¡ ÀÖ´ÂÁö È®ÀÎÇÑ´Ù. °ªÀÌ 2¶ó¸é 1·Î º¯°æÇÏ°í 1ÀÌ¶ó¸é Á¦°ÅÇÑ´Ù.
-        //¾øÀ»°æ¿ì answer¿¡ ³Ö°í return ÇÑ´Ù.
+        //completionì„ hashmapì— ë„£ëŠ”ë‹¤. ì´ë¯¸ ìˆì„ê²½ìš° 2ë¡œ í•œë‹¤.
+        //participantê°€ ìˆëŠ”ì§€ í™•ì¸í•œë‹¤. ê°’ì´ 2ë¼ë©´ 1ë¡œ ë³€ê²½í•˜ê³  1ì´ë¼ë©´ ì œê±°í•œë‹¤.
+        //ì—†ì„ê²½ìš° answerì— ë„£ê³  return í•œë‹¤.
         
         HashMap<String, Integer> map = new HashMap<>();
         

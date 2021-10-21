@@ -1,4 +1,4 @@
-package study_0301;
+ï»¿package study_0301;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.StringTokenizer;
 
-public class Solution_B_13305_ÁÖÀ¯¼Ò {
+public class Solution_B_13305_ì£¼ìœ ì†Œ {
 
 	static class City{
 		int nextCity = 0;
@@ -49,8 +49,8 @@ public class Solution_B_13305_ÁÖÀ¯¼Ò {
 			data[i].fuel = Integer.parseInt(st2.nextToken());
 			
 			
-			//Áö±İ²¨¶û µé¾îÀÖ´Â°Å ¸¶Áö¸·°Å¶û ºñ±³ÇØ¼­ ´õ ½Î¸é ÀÚ±â°¡°İ°ú ÀÚ±â °Å¸® ³ÖÀ½
-			//´õ ºñ½Ò°æ¿ì ¸¶Áö¸· ½Ñ °¡°İ°ú ÀÚ±â °Å¸® ³ÖÀ½
+			//ì§€ê¸ˆêº¼ë‘ ë“¤ì–´ìˆëŠ”ê±° ë§ˆì§€ë§‰ê±°ë‘ ë¹„êµí•´ì„œ ë” ì‹¸ë©´ ìê¸°ê°€ê²©ê³¼ ìê¸° ê±°ë¦¬ ë„£ìŒ
+			//ë” ë¹„ìŒ€ê²½ìš° ë§ˆì§€ë§‰ ì‹¼ ê°€ê²©ê³¼ ìê¸° ê±°ë¦¬ ë„£ìŒ
 			long[] temp = cal.get(cal.size()-1);
 			if(temp[1]<=data[i].fuel){
 				temp[0]+=data[i].nextCity;

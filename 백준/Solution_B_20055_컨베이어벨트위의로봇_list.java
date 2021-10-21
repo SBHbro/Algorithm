@@ -1,4 +1,4 @@
-package study_1210;
+ï»¿package study_1210;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.StringTokenizer;
 
-public class Solution_B_20055_ÄÁº£ÀÌ¾îº§Æ®À§ÀÇ·Îº¿_list {
+public class Solution_B_20055_ì»¨ë² ì´ì–´ë²¨íŠ¸ìœ„ì˜ë¡œë´‡_list {
 
 	static int N, K;
 	static int answer = 1;
@@ -32,16 +32,16 @@ public class Solution_B_20055_ÄÁº£ÀÌ¾îº§Æ®À§ÀÇ·Îº¿_list {
 		int count = 0;
 		while (true) {
 			
-			// µ¹¸®±â
+			// ëŒë¦¬ê¸°
 			map.add(0, map.get(map.size()-1));
 			map.remove(map.size()-1);
 			isRobot.add(0, isRobot.get(isRobot.size()-1));
 			isRobot.remove(isRobot.size()-1);
 			isRobot.set(N-1, false);
 			
-			// ·Îº¿ ÀÌµ¿
+			// ë¡œë´‡ ì´ë™
 			for (int i = N; i > 1; i--) {
-				// ÀÌµ¿ÇÒ ¼ö ÀÖ´Ù¸é
+				// ì´ë™í•  ìˆ˜ ìˆë‹¤ë©´
 				if (count == K)
 					break;
 				if (isRobot.get(i-1) && !isRobot.get(i) && 0 < map.get(i)) {
@@ -54,7 +54,7 @@ public class Solution_B_20055_ÄÁº£ÀÌ¾îº§Æ®À§ÀÇ·Îº¿_list {
 			}
 			isRobot.set(N-1, false);
 
-			// ·Îº¿ ¿Ã¸®±â
+			// ë¡œë´‡ ì˜¬ë¦¬ê¸°
 			if (map.get(0) > 0 && !isRobot.get(0)) {
 				map.set(0, map.get(0)-1);
 				isRobot.set(0,true);

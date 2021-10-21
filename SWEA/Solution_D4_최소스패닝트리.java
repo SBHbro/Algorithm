@@ -1,4 +1,4 @@
-package study_0316;
+﻿package study_0316;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -10,7 +10,7 @@ import java.util.Queue;
 import java.util.Set;
 import java.util.StringTokenizer;
 
-public class Solution_D4_�ּҽ��д�Ʈ�� {
+public class Solution_D4_최소스패닝트리 {
 
 	static class Node implements Comparable<Node>{
 		int end;

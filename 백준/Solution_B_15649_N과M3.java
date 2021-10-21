@@ -1,4 +1,4 @@
-package algo_study_0714;
+ï»¿package algo_study_0714;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -7,9 +7,9 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.util.StringTokenizer;
 
-public class Solution_B_15649_N°úM3 {
+public class Solution_B_15649_Nê³¼M3 {
 
-	static int End, depth; // 1ºÎÅÍ End±îÁö depth °³¸¦ °í¸¥´Ù.
+	static int End, depth; // 1ë¶€í„° Endê¹Œì§€ depth ê°œë¥¼ ê³ ë¥¸ë‹¤.
 	static int[] array;
 
 	static BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out)); 
@@ -30,7 +30,7 @@ public class Solution_B_15649_N°úM3 {
 	}
 
 	private static void dfs(int tmp, int start) throws IOException {
-		if (tmp == depth) { // depth°³¸¦ »Ì¾Ò´Ù¸é Ãâ·Â
+		if (tmp == depth) { // depthê°œë¥¼ ë½‘ì•˜ë‹¤ë©´ ì¶œë ¥
 				for (int i = 0; i < tmp; i++) {
 					bw.write(String.valueOf(array[i])+ " ");
 				}

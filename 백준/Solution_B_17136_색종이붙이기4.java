@@ -1,4 +1,4 @@
-package algo_study_0728;
+ï»¿package algo_study_0728;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.StringTokenizer;
 
-public class Solution_B_17136_»öÁ¾ÀÌºÙÀÌ±â4 {
+public class Solution_B_17136_ìƒ‰ì¢…ì´ë¶™ì´ê¸°4 {
 
 	static int[][] map;
 	static int N = 10;
@@ -14,11 +14,11 @@ public class Solution_B_17136_»öÁ¾ÀÌºÙÀÌ±â4 {
 	static int[] paper;
 	static boolean isAns;
 
-	// »öÁ¾ÀÌÀÇ Å©±â´Â 1.1 2.2 3.3 4.4 5.5
-	// ¸ÊÀº 10x10
-	// 10x10 ¸ÊÀ» »öÁ¾ÀÌ Å«°ÍºÎÅÍ 2ÁßÆ÷¹®À¸·Î µ¹¸ç »öÁ¾ÀÌ·Î µ¤À» ¼ö ÀÖ´ÂÁö °Ë»ç
-	// µ¤À» ¼ö ÀÖÀ» °æ¿ì ±×ºÎºĞÀ» ¸ğµÎ 0 À¸·Î º¯°æ
-	// ¸¶Áö¸·¿¡ 1ÀÌ ÀÖ´ÂÁö È®ÀÎÇÑ ÈÄ ÀÖÀ¸¸é ans ¾øÀ¸¸é -1Ãâ·Â
+	// ìƒ‰ì¢…ì´ì˜ í¬ê¸°ëŠ” 1.1 2.2 3.3 4.4 5.5
+	// ë§µì€ 10x10
+	// 10x10 ë§µì„ ìƒ‰ì¢…ì´ í°ê²ƒë¶€í„° 2ì¤‘í¬ë¬¸ìœ¼ë¡œ ëŒë©° ìƒ‰ì¢…ì´ë¡œ ë®ì„ ìˆ˜ ìˆëŠ”ì§€ ê²€ì‚¬
+	// ë®ì„ ìˆ˜ ìˆì„ ê²½ìš° ê·¸ë¶€ë¶„ì„ ëª¨ë‘ 0 ìœ¼ë¡œ ë³€ê²½
+	// ë§ˆì§€ë§‰ì— 1ì´ ìˆëŠ”ì§€ í™•ì¸í•œ í›„ ìˆìœ¼ë©´ ans ì—†ìœ¼ë©´ -1ì¶œë ¥
 	public static void main(String[] args) throws IOException {
 		BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
 		map = new int[N][N];
@@ -65,11 +65,11 @@ public class Solution_B_17136_»öÁ¾ÀÌºÙÀÌ±â4 {
 					for (int t = 4; t >= 0; t--) {
 						if (paper[t] == 0)
 							continue;
-						// ¾ÈÀüÇÏ°í ¸ğµÎ 1ÀÏ°æ¿ì
+						// ì•ˆì „í•˜ê³  ëª¨ë‘ 1ì¼ê²½ìš°
 						if (isSafe(i + t, j + t) && check(i, j, t, map)) {
-							// ¸Ê º¹»çÇØ¼­ º¸³»°í ¹è¿­[t]¸¦ 1ÁÙÀÎ´Ù
-							// dfs¼ÒÈ¯
-							// ¹è¿­ t++
+							// ë§µ ë³µì‚¬í•´ì„œ ë³´ë‚´ê³  ë°°ì—´[t]ë¥¼ 1ì¤„ì¸ë‹¤
+							// dfsì†Œí™˜
+							// ë°°ì—´ t++
 							paint(i, j, t,0);
 							paper[t]--;
 							dfs(i, j,k + 1, t,count-((t+1)*(t+1)));

@@ -1,4 +1,4 @@
-package study_0125;
+ï»¿package study_0125;
 
 import java.util.ArrayList;
 import java.util.Dictionary;
@@ -32,13 +32,13 @@ public class Solution_H_Active_Traders {
 			}
 		}
 		
-		//5%³ÑÀ¸¸é answer ¸®½ºÆ®·Î ÀÌµ¿
+		//5%ë„˜ìœ¼ë©´ answer ë¦¬ìŠ¤íŠ¸ë¡œ ì´ë™
 		Set<Map.Entry<String, Integer>> entries = data.entrySet();
         
         for(Map.Entry<String, Integer> entry : entries) {
 
             if(5<=Double.valueOf(entry.getValue())/Double.valueOf(customersSize)*100) {
-                System.out.println("µé¾î¿È");
+                System.out.println("ë“¤ì–´ì˜´");
                 answer.add(entry.getKey());
             }
         }

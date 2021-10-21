@@ -1,22 +1,22 @@
-package algo_study_0716;
+ï»¿package algo_study_0716;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Solution_B_14503_·Îº¿Ã»¼Ò±â {
+public class Solution_B_14503_ë¡œë´‡ì²­ì†Œê¸° {
 
-	static int N, M;// ¸ÊÀÇ Å©±â
-	static int d; // ·Îº¿ÀÌ ¹Ù¶óº¸´Â ¹æÇâ
-	static int ry, rx; // ·Îº¿ÀÇ À§Ä¡
+	static int N, M;// ë§µì˜ í¬ê¸°
+	static int d; // ë¡œë´‡ì´ ë°”ë¼ë³´ëŠ” ë°©í–¥
+	static int ry, rx; // ë¡œë´‡ì˜ ìœ„ì¹˜
 	static int[][] map;
 	static int answer;
 
 	static int[] dy = { -1, 0, 1, 0 };
 	static int[] dx = { 0, 1, 0, -1 };
 
-	// 0 ºÏ 1 µ¿ 2 ³² 3 ¼­
+	// 0 ë¶ 1 ë™ 2 ë‚¨ 3 ì„œ
 	public static void main(String[] args) throws IOException {
 		BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
 
@@ -33,7 +33,7 @@ public class Solution_B_14503_·Îº¿Ã»¼Ò±â {
 		answer = 0;
 		map = new int[N][M];
 
-		// ºóÄ­ 0 º® 1
+		// ë¹ˆì¹¸ 0 ë²½ 1
 		for (int i = 0; i < N; i++) {
 			st = new StringTokenizer(in.readLine());
 			for (int j = 0; j < M; j++) {

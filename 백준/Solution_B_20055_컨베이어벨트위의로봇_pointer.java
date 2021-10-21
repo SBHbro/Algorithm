@@ -1,4 +1,4 @@
-package study_1210;
+ï»¿package study_1210;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -7,7 +7,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.StringTokenizer;
 
-public class Solution_B_20055_ÄÁº£ÀÌ¾îº§Æ®À§ÀÇ·Îº¿_pointer {
+public class Solution_B_20055_ì»¨ë² ì´ì–´ë²¨íŠ¸ìœ„ì˜ë¡œë´‡_pointer {
 
 	static int N, K;
 	static int answer = 1;
@@ -40,13 +40,13 @@ public class Solution_B_20055_ÄÁº£ÀÌ¾îº§Æ®À§ÀÇ·Îº¿_pointer {
 		int count = 0;
 		while (true) {
 			
-			// µ¹¸®±â
+			// ëŒë¦¬ê¸°
 			start--;
 			end--;
 			if(start == 0 )start = max;
 			if(end == 0 )end = max;
 			
-			// ·Îº¿ ÀÌµ¿
+			// ë¡œë´‡ ì´ë™
 			while(!que2.isEmpty()) {
 				que.add(que2.poll());
 			}
@@ -80,7 +80,7 @@ public class Solution_B_20055_ÄÁº£ÀÌ¾îº§Æ®À§ÀÇ·Îº¿_pointer {
 				}
 			}
 			
-			// ·Îº¿ ¿Ã¸®±â
+			// ë¡œë´‡ ì˜¬ë¦¬ê¸°
 			if(!isRobot[start]&&0<map[start]) {
 				map[start]--;
 				isRobot[start]=true;

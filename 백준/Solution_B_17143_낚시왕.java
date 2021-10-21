@@ -1,4 +1,4 @@
-package ssibal;
+ï»¿package ssibal;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -8,7 +8,7 @@ import java.util.StringTokenizer;
 
 
 
-public class Solution_B_17143_³¬½Ã¿Õ {
+public class Solution_B_17143_ë‚šì‹œì™• {
 
 	
 	static class Shark{
@@ -33,10 +33,10 @@ public class Solution_B_17143_³¬½Ã¿Õ {
 	static int[] dy = {0,-1,1,0,0};
 	static int[] dx = {0,0,0,1,-1};
 	
-	//ÀÔ·Â
+	//ì…ë ¥
 	
-	//»ó¾î Å¬·¡½º ¸¸µé±â y,x,Å©±â,¹æÇâ,¼Ó·Â,»ıÁ¸
-	//¹è¿­·Î ¸¸µé±â
+	//ìƒì–´ í´ë˜ìŠ¤ ë§Œë“¤ê¸° y,x,í¬ê¸°,ë°©í–¥,ì†ë ¥,ìƒì¡´
+	//ë°°ì—´ë¡œ ë§Œë“¤ê¸°
 	public static void main(String[] args) throws IOException {
 		
 		BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
@@ -63,10 +63,10 @@ public class Solution_B_17143_³¬½Ã¿Õ {
 			shark[i] = new Shark(tempY, tempX, tempD, tempZ, tempS, 1);
 		}
 		
-		//³¬½Ã¿Õ ÇÑÄ­¿À¸¥ÂÊ
-		//»ó¾îÀâ±â(°°ÀºÄ­¿¡ »ó¾îµÎ¸¶¸®ÀÖÀ»¼öÀÖÀ½)
-		//»ó¾îÀÌµ¿(°æ°èÀÏ°æ¿ì ¹İ´ë·Î ¹æÇâ¹Ù²Ş)
-		//¸Ê¿¡ »ó¾î Âï¾îÁÖ±â
+		//ë‚šì‹œì™• í•œì¹¸ì˜¤ë¥¸ìª½
+		//ìƒì–´ì¡ê¸°(ê°™ì€ì¹¸ì— ìƒì–´ë‘ë§ˆë¦¬ìˆì„ìˆ˜ìˆìŒ)
+		//ìƒì–´ì´ë™(ê²½ê³„ì¼ê²½ìš° ë°˜ëŒ€ë¡œ ë°©í–¥ë°”ê¿ˆ)
+		//ë§µì— ìƒì–´ ì°ì–´ì£¼ê¸°
 //		print();
 		while(manX<C) {
 			manX++;
@@ -96,22 +96,22 @@ public class Solution_B_17143_³¬½Ã¿Õ {
 	private static void checkShark() {
 		
 		for(int i = 1; i<=M;i++) {
-			//»ì¾ÆÀÖ´Â¾Öµé¸¸
+			//ì‚´ì•„ìˆëŠ”ì• ë“¤ë§Œ
 			if(shark[i].life==1) {
-				//ÀÚ¸®¿¡ ´©°¡ÀÖÀ¸¸é
+				//ìë¦¬ì— ëˆ„ê°€ìˆìœ¼ë©´
 				if(map[shark[i].y][shark[i].x] != 0) {
 					Shark pre = shark[map[shark[i].y][shark[i].x]];
-					//³»°¡Å©¸é ³¯³Ö´Â´Ù
+					//ë‚´ê°€í¬ë©´ ë‚ ë„£ëŠ”ë‹¤
 					if(pre.z<shark[i].z) {
 						pre.life = -1;
 						map[shark[i].y][shark[i].x] = i;
 					}
-					//¿ø·¡ ÀÖ´ø¾Ö°¡ Å©¸é ³ª µÚÁü
+					//ì›ë˜ ìˆë˜ì• ê°€ í¬ë©´ ë‚˜ ë’¤ì§
 					else {
 						shark[i].life = -1;
 					}
 				}
-				//ÀÚ¸®¿¡ ¾Æ¹«µµ ¾øÀ»¶§
+				//ìë¦¬ì— ì•„ë¬´ë„ ì—†ì„ë•Œ
 				else {
 					map[shark[i].y][shark[i].x] = i;
 				}
@@ -128,7 +128,7 @@ public class Solution_B_17143_³¬½Ã¿Õ {
 				int ty = shark[i].y+(dy[shark[i].d]*shark[i].s);
 				int tx = shark[i].x+(dx[shark[i].d]*shark[i].s);
 				while(!isSafe(ty,tx)) {
-					//»óÇÏ
+					//ìƒí•˜
 					if(shark[i].d==1||shark[i].d==2) {
 						if(R<ty) {
 							ty = R - (ty-R);
@@ -139,7 +139,7 @@ public class Solution_B_17143_³¬½Ã¿Õ {
 							shark[i].d = shark[i].d ==1 ? 2:1;
 						}
 					}
-					//ÁÂ¿ì
+					//ì¢Œìš°
 					else {
 						if(C<tx) {
 							tx = C - (tx-C);
@@ -166,7 +166,7 @@ public class Solution_B_17143_³¬½Ã¿Õ {
 
 
 	private static void catchShark() {
-		//°°Àº ¿­¿¡ÀÖ´Â¾ÖÁß °¡Àå À§¿¡ÀÖ´Â¾Ö.
+		//ê°™ì€ ì—´ì—ìˆëŠ”ì• ì¤‘ ê°€ì¥ ìœ„ì—ìˆëŠ”ì• .
 		for(int i = 1;i<=R;i++) {
 			if(map[i][manX]!=0) {
 				Shark temp = shark[map[i][manX]];

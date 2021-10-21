@@ -1,4 +1,4 @@
-package study_1203;
+ï»¿package study_1203;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -14,7 +14,7 @@ public class Solution_Go_2_2 {
 	
 	private static int[] solution(int n) {
 		// TODO Auto-generated method stub
-		int max = n*n; // ÃÖ´ë°ª
+		int max = n*n; // ìµœëŒ€ê°’
 		
 		ArrayList<Integer> answer = new ArrayList<>();
 		boolean[] isValid = new boolean[n+1];
@@ -25,7 +25,7 @@ public class Solution_Go_2_2 {
 			test[i] = i*i;
 		}
 		
-		//ArrayList => ¹è¿­
+		//ArrayList => ë°°ì—´
 		int[] result = new int[answer.size()];
 		for(int i = 0 ; i<answer.size();i++) {
 			result[i] = answer.get(i);
@@ -65,7 +65,7 @@ public class Solution_Go_2_2 {
 			System.out.println(i);
 				if(!answer.isEmpty()&&answer.get(0)==1)
 					return answer;
-				//°ñ¶óÁöÁö ¾ÊÀº ¼ýÀÚÀÏ°æ¿ì
+				//ê³¨ë¼ì§€ì§€ ì•Šì€ ìˆ«ìžì¼ê²½ìš°
 				if(!isValid[i]&&max>=now+(i*i)) {
 					isValid[i] = true;
 					answer = dfs(answer,isValid,max,now+(i*i),n,index-1);

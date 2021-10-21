@@ -1,4 +1,4 @@
-package study_0308;
+ï»¿package study_0308;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.StringTokenizer;
 
-public class Solution_B_12738_°¡Àå±äÁõ°¡ÇÏ´ÂºÎºĞ¼ö¿­3 {
+public class Solution_B_12738_ê°€ì¥ê¸´ì¦ê°€í•˜ëŠ”ë¶€ë¶„ìˆ˜ì—´3 {
 
 	static int N;
 	static List<Integer> data = new ArrayList<Integer>();

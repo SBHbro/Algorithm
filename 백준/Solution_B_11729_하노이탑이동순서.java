@@ -1,4 +1,4 @@
-package study_0115;
+ï»¿package study_0115;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -7,7 +7,7 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.util.StringTokenizer;
 
-public class Solution_B_11729_ÇÏ³ëÀÌÅ¾ÀÌµ¿¼ø¼­ {
+public class Solution_B_11729_í•˜ë…¸ì´íƒ‘ì´ë™ìˆœì„œ {
 
 	static BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 	

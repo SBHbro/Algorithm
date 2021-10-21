@@ -1,4 +1,4 @@
-package algo_study_0626;
+﻿package algo_study_0626;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.StringTokenizer;
 
-public class Solution_D4_1226_미로1_dfs {
+public class Solution_D4_1226_誘몃?1_dfs {
 
 	static int N = 16;
 	static int[][] map;
@@ -20,15 +20,15 @@ public class Solution_D4_1226_미로1_dfs {
 		BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
 
 		for (int t = 1; t <= 10; t++) {
-			// 테스트케이스 번호받는부붑
+			// ??ㅽ몄??댁?踰?몃??遺遺
 			in.readLine();
 
-			// 변수 초기화
+			// 蹂? 珥湲고
 			map = new int[N][N];
 			visited = new boolean[N][N];
 			ans = 0;
 
-			// 데이터 입력
+			// ?곗댄????
 			for (int i = 0; i < N; i++) {
 				String input = in.readLine();
 				for (int j = 0; j < N; j++) {
@@ -48,17 +48,17 @@ public class Solution_D4_1226_미로1_dfs {
 
 	private static void dfs(int y, int x) {
 		
-		//도착지점을 만나면 1 로 바꿔준다
+		//?李⑹??? 留?硫?1 濡 諛轅以??
 		if (map[y][x] == 3) {
 			ans = 1;
 		}
 		
-		//이미 도착지점을 만난 경우 리턴
+		//?대??李⑹??? 留? 寃쎌?由ы?
 		if (ans == 1) {
 			return ;
 		}
 
-		for (int k = 0; k < 4; k++) {//상하좌우
+		for (int k = 0; k < 4; k++) {//??醫??
 			int ty = y + dy[k];
 			int tx = x + dx[k];
 

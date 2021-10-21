@@ -1,4 +1,4 @@
-package algo_study_0629;
+﻿package algo_study_0629;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -8,14 +8,14 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.StringTokenizer;
 
-public class Solution_B_2583_영역구하기 {
+public class Solution_B_2583_??援ы湲?{
 
-	static int M, N, K; // Y,X, 사각형의개수
-	static int[][] map; // 맵
-	static ArrayList<Integer> ans; // 답
-	static int[] dx = { 0, 0, -1, 1 }; // 이동
+	static int M, N, K; // Y,X, ?ш???媛?
+	static int[][] map; // 留?
+	static ArrayList<Integer> ans; // ??
+	static int[] dx = { 0, 0, -1, 1 }; // ?대
 	static int[] dy = { -1, 1, 0, 0 };
-	static int cnt; // 분리된 영역의 개수
+	static int cnt; // 遺由щ ??? 媛?
 
 	public static void main(String[] args) throws IOException {
 		BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
@@ -26,7 +26,7 @@ public class Solution_B_2583_영역구하기 {
 		N = Integer.parseInt(st.nextToken());
 		K = Integer.parseInt(st.nextToken());
 
-		// 값 초기화
+		// 媛 珥湲고
 		map = new int[M][N];
 		ans = new ArrayList<Integer>();
 		ans.add(1);
@@ -50,7 +50,7 @@ public class Solution_B_2583_영역구하기 {
 			System.out.println(Arrays.toString(map[i]));
 		}
 
-		//영역 탐색
+		//?? ??
 		for (int i = 0; i < M; i++) {
 			for (int j = 0; j < N; j++) {
 				if (map[i][j] == 0) {

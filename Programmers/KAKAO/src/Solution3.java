@@ -1,4 +1,4 @@
-import java.util.ArrayList;
+ï»¿import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
@@ -40,10 +40,10 @@ public class Solution3 {
         	data[to].add(from);
         }
         
-        //1¹øÀ» Å¥¿¡ ³Ö´Â´Ù.
-        //1¹øÀ» ²¨³»°í 1¹øÀ» ¹æ¹® Ç¥½Ã ÇÑ µÚ 1¹øÀÌ °¥ ¼ö ÀÖ´Â ¾ÖµéÀ» ¸ğµÎ Ã£¾Æ¼­ ´Ù½Ã Å¥¿¡³ÖÀ¸¸é¼­ °¡Àå Å« °ªÀ» Ã£´Â´Ù.
-        //³¡³¯¶§±îÁö ¹İº¹
-        //que= node, Áö±İ±îÁöÀÇ °ª
+        //1ë²ˆì„ íì— ë„£ëŠ”ë‹¤.
+        //1ë²ˆì„ êº¼ë‚´ê³  1ë²ˆì„ ë°©ë¬¸ í‘œì‹œ í•œ ë’¤ 1ë²ˆì´ ê°ˆ ìˆ˜ ìˆëŠ” ì• ë“¤ì„ ëª¨ë‘ ì°¾ì•„ì„œ ë‹¤ì‹œ íì—ë„£ìœ¼ë©´ì„œ ê°€ì¥ í° ê°’ì„ ì°¾ëŠ”ë‹¤.
+        //ëë‚ ë•Œê¹Œì§€ ë°˜ë³µ
+        //que= node, ì§€ê¸ˆê¹Œì§€ì˜ ê°’
         
         que.add(new int[] {1,passenger[0]});
         

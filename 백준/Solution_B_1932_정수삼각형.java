@@ -1,11 +1,11 @@
-package study_0204;
+ï»¿package study_0204;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Solution_B_1932_Á¤¼ö»ï°¢Çü {
+public class Solution_B_1932_ì •ìˆ˜ì‚¼ê°í˜• {
 
 	static int N;
 	static int[][] data;

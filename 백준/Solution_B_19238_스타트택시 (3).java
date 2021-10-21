@@ -1,4 +1,4 @@
-package study_1215;
+﻿package study_1215;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -7,7 +7,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.StringTokenizer;
 
-public class Solution_B_19238_��ŸƮ�ý� {
+public class Solution_B_19238_스타트택시 {
 	
 	static class Node{
 		int y,x;

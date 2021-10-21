@@ -1,4 +1,4 @@
-package study_1203;
+ï»¿package study_1203;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -14,13 +14,13 @@ public class Solution_Go_2 {
 	
 	private static int[] solution(int n) {
 		
-		int max = n*n; // ÃÖ´ë°ª
+		int max = n*n; // ìµœëŒ€ê°’
 		
 		ArrayList<Integer> answer = new ArrayList<>();
 		boolean[] isValid = new boolean[n+1];
 		answer = dfs(answer,isValid,max,0,n,n-1);
 		
-		//ArrayList => ¹è¿­
+		//ArrayList => ë°°ì—´
 		int[] result = new int[answer.size()];
 		for(int i = 0 ; i<answer.size();i++) {
 			result[i] = answer.get(i);
@@ -31,7 +31,7 @@ public class Solution_Go_2 {
 
 	public static ArrayList<Integer> dfs(ArrayList<Integer> answer,boolean[] isValid, int max, int now,int n,int index) {
 		
-		//Á¾·áÁ¶°Ç
+		//ì¢…ë£Œì¡°ê±´
 		if(max == now) {
 			for(int i = 1 ; i<n;i++) {
 				if(isValid[i]) {
@@ -42,7 +42,7 @@ public class Solution_Go_2 {
 		}
 		
 		for(int i = index; i>0;i-- ) {
-				//´äÀÌ Á¤ÇØÁ³´Ù¸é ´õÀÌ»ó Æ÷¹® µ¹Áö¾Ê°í ¸®ÅÏ
+				//ë‹µì´ ì •í•´ì¡Œë‹¤ë©´ ë”ì´ìƒ í¬ë¬¸ ëŒì§€ì•Šê³  ë¦¬í„´
 				if(!answer.isEmpty()) 
 					return answer;
 				

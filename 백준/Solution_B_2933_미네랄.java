@@ -1,4 +1,4 @@
-package study_0309;
+ï»¿package study_0309;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -13,18 +13,18 @@ import java.util.List;
 import java.util.Map;
 import java.util.StringTokenizer;
 
-public class Solution_B_2933_¹Ì³×¶ö {
+public class Solution_B_2933_ë¯¸ë„¤ë„ {
 
-	//1.¾óÀ½ ±ú±â
-	//2.Å¬·¯½ºÅÍ Àç»ı¼º
-	//3.¾Æ·¡·Î ¶³¾îÁö±â
+	//1.ì–¼ìŒ ê¹¨ê¸°
+	//2.í´ëŸ¬ìŠ¤í„° ì¬ìƒì„±
+	//3.ì•„ë˜ë¡œ ë–¨ì–´ì§€ê¸°
 	
-	//1. ¿ŞÂÊ¿¡¼­ ´øÁ³À» ¶§, ¿À¸¥ÂÊ¿¡¼­ ´øÁ³À» ¶§.
-	//dx[i]¸¦ ´õÇØ°¡¸ç ±×°÷ÀÌ ¾óÀ½ÀÌ¸é ºÎ¼ø´Ù.
-	//2. ºÎ¼­Áø°÷ÀÇ »ó,¿ì,ÁÂ ¸¦ dfs·Î µ¹¸ç Å¬·¯½ºÅÍ¸¦ ¸¸µé¾î¼­ ¸Ê¿¡ ³Ö´Â´Ù
-	//¸Ê -> Å° = x  °ª = ÀÎÆ®[](y°¡ ³·Àº°Ô ¿ì¼±) <Integer, List<Integer>>
-	//3. Å°°ªÀ» ¸ğµÎ µ¹¸ç °ª.get(0),Å° ÀÇ ¾Æ·¡°¡ ºó °ø°£ÀÎÁö È®ÀÎ
-	// ¸ğµÎ ºó°ø°£ÀÏ °æ¿ì for(Å°)for(°ª.size) °ª-1,x ´Â °ª,x
+	//1. ì™¼ìª½ì—ì„œ ë˜ì¡Œì„ ë•Œ, ì˜¤ë¥¸ìª½ì—ì„œ ë˜ì¡Œì„ ë•Œ.
+	//dx[i]ë¥¼ ë”í•´ê°€ë©° ê·¸ê³³ì´ ì–¼ìŒì´ë©´ ë¶€ìˆœë‹¤.
+	//2. ë¶€ì„œì§„ê³³ì˜ ìƒ,ìš°,ì¢Œ ë¥¼ dfsë¡œ ëŒë©° í´ëŸ¬ìŠ¤í„°ë¥¼ ë§Œë“¤ì–´ì„œ ë§µì— ë„£ëŠ”ë‹¤
+	//ë§µ -> í‚¤ = x  ê°’ = ì¸íŠ¸[](yê°€ ë‚®ì€ê²Œ ìš°ì„ ) <Integer, List<Integer>>
+	//3. í‚¤ê°’ì„ ëª¨ë‘ ëŒë©° ê°’.get(0),í‚¤ ì˜ ì•„ë˜ê°€ ë¹ˆ ê³µê°„ì¸ì§€ í™•ì¸
+	// ëª¨ë‘ ë¹ˆê³µê°„ì¼ ê²½ìš° for(í‚¤)for(ê°’.size) ê°’-1,x ëŠ” ê°’,x
 	
 	static int R,C;
 	static char[][] map;
@@ -53,14 +53,14 @@ public class Solution_B_2933_¹Ì³×¶ö {
 		for(int i = 1 ; i<=N;i++) {
 			int ty = R-Integer.parseInt(st.nextToken());
 			int[] ice;
-			//¿ŞÂÊ¿¡¼­ ´øÁü
+			//ì™¼ìª½ì—ì„œ ë˜ì§
 			if(i%2==1) {
-//				System.out.println("¿ŞÂÊ¿¡¼­ ´øÁü");
+//				System.out.println("ì™¼ìª½ì—ì„œ ë˜ì§");
 				ice = throwBar(ty,3);
 			}
-			//¿À¸¥ÂÊ¿¡¼­ ´øÁü
+			//ì˜¤ë¥¸ìª½ì—ì„œ ë˜ì§
 			else {
-//				System.out.println("¿À¸¥ÂÊ¿¡¼­ ´øÁü");
+//				System.out.println("ì˜¤ë¥¸ìª½ì—ì„œ ë˜ì§");
 				ice = throwBar(ty,2);
 			}
 			if(ice != null){
@@ -71,14 +71,14 @@ public class Solution_B_2933_¹Ì³×¶ö {
 					int iceTy = ice[0]+dy[j];
 					int iceTx = ice[1]+dx[j];
 					if(isSafe(iceTy,iceTx)&&map[iceTy][iceTx]=='x') {
-//						System.out.println("¾óÀ½Á¶°¢¸¸³² "+ j);
+//						System.out.println("ì–¼ìŒì¡°ê°ë§Œë‚¨ "+ j);
 						cluster = new HashMap<Integer, List<Integer>>();
 						checkCluster(new int[] {iceTy,iceTx});
 //						if(i==6) {
 //							out.write(iceTy+ " "+iceTx+"\n");
 //							out.write(map[iceTy][iceTx] + "\n");
 //							out.write(ice[0] + " " + ice[1] + "\n");
-//							out.write(j+"¿Ö¾È¶³¾îÁöÁö? input "+ty+"\n");
+//							out.write(j+"ì™œì•ˆë–¨ì–´ì§€ì§€? input "+ty+"\n");
 							for(Integer a : cluster.keySet()) {
 								Collections.sort(cluster.get(a),Comparator.reverseOrder());
 //								out.write(a + " " + cluster.get(a)+"\n");
@@ -89,7 +89,7 @@ public class Solution_B_2933_¹Ì³×¶ö {
 				}
 			}
 //			System.out.println();
-//			System.out.println("´Ü°è³¡");
+//			System.out.println("ë‹¨ê³„ë");
 		}
 		
 		for(char[] a : map) {
@@ -106,11 +106,11 @@ public class Solution_B_2933_¹Ì³×¶ö {
 
 	private static void downCluster() {
 		while(true) {
-			//x°¡ µé¾îÀÖ´Â ¸¸Å­
+			//xê°€ ë“¤ì–´ìˆëŠ” ë§Œí¼
 			for(Integer key : cluster.keySet()) {
-				//x¿¡¼­ y°¡ °¡ÀåÀÛÀº¾Ö¸¦ Ã£´Â´Ù.
-				//°Â³×µéÀÌ ¸ğµÎ ³»·Á°¥ ¼ö ÀÖÀ»°æ¿ì
-				//¸ÊÀÇ ÀüÃ¼ ¿ø¼Ò¸¦ µ¹¸ç ÇÑÄ­¾¿ ³»¸°´Ù.
+				//xì—ì„œ yê°€ ê°€ì¥ì‘ì€ì• ë¥¼ ì°¾ëŠ”ë‹¤.
+				//ê±”ë„¤ë“¤ì´ ëª¨ë‘ ë‚´ë ¤ê°ˆ ìˆ˜ ìˆì„ê²½ìš°
+				//ë§µì˜ ì „ì²´ ì›ì†Œë¥¼ ëŒë©° í•œì¹¸ì”© ë‚´ë¦°ë‹¤.
 				int top=cluster.get(key).get(cluster.get(key).size()-1);
 				int bottom=cluster.get(key).get(0);
 //				Collections.sort(cluster.get(key),Comparator.reverseOrder());
@@ -171,7 +171,7 @@ public class Solution_B_2933_¹Ì³×¶ö {
 			tx += dx[direction];
 			if(map[y][tx] == 'x') {
 				map[y][tx] = '.';
-//				System.out.println(y+" "+tx+" ¾óÀ½¸¸³²");
+//				System.out.println(y+" "+tx+" ì–¼ìŒë§Œë‚¨");
 				return new int[] {y,tx};
 			}
 		}

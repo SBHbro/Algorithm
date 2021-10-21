@@ -1,4 +1,4 @@
-package study_0203;
+ï»¿package study_0203;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -7,7 +7,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.StringTokenizer;
 
-public class Solution_B_1149_RGB°Å¸® {
+public class Solution_B_1149_RGBê±°ë¦¬ {
 
 	static int[][] data;
 	static int N;
@@ -44,7 +44,7 @@ public class Solution_B_1149_RGB°Å¸® {
 
 	private static void bfs() {
 		
-		//¾îµğ¿¡¼­ ¿Ô´ÂÁö
+		//ì–´ë””ì—ì„œ ì™”ëŠ”ì§€
 		Queue<Integer> que = new LinkedList<Integer>();
 		Queue<Integer> que2 = new LinkedList<Integer>();
 		
@@ -52,10 +52,10 @@ public class Solution_B_1149_RGB°Å¸® {
 		que.add(1);
 		que.add(2);
 		
-		//¸î¹øÂ° ÁıÀÎÁö
+		//ëª‡ë²ˆì§¸ ì§‘ì¸ì§€
 		int depth = 1;
 		
-		//¿ÍÀÏ Å¥ºô¶§±îÁö
+		//ì™€ì¼ íë¹Œë•Œê¹Œì§€
 		while(!que.isEmpty()&&depth<N) {
 			
 			while(!que.isEmpty()) {
@@ -72,7 +72,7 @@ public class Solution_B_1149_RGB°Å¸® {
 						continue;
 					
 					int now = dp[depth-1][from] + data[depth][i];
-					//r»öÄ¥ÇÑ°÷¿¡¼­ ¿ÀÁö ¾Ê¾Ò°í Àü¿¡ÀÖ´ø°÷¿¡¼­ ¿©±â¿À´Â »öÄ¥ÀÇ ºñ¿ëÀÌ ¿ø·¡º¸´Ù ÀÛÀ¸¸é ¹Ù²Ù°í ´ÙÀ½À¸·Î°£´Ù.
+					//rìƒ‰ì¹ í•œê³³ì—ì„œ ì˜¤ì§€ ì•Šì•˜ê³  ì „ì—ìˆë˜ê³³ì—ì„œ ì—¬ê¸°ì˜¤ëŠ” ìƒ‰ì¹ ì˜ ë¹„ìš©ì´ ì›ë˜ë³´ë‹¤ ì‘ìœ¼ë©´ ë°”ê¾¸ê³  ë‹¤ìŒìœ¼ë¡œê°„ë‹¤.
 					if(now<dp[depth][i]) {
 						dp[depth][i] = now;
 						que.add(i);
@@ -82,12 +82,12 @@ public class Solution_B_1149_RGB°Å¸® {
 			depth++;
 		}
 		
-		//Å¥¿¡ÀÖ´Â°Å ´Ù Å¥2·Î ¿Å±ä´Ù
-		//¿ÍÀÏ Å¥2ºô¶§±îÁö
-		//ÇÏ³ª¾¿ ²¨³½´Ù
-		//²¨³½¾Ö¸¦ ¿Â°÷°ú ºñ±³ÇØ¼­ °¥ ¼ö ÀÖ´Â°÷À» ÀÌÇÁ¹®À¸·Î °£´ÙÀ½
-		//°Å±âÀÇ dp°ªÀÌ 0ÀÌ¸é ±×³É ³Ö°í
-		//0ÀÌ ¾Æ´Ñµ¥ ³ªº¸´Ù °ªÀÌ Å©¸é ³Ö°í Å¥1¿¡ ³Ö´Â´Ù.
+		//íì—ìˆëŠ”ê±° ë‹¤ í2ë¡œ ì˜®ê¸´ë‹¤
+		//ì™€ì¼ í2ë¹Œë•Œê¹Œì§€
+		//í•˜ë‚˜ì”© êº¼ë‚¸ë‹¤
+		//êº¼ë‚¸ì• ë¥¼ ì˜¨ê³³ê³¼ ë¹„êµí•´ì„œ ê°ˆ ìˆ˜ ìˆëŠ”ê³³ì„ ì´í”„ë¬¸ìœ¼ë¡œ ê°„ë‹¤ìŒ
+		//ê±°ê¸°ì˜ dpê°’ì´ 0ì´ë©´ ê·¸ëƒ¥ ë„£ê³ 
+		//0ì´ ì•„ë‹Œë° ë‚˜ë³´ë‹¤ ê°’ì´ í¬ë©´ ë„£ê³  í1ì— ë„£ëŠ”ë‹¤.
 		
 	}
 	

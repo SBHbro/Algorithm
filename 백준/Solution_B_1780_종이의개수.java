@@ -1,11 +1,11 @@
-package study_0302;
+ï»¿package study_0302;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Solution_B_1780_Á¾ÀÌÀÇ°³¼ö {
+public class Solution_B_1780_ì¢…ì´ì˜ê°œìˆ˜ {
 
 	static int N;
 	static int[][] input;
@@ -62,7 +62,7 @@ public class Solution_B_1780_Á¾ÀÌÀÇ°³¼ö {
 			return;
 		}
 		else {
-			//½ÃÀÛÀ§Ä¡Àâ´Â°÷ ºÎÅÍ ´Ù½Ã
+			//ì‹œì‘ìœ„ì¹˜ì¡ëŠ”ê³³ ë¶€í„° ë‹¤ì‹œ
 			find(startY,startX,len/3);
 			find(startY,startX+len/3,len/3);
 			find(startY,startX+(len/3)*2,len/3);

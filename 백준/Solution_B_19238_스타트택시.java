@@ -1,4 +1,4 @@
-package study_1130;
+ï»¿package study_1130;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -7,14 +7,14 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.StringTokenizer;
 
-public class Solution_B_19238_½ºÅ¸Æ®ÅÃ½Ã {
+public class Solution_B_19238_ìŠ¤íƒ€íŠ¸íƒì‹œ {
 
-	static int N,M;//¸Ê Å©±â, ½Â°´ ¼ö
-	static int[][] map; // ¸Ê
+	static int N,M;//ë§µ í¬ê¸°, ìŠ¹ê° ìˆ˜
+	static int[][] map; // ë§µ
 	static int ay,ax;
-	static int min; //½Â°´¿¡°Ô °¥ ¼ö ÀÖ´Â ÃÖ´Ü°Å¸®
-	static int fuel;//¿¬·á
-	static int[] dy = {-1,1,0,0}; // ÀÌµ¿¿¡ »ç¿ëÇÒ ¹è¿­
+	static int min; //ìŠ¹ê°ì—ê²Œ ê°ˆ ìˆ˜ ìˆëŠ” ìµœë‹¨ê±°ë¦¬
+	static int fuel;//ì—°ë£Œ
+	static int[] dy = {-1,1,0,0}; // ì´ë™ì— ì‚¬ìš©í•  ë°°ì—´
 	static int[] dx = {0,0,-1,1};
 	static ArrayList<int[]> start;
 	static ArrayList<int[]> end;
@@ -30,7 +30,7 @@ public class Solution_B_19238_½ºÅ¸Æ®ÅÃ½Ã {
 		map = new int[N][N];
 		
 		
-		//¸Ê Á¤º¸ ÀÔ·Â
+		//ë§µ ì •ë³´ ì…ë ¥
 		for(int i = 0 ; i<N;i++) {
 			st = new StringTokenizer(in.readLine());
 			for(int j =0;j<N;j++) {
@@ -38,12 +38,12 @@ public class Solution_B_19238_½ºÅ¸Æ®ÅÃ½Ã {
 			}
 		}
 		
-		//ÅÃ½Ã ½ÃÀÛÁÂÇ¥ ÀÔ·Â
+		//íƒì‹œ ì‹œì‘ì¢Œí‘œ ì…ë ¥
 		st= new StringTokenizer(in.readLine());
 		ay = Integer.parseInt(st.nextToken())-1;
 		ax = Integer.parseInt(st.nextToken())-1;
 		
-		//½Â°´ ÁÂÇ¥¿Í µµÂøÁöÁÂÇ¥ ÀÔ·Â
+		//ìŠ¹ê° ì¢Œí‘œì™€ ë„ì°©ì§€ì¢Œí‘œ ì…ë ¥
 		start = new ArrayList<>();
 		end = new ArrayList<>();
 		for(int i = 0 ; i<M;i++) {
@@ -52,8 +52,8 @@ public class Solution_B_19238_½ºÅ¸Æ®ÅÃ½Ã {
 			end.add(new int[] {Integer.parseInt(st.nextToken())-1,Integer.parseInt(st.nextToken())-1});
 		}
 		
-		//ÅÃ½Ã¿¡¼­ ½Â°´±îÁöÀÇ ÃÖ´Ü°Å¸®¸¦ ¸ğµÎ ±¸ÇÏ¸é¼­(ÅÃ½Ã¿Í ½Â°´ÀÌ °°Àº°÷¿¡ ÀÖÀ¸¸é 0, ÃÖ´Ü°Å¸®°¡ °°À»°æ¿ì y,x ¼øÀ¸·Î ÀÛÀº ½Â°´ºÎÅÍ °£´Ù
-		//ÃÖ´Ü°Å¸®°¡ °¡Àå ÂªÀº ½Â°´°ú ÃÖ´Ü°Å¸®¸¦ ÀúÀåÇØ³õ´Â´Ù
+		//íƒì‹œì—ì„œ ìŠ¹ê°ê¹Œì§€ì˜ ìµœë‹¨ê±°ë¦¬ë¥¼ ëª¨ë‘ êµ¬í•˜ë©´ì„œ(íƒì‹œì™€ ìŠ¹ê°ì´ ê°™ì€ê³³ì— ìˆìœ¼ë©´ 0, ìµœë‹¨ê±°ë¦¬ê°€ ê°™ì„ê²½ìš° y,x ìˆœìœ¼ë¡œ ì‘ì€ ìŠ¹ê°ë¶€í„° ê°„ë‹¤
+		//ìµœë‹¨ê±°ë¦¬ê°€ ê°€ì¥ ì§§ì€ ìŠ¹ê°ê³¼ ìµœë‹¨ê±°ë¦¬ë¥¼ ì €ì¥í•´ë†“ëŠ”ë‹¤
 		while(M>0) {
 			int minIndex = 0;
 			int minLength = Integer.MAX_VALUE;
@@ -67,7 +67,7 @@ public class Solution_B_19238_½ºÅ¸Æ®ÅÃ½Ã {
 				}
 			}
 			
-			//ÅÃ½ÃÀÇ À§Ä¡¸¦ ½Â°´À¸·Î ¿Å±ä ÈÄ ¿¬·á¸¦ ÀÌµ¿ÇÑ °Å¸®¸¸Å­ »«´Ù
+			//íƒì‹œì˜ ìœ„ì¹˜ë¥¼ ìŠ¹ê°ìœ¼ë¡œ ì˜®ê¸´ í›„ ì—°ë£Œë¥¼ ì´ë™í•œ ê±°ë¦¬ë§Œí¼ ëº€ë‹¤
 			if(fuel-minLength >0) {
 				fuel-=minLength;
 				ay = start.get(minIndex)[0];
@@ -76,13 +76,13 @@ public class Solution_B_19238_½ºÅ¸Æ®ÅÃ½Ã {
 			else
 				break;
 			
-			//¸ñÀûÁö±îÁöÀÇ ÃÖ´Ü°Å¸® °è»ê ÈÄ ¿¬·á°¡ ÃæºĞÇÏ´Ù¸é ÀÌµ¿ÇÑ ÈÄ ¿¬·á¸¦ ÃæÀüÇÑ´Ù.
-			//ÀÌµ¿ÇÒ ¼ö ¾øÀ» °æ¿ì Á¾·á
+			//ëª©ì ì§€ê¹Œì§€ì˜ ìµœë‹¨ê±°ë¦¬ ê³„ì‚° í›„ ì—°ë£Œê°€ ì¶©ë¶„í•˜ë‹¤ë©´ ì´ë™í•œ í›„ ì—°ë£Œë¥¼ ì¶©ì „í•œë‹¤.
+			//ì´ë™í•  ìˆ˜ ì—†ì„ ê²½ìš° ì¢…ë£Œ
 			min = Integer.MAX_VALUE;
 			boolean[][] check = new boolean[N][N];
 			dfs(ay,ax,0,minIndex,check,end);
 			
-			//ÀÌµ¿ÇÒ ¼ö ÀÖ´Ù¸é
+			//ì´ë™í•  ìˆ˜ ìˆë‹¤ë©´
 			if(fuel-min>=0) {
 				ay = end.get(minIndex)[0];
 				ax = end.get(minIndex)[1];
@@ -100,7 +100,7 @@ public class Solution_B_19238_½ºÅ¸Æ®ÅÃ½Ã {
 			System.out.println(fuel);
 	}
 	
-	//ÃÖ´Ü°Å¸® °è»ê dfs
+	//ìµœë‹¨ê±°ë¦¬ ê³„ì‚° dfs
 	private static void dfs(int y, int x,int k,int man,boolean[][] check,ArrayList<int[]> list) {
 		if(k>min) {
 			return;

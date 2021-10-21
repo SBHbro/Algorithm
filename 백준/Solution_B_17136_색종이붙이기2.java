@@ -1,4 +1,4 @@
-package algo_study_0728;
+ï»¿package algo_study_0728;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.StringTokenizer;
 
-public class Solution_B_17136_»öÁ¾ÀÌºÙÀÌ±â2 {
+public class Solution_B_17136_ìƒ‰ì¢…ì´ë¶™ì´ê¸°2 {
 
 	static int[][] map;
 	static int N = 10;
@@ -14,11 +14,11 @@ public class Solution_B_17136_»öÁ¾ÀÌºÙÀÌ±â2 {
 	static int[] paper;
 	static boolean isAns;
 
-	// »öÁ¾ÀÌÀÇ Å©±â´Â 1.1 2.2 3.3 4.4 5.5
-	// ¸ÊÀº 10x10
-	// 10x10 ¸ÊÀ» »öÁ¾ÀÌ Å«°ÍºÎÅÍ 2ÁßÆ÷¹®À¸·Î µ¹¸ç »öÁ¾ÀÌ·Î µ¤À» ¼ö ÀÖ´ÂÁö °Ë»ç
-	// µ¤À» ¼ö ÀÖÀ» °æ¿ì ±×ºÎºĞÀ» ¸ğµÎ 0 À¸·Î º¯°æ
-	// ¸¶Áö¸·¿¡ 1ÀÌ ÀÖ´ÂÁö È®ÀÎÇÑ ÈÄ ÀÖÀ¸¸é ans ¾øÀ¸¸é -1Ãâ·Â
+	// ìƒ‰ì¢…ì´ì˜ í¬ê¸°ëŠ” 1.1 2.2 3.3 4.4 5.5
+	// ë§µì€ 10x10
+	// 10x10 ë§µì„ ìƒ‰ì¢…ì´ í°ê²ƒë¶€í„° 2ì¤‘í¬ë¬¸ìœ¼ë¡œ ëŒë©° ìƒ‰ì¢…ì´ë¡œ ë®ì„ ìˆ˜ ìˆëŠ”ì§€ ê²€ì‚¬
+	// ë®ì„ ìˆ˜ ìˆì„ ê²½ìš° ê·¸ë¶€ë¶„ì„ ëª¨ë‘ 0 ìœ¼ë¡œ ë³€ê²½
+	// ë§ˆì§€ë§‰ì— 1ì´ ìˆëŠ”ì§€ í™•ì¸í•œ í›„ ìˆìœ¼ë©´ ans ì—†ìœ¼ë©´ -1ì¶œë ¥
 	public static void main(String[] args) throws IOException {
 		BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
 		map = new int[N][N];
@@ -46,7 +46,7 @@ public class Solution_B_17136_»öÁ¾ÀÌºÙÀÌ±â2 {
 //		}
 //		System.out.println(Arrays.toString(paper));
 //		System.out.println();
-//		//y,x°¡ 10¿¡ µµÂøÇßÀ»¶§
+//		//y,xê°€ 10ì— ë„ì°©í–ˆì„ë•Œ
 //		if(y>=N-1&&x>=N-1) {
 //			
 //		}
@@ -55,22 +55,22 @@ public class Solution_B_17136_»öÁ¾ÀÌºÙÀÌ±â2 {
 		
 		
 		
-		//0ºÎÅÍ³¡±îÁö È®ÀÎÇÑ´Ù
+		//0ë¶€í„°ëê¹Œì§€ í™•ì¸í•œë‹¤
 		for(int i =y;i<N;i++) {
 			for(int j = 0 ;j<N;j++) {
-				//¸ÊÀÌ 1ÀÏ°æ¿ì
+				//ë§µì´ 1ì¼ê²½ìš°
 				if(map[i][j]==1) {
-					//Á¾ÀÌÀÇÅ©±â 1~5±îÁö µ¹¸é¼­
+					//ì¢…ì´ì˜í¬ê¸° 1~5ê¹Œì§€ ëŒë©´ì„œ
 					for(int t =4;t>=0;t--) {
-						//1~5ÀÇ Å©±âÀÎ Á¾ÀÌ·Î µ¤À»¼ö ÀÖ´ÂÁö, ±× Á¾ÀÌ°¡ ³²¾ÆÀÖ´ÂÁö È®ÀÎÇÏ°í
+						//1~5ì˜ í¬ê¸°ì¸ ì¢…ì´ë¡œ ë®ì„ìˆ˜ ìˆëŠ”ì§€, ê·¸ ì¢…ì´ê°€ ë‚¨ì•„ìˆëŠ”ì§€ í™•ì¸í•˜ê³ 
 						if(check(i,j,t,map)&&paper[t]>=0) {
-							//map º¹»ç
+							//map ë³µì‚¬
 							int[][] map2 = new int[N][N];
 							for(int z = 0;z<N;z++) {
 								map2[z] = map[z].clone();
 							}
 							
-							//´ÙÀ½ dfsÈ£Ãâ
+							//ë‹¤ìŒ dfsí˜¸ì¶œ
 							paper[t]--;
 							paint(i,j,t,map2);
 							dfs(i,j+t+1,map2,k+1);

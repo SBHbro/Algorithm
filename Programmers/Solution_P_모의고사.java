@@ -1,4 +1,4 @@
-package study_1019;
+ï»¿package study_1019;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -9,7 +9,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
-public class Solution_P_¸ğÀÇ°í»ç {
+public class Solution_P_ëª¨ì˜ê³ ì‚¬ {
 
 	public static void main(String[] args) {
 //		int[] answer = {1,2,3,4,5};
@@ -20,7 +20,7 @@ public class Solution_P_¸ğÀÇ°í»ç {
 	public static int[] solution(int[] answers) {
 		int[] answer = new int[3];
 
-		// 1¹ø,2¹ø,3¹øÀÇ Å¥¸¦ ¸¸µç´Ù.
+		// 1ë²ˆ,2ë²ˆ,3ë²ˆì˜ íë¥¼ ë§Œë“ ë‹¤.
 		Queue<Integer>[] student = new Queue[3];
 
 		for (int i = 0; i < 3; i++) {
@@ -87,10 +87,10 @@ public class Solution_P_¸ğÀÇ°í»ç {
 		
 		Arrays.sort(answer);
 
-		// Á¤´ä¹è¿­¿¡¼­ ÇÏ³ª¸¦ »Ì¾Æ °¢ Å¥¿¡¼­ »Ì¾Æ¼­ ³ª¿Â°Í°ú ´ëÁ¶ÇÏ¿©
-		// ¸Â´Â ¹øÈ£ÀÇ Á¤´ä ¹è¿­À» ¿Ã¸°´Ù.
-		// Á¤´ä¹è¿­À» ¸®½ºÆ®<ÀÎÆ®[2]> ·Î º¯È¯ÇÑ´Ù.
-		// ¸ÂÀº °³¼ö·Î Á¤·ÄÀ» ÇÑ ÈÄ ¸ÇÃ³À½°É Á¤´ä ¹è¿­¿¡ ³Ö°í µÎ¹ø¤ŠºÎÅÍ ºñ±³ÇÏ¸ç ³Ö´Â´Ù.
+		// ì •ë‹µë°°ì—´ì—ì„œ í•˜ë‚˜ë¥¼ ë½‘ì•„ ê° íì—ì„œ ë½‘ì•„ì„œ ë‚˜ì˜¨ê²ƒê³¼ ëŒ€ì¡°í•˜ì—¬
+		// ë§ëŠ” ë²ˆí˜¸ì˜ ì •ë‹µ ë°°ì—´ì„ ì˜¬ë¦°ë‹¤.
+		// ì •ë‹µë°°ì—´ì„ ë¦¬ìŠ¤íŠ¸<ì¸íŠ¸[2]> ë¡œ ë³€í™˜í•œë‹¤.
+		// ë§ì€ ê°œìˆ˜ë¡œ ì •ë ¬ì„ í•œ í›„ ë§¨ì²˜ìŒê±¸ ì •ë‹µ ë°°ì—´ì— ë„£ê³  ë‘ë²ˆ?ë¶€í„° ë¹„êµí•˜ë©° ë„£ëŠ”ë‹¤.
 
 		return answer;
 	}

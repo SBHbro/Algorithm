@@ -1,4 +1,4 @@
-import java.io.BufferedReader;
+﻿import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Arrays;
@@ -6,12 +6,12 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.StringTokenizer;
 
-public class Solution_D4_1219_길찾기 {
+public class Solution_D4_1219_湲몄갼湲?{
 
-	static int T; // 테스트케이스
-	static int N; // 간선의 개수
-	static int[] data;// 간선정보
-	static int[] data2;// 간선정보
+	static int T; // ??ㅽ몄??댁?
+	static int N; // 媛?? 媛?
+	static int[] data;// 媛??蹂?
+	static int[] data2;// 媛??蹂?
 	static Queue<int[]> que;
 	static int ans;
 
@@ -33,7 +33,7 @@ public class Solution_D4_1219_길찾기 {
 				int start = Integer.parseInt(st.nextToken());
 				int end = Integer.parseInt(st.nextToken());
 
-				if (data[start] != 0) {// 이미 값이 들어와 있는경우
+				if (data[start] != 0) {// ?대?媛???ㅼ댁 ??寃쎌?
 					data2[start] = end;
 				} else {
 					data[start] = end;
@@ -52,10 +52,10 @@ public class Solution_D4_1219_길찾기 {
 					int end = temp[1];
 //					System.out.println(Arrays.toString(temp));
 
-					// data[end] 에 값이 있을 경우에만
+					// data[end] ? 媛???? 寃쎌곗留
 					if (data[end] != 0) {
 						que.add(new int[] { end, data[end] });
-						// data2[end] 에 값이 있을 경우에만
+						// data2[end] ? 媛???? 寃쎌곗留
 						if (data2[end] != 0) {
 							que.add(new int[] { end, data2[end] });
 						}

@@ -1,4 +1,4 @@
-package programmers;
+ï»¿package programmers;
 
 import java.util.Arrays;
 
@@ -8,19 +8,19 @@ public class Solution_P_lv2_2 {
         int[] answer = {};
         int[][] data = new int[n][];
         
-        //0~n-1¹ø¶óÀÎ±îÁö ¹è¿­ »ı¼º
+        //0~n-1ë²ˆë¼ì¸ê¹Œì§€ ë°°ì—´ ìƒì„±
         int max = 0;
         for(int i =0;i<n;i++) {
         	data[i] = new int[i+1];
         	max += i+1;
         }
         
-        int dir = 0; // ¹æÇâ
+        int dir = 0; // ë°©í–¥
         int value = 2;
         int x=0,y=0;
         data[0][0] = 1;
         while(value<max+1) {
-        	//¾Æ·¡·Î°¥¶§
+        	//ì•„ë˜ë¡œê°ˆë•Œ
         	if(dir == 0) {
         		if(y+1<n&&data[y+1][x]==0) {
         			y++;
@@ -30,7 +30,7 @@ public class Solution_P_lv2_2 {
         		else
         			dir =1;
         	}
-        	//¿À¸¥ÂÊ
+        	//ì˜¤ë¥¸ìª½
         	else if(dir == 1) {
         		if(x+1<n && data[y][x+1]==0) {
         			x++;
@@ -40,7 +40,7 @@ public class Solution_P_lv2_2 {
         		else
         			dir=2;
         	}
-        	//À§
+        	//ìœ„
         	else if(dir ==2) {
         		if(y-1 <n && data[y-1][x-1] == 0 ) {
         			y--;

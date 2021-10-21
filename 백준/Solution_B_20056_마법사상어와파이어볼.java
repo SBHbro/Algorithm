@@ -1,4 +1,4 @@
-package study_1210;
+ï»¿package study_1210;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Queue;
 import java.util.StringTokenizer;
 
-public class Solution_B_20056_¸¶¹ı»ç»ó¾î¿ÍÆÄÀÌ¾îº¼ {
+public class Solution_B_20056_ë§ˆë²•ì‚¬ìƒì–´ì™€íŒŒì´ì–´ë³¼ {
 	
 	
 	public static class Node{
@@ -38,12 +38,12 @@ public class Solution_B_20056_¸¶¹ı»ç»ó¾î¿ÍÆÄÀÌ¾îº¼ {
 	public static void main(String[] args) throws IOException {
 		BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
 		StringTokenizer st = new StringTokenizer(in.readLine());
-		N = Integer.parseInt(st.nextToken()); //¸Ê »çÀÌÁî
-		M = Integer.parseInt(st.nextToken()); //ÆÄÀÌ¾îº¼ °³¼ö
-		K = Integer.parseInt(st.nextToken()); //ÀÌµ¿ È¸¼ö
+		N = Integer.parseInt(st.nextToken()); //ë§µ ì‚¬ì´ì¦ˆ
+		M = Integer.parseInt(st.nextToken()); //íŒŒì´ì–´ë³¼ ê°œìˆ˜
+		K = Integer.parseInt(st.nextToken()); //ì´ë™ íšŒìˆ˜
 		
 		map = new ArrayList[N+1][N+1];
-		//¸Ê »ı¼º
+		//ë§µ ìƒì„±
 		for(int i = 1 ; i<=N;i++) {
 			for(int j = 1 ; j<=N;j++) {
 				map[i][j] = new ArrayList<>();
@@ -62,10 +62,10 @@ public class Solution_B_20056_¸¶¹ı»ç»ó¾î¿ÍÆÄÀÌ¾îº¼ {
 			map[y][x].add(temp);
 		}
 		
-		//k¹ø¹İº¹
+		//kë²ˆë°˜ë³µ
 		for(int k = 0 ; k<K;k++) {
 			
-			//ÀÌµ¿ÇÏ±â
+			//ì´ë™í•˜ê¸°
 			Queue<Node> que = new LinkedList<>();
 			for(int i = 1;i<=N;i++) {
 				for(int j = 1; j<=N;j++) {
@@ -95,7 +95,7 @@ public class Solution_B_20056_¸¶¹ı»ç»ó¾î¿ÍÆÄÀÌ¾îº¼ {
 			for(int i = 1;i<=N;i++) {
 				for(int j =1;j<=N;j++) {
 					if(map[i][j].size()>=2) {
-						//ÆÄÀÌ¾îº¼ ¸ğµÎ ÇÕÄ¡°í
+						//íŒŒì´ì–´ë³¼ ëª¨ë‘ í•©ì¹˜ê³ 
 						int allFireM = 0;
 						int allFireS = 0;
 						int checkD = 0;
@@ -105,7 +105,7 @@ public class Solution_B_20056_¸¶¹ı»ç»ó¾î¿ÍÆÄÀÌ¾îº¼ {
 						for(int f = 0;f<size;f++) {
 							allFireM +=map[i][j].get(f).m;
 							allFireS +=map[i][j].get(f).s;
-							if(map[i][j].get(f).d%2==0)//Â¦¼ö
+							if(map[i][j].get(f).d%2==0)//ì§ìˆ˜
 								checkD++;
 							else
 								checkD2++;
@@ -114,10 +114,10 @@ public class Solution_B_20056_¸¶¹ı»ç»ó¾î¿ÍÆÄÀÌ¾îº¼ {
 						allFireM = allFireM/5;
 						if(allFireM != 0) {
 							allFireS = allFireS/size;
-							//4°³·Î ³ª´«´Ù
-							//m -> ¸ğµç ÆÄÀÌ¾îº¼ Áú·®ÀÇ ÇÕ/5
-							//s -> ÇÕÃÄÁø ÆÄÀÌ¾îº¼ ¼Ó·ÂÀÇ ÇÕ/ ÇÕÃÄÁø ÆÄÀÌ¾îº¼ °³¼ö
-							//d -> ¹æÇâÀÌ ¸ğµÎ È¦¼öÀÌ°Å³ª ¸ğµÎ Â¦¼öÀÌ¸é 0,2,4,6 ¾Æ´Ï¸é 1,3,5,7
+							//4ê°œë¡œ ë‚˜ëˆˆë‹¤
+							//m -> ëª¨ë“  íŒŒì´ì–´ë³¼ ì§ˆëŸ‰ì˜ í•©/5
+							//s -> í•©ì³ì§„ íŒŒì´ì–´ë³¼ ì†ë ¥ì˜ í•©/ í•©ì³ì§„ íŒŒì´ì–´ë³¼ ê°œìˆ˜
+							//d -> ë°©í–¥ì´ ëª¨ë‘ í™€ìˆ˜ì´ê±°ë‚˜ ëª¨ë‘ ì§ìˆ˜ì´ë©´ 0,2,4,6 ì•„ë‹ˆë©´ 1,3,5,7
 							if(checkD==0||checkD2==0) {
 								map[i][j].add(new Node(i,j,allFireM,allFireS,0));
 								map[i][j].add(new Node(i,j,allFireM,allFireS,2));
@@ -125,7 +125,7 @@ public class Solution_B_20056_¸¶¹ı»ç»ó¾î¿ÍÆÄÀÌ¾îº¼ {
 								map[i][j].add(new Node(i,j,allFireM,allFireS,6));
 							}
 							else {
-								//¸ğµÎ È¦¼ö³ª Â¦¼ö°¡ ¾Æ´Ò°æ¿ì
+								//ëª¨ë‘ í™€ìˆ˜ë‚˜ ì§ìˆ˜ê°€ ì•„ë‹ê²½ìš°
 								map[i][j].add(new Node(i,j,allFireM,allFireS,1));
 								map[i][j].add(new Node(i,j,allFireM,allFireS,3));
 								map[i][j].add(new Node(i,j,allFireM,allFireS,5));
@@ -137,7 +137,7 @@ public class Solution_B_20056_¸¶¹ı»ç»ó¾î¿ÍÆÄÀÌ¾îº¼ {
 			}
 		}
 		
-		//´ä ±¸ÇÏ±â
+		//ë‹µ êµ¬í•˜ê¸°
 		for(int i = 1 ; i<=N;i++) {
 			for(int j = 1;j<=N;j++) {
 				int size = map[i][j].size();

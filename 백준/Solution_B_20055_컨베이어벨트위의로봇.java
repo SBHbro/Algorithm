@@ -1,11 +1,11 @@
-package study_1210;
+ï»¿package study_1210;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Solution_B_20055_ÄÁº£ÀÌ¾îº§Æ®À§ÀÇ·Îº¿ {
+public class Solution_B_20055_ì»¨ë² ì´ì–´ë²¨íŠ¸ìœ„ì˜ë¡œë´‡ {
 
 	static int N, K;
 	static int answer = 1;
@@ -42,7 +42,7 @@ public class Solution_B_20055_ÄÁº£ÀÌ¾îº§Æ®À§ÀÇ·Îº¿ {
 	}
 
 	public static void rotate() {
-		// µ¹¸®±â
+		// ëŒë¦¬ê¸°
 		int temp = map[max];
 		for (int i = max; i > 1; i--) {
 			map[i] = map[i - 1];
@@ -50,16 +50,16 @@ public class Solution_B_20055_ÄÁº£ÀÌ¾îº§Æ®À§ÀÇ·Îº¿ {
 		}
 		map[1] = temp;
 		isRobot[1] = false;
-		// ¸¶Áö¸·¿¡ ÀÖ´Â ·Îº¿ »©±â
+		// ë§ˆì§€ë§‰ì— ìžˆëŠ” ë¡œë´‡ ë¹¼ê¸°
 		isRobot[N] = false;
 	}
 
 	public static void move() {
-		// ·Îº¿ ÀÌµ¿
+		// ë¡œë´‡ ì´ë™
 		for (int i = N - 1; i >= 1; i--) {
-			// ·Îº¿ÀÌ ÀÖ´Ù¸é
+			// ë¡œë´‡ì´ ìžˆë‹¤ë©´
 			if (isRobot[i]) {
-				// ³»±¸µµ°¡ 0º¸´Ù Å©°í ´Ù¸¥ ·Îº¿ÀÌ¾ø´Ù¸é
+				// ë‚´êµ¬ë„ê°€ 0ë³´ë‹¤ í¬ê³  ë‹¤ë¥¸ ë¡œë´‡ì´ì—†ë‹¤ë©´
 				if (!isRobot[i + 1] && 0 < map[i + 1]) {
 					map[i + 1]--;
 					isRobot[i] = false;
@@ -70,7 +70,7 @@ public class Solution_B_20055_ÄÁº£ÀÌ¾îº§Æ®À§ÀÇ·Îº¿ {
 			}
 		}
 
-		// ·Îº¿ ¿Ã¸®±â
+		// ë¡œë´‡ ì˜¬ë¦¬ê¸°
 		if (map[1] > 0 && !isRobot[1]) {
 			map[1]--;
 			isRobot[1] = true;
@@ -78,7 +78,7 @@ public class Solution_B_20055_ÄÁº£ÀÌ¾îº§Æ®À§ÀÇ·Îº¿ {
 				count++;
 		}
 
-		// ¸¶Áö¸·¿¡ ÀÖ´Â ·Îº¿ »©±â
+		// ë§ˆì§€ë§‰ì— ìžˆëŠ” ë¡œë´‡ ë¹¼ê¸°
 		isRobot[N] = false;
 	}
 }

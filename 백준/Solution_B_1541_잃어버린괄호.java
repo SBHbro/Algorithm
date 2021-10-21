@@ -1,4 +1,4 @@
-package study_0301;
+ï»¿package study_0301;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Solution_B_1541_ÀÒ¾î¹ö¸°°ýÈ£ {
+public class Solution_B_1541_ìžƒì–´ë²„ë¦°ê´„í˜¸ {
 
 	static String input;
 	static int answer;

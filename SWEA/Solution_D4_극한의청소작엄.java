@@ -1,4 +1,4 @@
-package study_0310;
+ï»¿package study_0310;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.StringTokenizer;
 
-public class Solution_D4_±ØÇÑÀÇÃ»¼ÒÀÛ¾ö {
+public class Solution_D4_ê·¹í•œì˜ì²­ì†Œì‘ì—„ {
 	
 	static int T;
 	static long A,B;

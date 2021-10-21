@@ -1,4 +1,4 @@
-package study_1201;
+ï»¿package study_1201;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -7,11 +7,11 @@ import java.util.ArrayList;
 import java.util.StringTokenizer;
 
 
-public class Solution_B_19238_½ºÅ¸Æ®ÅÃ½Ã {
+public class Solution_B_19238_ìŠ¤íƒ€íŠ¸íƒì‹œ {
 
-	static int N,M,F; //¸ÊÅ©±â, ½Â°´¼ö, ¿¬·á
-	static int[][] map; //¸Ê
-	static int ay,ax; //ÅÃ½ÃÀ§Ä¡
+	static int N,M,F; //ë§µí¬ê¸°, ìŠ¹ê°ìˆ˜, ì—°ë£Œ
+	static int[][] map; //ë§µ
+	static int ay,ax; //íƒì‹œìœ„ì¹˜
 	static ArrayList<Node> start = new ArrayList<>();
 	static ArrayList<Node> end = new ArrayList<>();
 	
@@ -35,7 +35,7 @@ public class Solution_B_19238_½ºÅ¸Æ®ÅÃ½Ã {
 		F = Integer.parseInt(st.nextToken());
 		
 		map = new int[N][N];
-		//¸Ê Á¤º¸ ÀÔ·Â
+		//ë§µ ì •ë³´ ì…ë ¥
 		for(int i = 0 ; i<N;i++) {
 			st = new StringTokenizer(in.readLine());
 			for(int j =0;j<N;j++) {

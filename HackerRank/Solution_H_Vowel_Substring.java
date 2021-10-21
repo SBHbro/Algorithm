@@ -1,4 +1,4 @@
-package study_0125;
+ï»¿package study_0125;
 
 public class Solution_H_Vowel_Substring {
 	/*
@@ -29,7 +29,7 @@ public class Solution_H_Vowel_Substring {
     	int value = 0;
     	int max = 0;
     	int answer = 0;
-    	//0¹øºÎÅÍ k ¹ø±îÁö Ã¼Å©
+    	//0ë²ˆë¶€í„° k ë²ˆê¹Œì§€ ì²´í¬
     	for(int i = 0 ; i<k;i++) {
     		if(checkIn(s.charAt(i))){
     			value++;
@@ -38,7 +38,7 @@ public class Solution_H_Vowel_Substring {
     	
     	max = value;
     	
-    	//k¹øºÎÅÍ s.length - k= ±îÁö Ã¼Å©
+    	//kë²ˆë¶€í„° s.length - k= ê¹Œì§€ ì²´í¬
     	for(int i = 1;i<=s.length()-k;i++) {
     		if(checkIn(s.charAt(i-1))) {
     			value--;
